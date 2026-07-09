@@ -1,0 +1,50 @@
+{
+  "site.title": "SIM JUYONG | 클라우드 엔지니어 포트폴리오",
+  "site.description": "AWS, GCP, Terraform, Cloud Run Jobs, JP1 배치 전환 경험을 정리한 SIM JUYONG의 클라우드 엔지니어 포트폴리오",
+  "header.name": "SIM JUYONG",
+  "nav.home": "홈",
+  "nav.about": "소개",
+  "nav.career": "경력",
+  "nav.skills": "스킬",
+  "nav.certificates": "자격증",
+  "nav.projects": "프로젝트",
+  "nav.contact": "연락",
+  "home.title": "클라우드 마이그레이션, 실전 운영.\n엔드투엔드 DevOps, 확실하게.",
+  "home.im": "저는",
+  "home.desc": "From Code to Cloud. Building End-to-End Systems.",
+  "og.title": "SIM JUYONG | 클라우드 엔지니어 포트폴리오",
+  "og.type": "website",
+  "og.image": "https://moondolph.github.io/portfolio/images/og2.webp",
+
+  "about.title": "클라우드 전환 흐름을 이해하고, 운영 가능한 구조로 정리하는 엔지니어",
+  "about.desc": "한국에서 프론트엔드/웹 개발 경험을 쌓은 뒤 일본 IT 프로젝트에서 공공 시스템 운영과 금융권 클라우드 전환 업무를 경험했습니다. 현재는 클라우드 인프라, DevOps, 배치 플랫폼, 운영 자동화 역량을 중심으로 커리어를 확장하고 있습니다.",
+  "about.positioning.1": "JP1 기반 배치 실행 구조를 Cloud Run Jobs 중심 구조로 전환하는 흐름 이해",
+  "about.positioning.2": "AWS S3, CloudFront, Lambda, DynamoDB, EventBridge 기반 아키텍처 학습 및 포트폴리오화",
+  "about.positioning.3": "Oracle, SQL, Linux, 로그 확인, 장애 1차 조사 등 운영 기반 경험 보유",
+  "about.positioning.4": "일본어/영어/한국어 커뮤니케이션이 가능한 글로벌 프로젝트 적응력",
+
+  "career.desc": "클라우드 엔지니어링과 관련된 경험을 인프라, 운영, 클라우드 기술 중심으로 정리했습니다.",
+  "career.item1.desc": "온프레미스 기반 금융 시스템을 Google Cloud 기반 환경으로 전환하는 프로젝트에서 배치 실행 구조, Wrapper Shell, Cloud Run Jobs 연계 흐름을 검토했습니다.",
+  "career.item2.desc": "지자체 건강보험시스템 표준화 프로젝트에서 JAVA, 시스템환경구축, Oracle DB, 장애조사, 로그수집, 배치/계정/출력 디버깅 등을 수행했습니다.",
+  "career.item3.desc": "기업 IR/웹 페이지 구축 경험을 통해 HTML, CSS, JavaScript 기반 UI 구현, 반응형 레이아웃, 협업 개발 흐름을 익혔습니다.",
+
+  "skills.cloud.desc": "AWS와 GCP를 모두 학습·활용하며 정적 호스팅, 서버리스, 컨테이너 배치 실행 구조를 다룹니다.",
+  "skills.devops.desc": "인프라 변경을 코드화하고 배포·실행·로그 확인까지 이어지는 운영 흐름을 설계합니다.",
+  "skills.operation.desc": "운영 환경에서 로그, DB, 배치 실행 결과를 확인하고 원인 조사와 문서화를 수행합니다.",
+  "skills.development.desc": "개발 경험을 바탕으로 클라우드 인프라와 애플리케이션 사이의 연결 구조를 이해합니다.",
+  "skills.tools.desc": "다양한 협업 툴을 활용한 실무 경험을 바탕으로, 조직 환경에 관계없이 원활한 협업과 커뮤니케이션을 지향합니다.",
+
+  "cert.cloudPractitioner.desc": "IAM, EC2, S3 등 핵심 서비스 이해를 바탕으로 한 클라우드 기초 역량",
+  "cert.aiPractitioner.desc": "SageMaker, Bedrock 등 AI/ML 서비스 활용 관점의 클라우드 기반 AI 역량",
+  "cert.solutionsArchitect.desc": "VPC, EC2, S3, RDS, Route 53, CloudFront 중심의 클라우드 설계 역량",
+  "cert.developer.desc": "Lambda, API, DynamoDB, 배포, 애플리케이션 연계 관점의 AWS 활용 역량",
+  "cert.sysops.desc": "모니터링, 운영, 장애 대응, 자동화, 보안 운영 관점의 클라우드 운영 역량",
+
+  "project.JCB.desc": "JP1 배치 실행을 Cloud Run Jobs 기반 컨테이너 배치로 연결하는 구조를 정리하고, 실행 결과·로그·에러 핸들링 흐름을 문서화했습니다.",
+  "project.awsPortfolio.desc": "바닐라 HTML/CSS/JS 포트폴리오를 S3 정적 웹사이트와 CloudFront 배포 구조로 운영할 수 있도록 설계한 개인 포트폴리오 프로젝트입니다.",
+  "project.oracleOps.desc": "공공 시스템 표준화 프로젝트에서 Oracle SQL, Linux 접속 도구, 로그 확인을 통해 계정·배치·출력 오류의 원인을 조사했습니다.",
+  "project.devopsLab.desc": "Terraform, Docker, Kubernetes, Shell Script를 중심으로 클라우드 리소스 배포와 운영 흐름을 실습하고 정리하는 개인 학습형 프로젝트입니다.",
+
+  "contact.title": "클라우드 엔지니어로서 함께 성장할 기회를 찾고 있습니다.",
+  "contact.subtitle": "클라우드로 실질적인 변화를 만듭니다."
+}

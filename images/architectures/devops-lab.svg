@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud DevOps learning lab architecture</title>
+  <desc id="desc">GitHub changes trigger CI/CD, Terraform provisions cloud resources, containers are deployed and monitored.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#201541"/></linearGradient>
+    <linearGradient id="devops" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#fff" font-family="Inter, Arial" font-size="34" font-weight="800">Cloud DevOps Learning Lab</text>
+  <text x="60" y="120" fill="rgba(255,255,255,.68)" font-family="Inter, Arial" font-size="18">GitHub → CI/CD → Terraform → Container Deploy → Monitoring</text>
+  <g font-family="Inter, Arial" font-weight="700" font-size="20" text-anchor="middle" filter="url(#shadow)">
+    <rect x="70" y="292" width="170" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="155" y="334" fill="#fff">GitHub</text><text x="155" y="363" fill="rgba(255,255,255,.6)" font-size="14">Repo / PR</text>
+    <rect x="305" y="292" width="170" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="390" y="334" fill="#fff">CI/CD</text><text x="390" y="363" fill="rgba(255,255,255,.6)" font-size="14">build / test</text>
+    <rect x="540" y="292" width="185" height="96" rx="18" fill="url(#devops)"/>
+    <text x="632" y="334" fill="#120a24">Terraform</text><text x="632" y="363" fill="#120a24" font-size="14">provisioning</text>
+    <rect x="790" y="215" width="190" height="86" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="885" y="253" fill="#fff">AWS / GCP</text><text x="885" y="280" fill="rgba(255,255,255,.6)" font-size="14">resources</text>
+    <rect x="790" y="380" width="190" height="86" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="885" y="418" fill="#fff">Containers</text><text x="885" y="445" fill="rgba(255,255,255,.6)" font-size="14">Docker / K8s</text>
+    <rect x="1035" y="292" width="110" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="1090" y="334" fill="#fff">Monitor</text><text x="1090" y="363" fill="rgba(255,255,255,.6)" font-size="14">logs</text>
+  </g>
+  <g stroke="#c4b5fd" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M240 340H305"/><path d="M475 340H540"/><path d="M725 320C760 290 760 258 790 258"/><path d="M725 360C760 390 760 423 790 423"/><path d="M980 258C1025 270 1025 320 1035 330"/><path d="M980 423C1025 410 1025 360 1035 350"/>
+  </g>
+  <rect x="60" y="585" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+  <text x="90" y="628" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="18">Design focus: infrastructure as code, repeatable deployment, container operation, and observability learning.</text>
+</svg>

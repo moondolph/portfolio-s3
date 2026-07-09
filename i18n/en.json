@@ -1,0 +1,50 @@
+{
+  "site.title": "SIM JUYONG | Cloud Engineer Portfolio",
+  "site.description": "Cloud engineer portfolio of SIM JUYONG: AWS, GCP, Terraform, Cloud Run Jobs, JP1 batch migration and DevOps.",
+  "header.name": "SIM JUYONG",
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.career": "Career",
+  "nav.skills": "Skills",
+  "nav.certificates": "Certificates",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+  "home.title": "Cloud migration. Real operations.\nEnd-to-end DevOps, done right.",
+  "home.im": "I'm",
+  "home.desc": "From Code to Cloud. Building End-to-End Systems.",
+  "og.title": "SIM JUYONG | Cloud Engineer Portfolio",
+  "og.type": "website",
+  "og.image": "https://moondolph.github.io/portfolio/images/og2.webp",
+
+  "about.title": "An engineer who understands cloud migration flows and organizes them into operable structures",
+  "about.desc": "After building frontend/web development experience in Korea, I worked on public system operations and financial-sector cloud migration in IT projects in Japan. I'm now expanding my career around cloud infrastructure, DevOps, batch platforms, and operational automation.",
+  "about.positioning.1": "Understanding of migrating JP1-based batch execution structures to Cloud Run Jobs-centered architecture",
+  "about.positioning.2": "Learned and built a portfolio around AWS S3, CloudFront, Lambda, DynamoDB, and EventBridge-based architecture",
+  "about.positioning.3": "Hands-on operations experience with Oracle, SQL, Linux, log review, and initial incident investigation",
+  "about.positioning.4": "Adaptability to global projects with communication in Japanese, English, and Korean",
+
+  "career.desc": "Experience related to cloud engineering, organized around infrastructure, operations, and cloud technologies.",
+  "career.item1.desc": "Reviewed batch execution structure, wrapper shell scripts, and Cloud Run Jobs integration flows for a project migrating an on-premises financial system to a Google Cloud-based environment.",
+  "career.item2.desc": "Worked on JAVA, system environment setup, Oracle DB, incident investigation, log collection, and batch/account/output debugging for a municipal health insurance system standardization project.",
+  "career.item3.desc": "Built HTML, CSS, and JavaScript-based UI, responsive layouts, and collaborative development workflows through corporate IR/web page projects.",
+
+  "skills.cloud.desc": "Working with both AWS and GCP to handle static hosting, serverless, and container-based batch execution structures.",
+  "skills.devops.desc": "Designing operational workflows that turn infrastructure changes into code, from deployment and execution to log review.",
+  "skills.operation.desc": "Reviewing logs, databases, and batch execution results in production environments, and performing root-cause investigation and documentation.",
+  "skills.development.desc": "Understanding the connection between cloud infrastructure and applications, drawing on development experience.",
+  "skills.tools.desc": "Experienced with a wide range of collaboration tools, enabling smooth teamwork and communication in any organization.",
+
+  "cert.cloudPractitioner.desc": "Foundational cloud competency built on core services such as IAM, EC2, and S3",
+  "cert.aiPractitioner.desc": "Cloud-based AI competency from working with AI/ML services such as SageMaker and Bedrock",
+  "cert.solutionsArchitect.desc": "Cloud architecture design competency centered on VPC, EC2, S3, RDS, Route 53, and CloudFront",
+  "cert.developer.desc": "AWS development competency covering Lambda, APIs, DynamoDB, deployment, and application integration",
+  "cert.sysops.desc": "Cloud operations competency in monitoring, operations, incident response, automation, and security operations",
+
+  "project.JCB.desc": "Organized the structure connecting JP1 batch execution to Cloud Run Jobs-based container batch processing, and documented the execution results, logging, and error-handling flow.",
+  "project.awsPortfolio.desc": "A personal portfolio project designed to run a vanilla HTML/CSS/JS portfolio on an S3 static website with CloudFront distribution.",
+  "project.oracleOps.desc": "Investigated the root causes of account, batch, and output errors using Oracle SQL, Linux access tools, and log review in a public-sector system standardization project.",
+  "project.devopsLab.desc": "A personal learning project centered on Terraform, Docker, Kubernetes, and shell scripts, practicing and documenting cloud resource deployment and operations workflows.",
+
+  "contact.title": "Looking for an opportunity to grow together as a Cloud Engineer.",
+  "contact.subtitle": "Driving real change through the cloud."
+}

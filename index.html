@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>SIM JUYONG | Cloud Engineer Portfolio</title>
+    <meta name="description" content="AWS, GCP, Terraform, Cloud Run Jobs, JP1 배치 전환 경험을 정리한 SIM JUYONG의 클라우드 엔지니어 포트폴리오" />
+    <meta name="author" content="SIM JUYONG" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="SIM JUYONG | Cloud Engineer Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moondolph.github.io/portfolio/" />
+    <meta property="og:image" content="https://moondolph.github.io/portfolio/images/og2.webp" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f57af81b89.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="max-container header__inner">
+        <a class="header__logo" href="#home" aria-label="Go to home">
+          <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+          <span class="header__logo__title" data-i18n="header.name">SIM JUYONG</span>
+        </a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__menu">
+            <li><a class="header__menu__item" data-i18n="nav.home" href="#home">Home</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.about" href="#about">About</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.career" href="#career">Career</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.skills" href="#skills">Skills</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.certificates" href="#certificates">Certificates</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.projects" href="#projects">Projects</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.contact" href="#contact">Contact</a></li>
+          </ul>
+          <div class="lang-switcher">
+            <i class="fa-solid fa-globe lang__icon"></i>
+            <select id="langSelect" aria-label="Language">
+              <option value="ko">한국어</option>
+              <option value="en">EN</option>
+              <option value="ja">日本語</option>
+            </select>
+          </div>
+          <button class="header__toggle" aria-label="navigation menu toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="home" class="hero section">
+        <div class="max-container hero__container">
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <span class="eyebrow">~/home — Cloud Engineer Portfolio</span>
+              <h1 class="hero__title">The Future Runs on Cloud</h1>
+              <p class="hero__subtitle" data-i18n="home.desc">From Code to Cloud. Building End-to-End Systems.</p>
+              <p class="home__description">
+                <span data-i18n="home.im">저는</span>
+                <strong class="home__title--strong"><span id="typeitTarget"></span></strong>
+              </p>
+              <div class="home__cta">
+                <a class="btn btn--primary" href="#projects"><i class="fa-solid fa-diagram-project"></i> View projects</a>
+                <a class="btn btn--ghost" href="https://github.com/moondolph" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a class="btn btn--ghost" href="#contact"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+              </div>
+            </div>
+
+            <aside class="hero__panel" aria-label="Profile summary">
+              <img class="hero__avatar" src="images/profile.jpg" alt="SIM JUYONG profile" />
+              <div class="hero__panel__content">
+                <p class="hero__name">SIM JUYONG</p>
+                <p class="hero__role">Web Developer / DevOps / Infra Engineer</p>
+                <div class="hero__badges">
+                  <span class="tag">AWS Associate × 3</span>
+                  <span class="tag">AWS Practitioner x 2</span>
+                  <span class="tag">Terraform</span>
+                  <span class="tag">Korean · English · Japanese</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="proof-strip" aria-label="Credibility highlights">
+            <div class="proof-item">
+              <div class="proof-item__label">Target</div>
+              <div class="proof-item__value">Cloud Engineer / DevOps / SRE</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-item__label">Cloud</div>
+              <div class="proof-item__value">AWS + GCP Multi-cloud</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-item__label">Domain</div>
+              <div class="proof-item__value">Finance · Public System</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-item__label">Strength</div>
+              <div class="proof-item__value">Migration · Ops · Docs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="max-container two-column">
+          <div class="section__header section__header--left">
+            <span class="eyebrow">~/about</span>
+            <h2 class="title" data-i18n="about.title">클라우드 전환 흐름을 이해하고, 운영 가능한 구조로 정리하는 엔지니어</h2>
+            <p class="description" data-i18n="about.desc">
+              한국에서 프론트엔드/웹 개발 경험을 쌓은 뒤 일본 IT 프로젝트에서 공공 시스템 운영과 금융권 클라우드 전환 업무를 경험했습니다. 현재는 클라우드
+              인프라, DevOps, 배치 플랫폼, 운영 자동화 역량을 중심으로 커리어를 확장하고 있습니다.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Positioning</h3>
+            <ul class="check-list">
+              <li data-i18n="about.positioning.1">JP1 기반 배치 실행 구조를 Cloud Run Jobs 중심 구조로 전환하는 흐름 이해</li>
+              <li data-i18n="about.positioning.2">AWS S3, CloudFront, Lambda, DynamoDB, EventBridge 기반 아키텍처 학습 및 포트폴리오화</li>
+              <li data-i18n="about.positioning.3">Oracle, SQL, Linux, 로그 확인, 장애 1차 조사 등 운영 기반 경험 보유</li>
+              <li data-i18n="about.positioning.4">일본어/영어/한국어 커뮤니케이션이 가능한 글로벌 프로젝트 적응력</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Career -->
+      <section id="career" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">~/career</span>
+            <h2 class="title">Experience Timeline</h2>
+            <p class="description" data-i18n="career.desc">클라우드 엔지니어링과 관련된 경험을 인프라, 운영, 클라우드 기술 중심으로 정리했습니다.</p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">2026.04 - Present / Japan / Finance Cloud Migration</div>
+                <h3>JCB Cloud Migration / Batch Platform Engineering</h3>
+                <p data-i18n="career.item1.desc">
+                  온프레미스 기반 금융 시스템을 Google Cloud 기반 환경으로 전환하는 프로젝트에서 배치 실행 구조, Wrapper Shell, Cloud Run Jobs 연계 흐름을
+                  검토했습니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">GCP</span><span class="tag">JP1</span><span class="tag">Shell Script</span><span class="tag">Cloud Run Jobs</span
+                  ><span class="tag">Docker</span><span class="tag">GCS</span><span class="tag">Terraform</span><span class="tag">CI/CD</span
+                  ><span class="tag">GitLab</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">2025.05 - 2025.12 / Japan / Public System Development</div>
+                <h3>Public Sector System Operation / Database Support</h3>
+                <p data-i18n="career.item2.desc">
+                  지자체 건강보험시스템 표준화 프로젝트에서 JAVA, 시스템환경구축, Oracle DB, 장애조사, 로그수집, 배치/계정/출력 디버깅 등을 수행했습니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">JAVA</span><span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">Linux</span
+                  ><span class="tag">TeraTerm</span><span class="tag">WinSCP</span><span class="tag">Troubleshooting</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline__item">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__meta">2023.03 - 2024.08 / Korea / Web / Frontend</div>
+                <h3>Frontend Engineer / Enterprise Web Projects</h3>
+                <p data-i18n="career.item3.desc">
+                  기업 IR/웹 페이지 구축 경험을 통해 HTML, CSS, JavaScript 기반 UI 구현, 반응형 레이아웃, 협업 개발 흐름을 익혔습니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span
+                  ><span class="tag">XML/JSON</span><span class="tag">Git</span><span class="tag">EC2</span><span class="tag">Responsive UI</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">~/skills</span>
+            <h2 class="title">Cloud Engineer Skill Map</h2>
+          </div>
+
+          <div class="capabilities capabilities--four">
+            <section class="capability">
+              <h3 class="capability__title"><i class="fa-solid fa-cloud"></i> Cloud</h3>
+              <p class="capability__desc" data-i18n="skills.cloud.desc">
+                AWS와 GCP를 모두 학습·활용하며 정적 호스팅, 서버리스, 컨테이너 배치 실행 구조를 다룹니다.
+              </p>
+              <div class="capability__tags">
+                <span class="tag">AWS</span><span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">Lambda</span
+                ><span class="tag">DynamoDB</span><span class="tag">EventBridge</span><span class="tag">GCP</span><span class="tag">Cloud Run Jobs</span
+                ><span class="tag">GCS</span><span class="tag">EC2</span>
+              </div>
+            </section>
+
+            <section class="capability">
+              <h3 class="capability__title"><i class="fa-solid fa-code-branch"></i> DevOps / IaC</h3>
+              <p class="capability__desc" data-i18n="skills.devops.desc">인프라 변경을 코드화하고 배포·실행·로그 확인까지 이어지는 운영 흐름을 설계합니다.</p>
+              <div class="capability__tags">
+                <span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Shell Script</span
+                ><span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">GitLab</span>
+              </div>
+            </section>
+
+            <section class="capability">
+              <h3 class="capability__title"><i class="fa-solid fa-terminal"></i> Operation</h3>
+              <p class="capability__desc" data-i18n="skills.operation.desc">
+                운영 환경에서 로그, DB, 배치 실행 결과를 확인하고 원인 조사와 문서화를 수행합니다.
+              </p>
+              <div class="capability__tags">
+                <span class="tag">Linux</span><span class="tag">JP1</span><span class="tag">Cloud Logging</span><span class="tag">Oracle</span
+                ><span class="tag">SQL</span><span class="tag">A5 SQL</span><span class="tag">TeraTerm</span>
+              </div>
+            </section>
+
+            <section class="capability">
+              <h3 class="capability__title"><i class="fa-solid fa-layer-group"></i> Development</h3>
+              <p class="capability__desc" data-i18n="skills.development.desc">
+                개발 경험을 바탕으로 클라우드 인프라와 애플리케이션 사이의 연결 구조를 이해합니다.
+              </p>
+              <div class="capability__tags">
+                <span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span
+                ><span class="tag">REST API</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">React</span
+                ><span class="tag">Python</span><span class="tag">PHP</span>
+              </div>
+            </section>
+            <section class="capability">
+              <h3 class="capability__title"><i class="fa-solid fa-layer-group"></i> Tools</h3>
+              <p class="capability__desc" data-i18n="skills.tools.desc">
+                다양한 협업 툴을 활용한 실무 경험을 바탕으로, 조직 환경에 관계없이 원활한 협업과 커뮤니케이션을 지향합니다.
+              </p>
+              <div class="capability__tags">
+                <span class="tag">Notion</span><span class="tag">Trello</span><span class="tag">Slack</span><span class="tag">Google Chat</span
+                ><span class="tag">Jira</span><span class="tag">Confluence</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates -->
+      <section id="certificates" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">~/certificates</span>
+            <h2 class="title">Cloud Certifications</h2>
+          </div>
+
+          <div class="cert-grid">
+            <article class="cert-card">
+              <img class="cert-card__badge" src="images/badges/sysops-associate.png" alt="AWS Certified CloudOps Engineer - Associate badge" loading="lazy" />
+              <h3>AWS Certified CloudOps Engineer - Associate</h3>
+              <p data-i18n="cert.sysops.desc">모니터링, 운영, 장애 대응, 자동화, 보안 운영 관점의 클라우드 운영 역량</p>
+            </article>
+            <article class="cert-card">
+              <img class="cert-card__badge" src="images/badges/developer-associate.png" alt="AWS Certified Developer - Associate badge" loading="lazy" />
+              <h3>AWS Certified Developer - Associate</h3>
+              <p data-i18n="cert.developer.desc">Lambda, API, DynamoDB, 배포, 애플리케이션 연계 관점의 AWS 활용 역량</p>
+            </article>
+
+            <article class="cert-card">
+              <img
+                class="cert-card__badge"
+                src="images/badges/solutions-architect-associate.png"
+                alt="AWS Certified Solutions Architect - Associate badge"
+                loading="lazy" />
+              <h3>AWS Certified Solutions Architect - Associate</h3>
+              <p data-i18n="cert.solutionsArchitect.desc">VPC, EC2, S3, RDS, Route 53, CloudFront 중심의 클라우드 설계 역량</p>
+            </article>
+            <article class="cert-card">
+              <img class="cert-card__badge" src="images/badges/ai-practitioner.png" alt="AWS Certified AI Practitioner badge" loading="lazy" />
+              <h3>AWS Certified AI Practitioner</h3>
+              <p data-i18n="cert.aiPractitioner.desc">SageMaker, Bedrock 등 AI/ML 서비스 활용 관점의 클라우드 기반 AI 역량</p>
+            </article>
+
+            <article class="cert-card">
+              <img class="cert-card__badge" src="images/badges/cloud-practitioner.png" alt="AWS Certified Cloud Practitioner badge" loading="lazy" />
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p data-i18n="cert.cloudPractitioner.desc">IAM, EC2, S3 등 핵심 서비스 이해를 바탕으로 한 클라우드 기초 역량</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">~/projects</span>
+            <h2 class="title">Cloud-focused Project Cards</h2>
+          </div>
+
+          <ul class="categories" aria-label="Project filters">
+            <li>
+              <button class="category category--selected" data-category="all">All<span class="category__count">4</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="cloud">Cloud<span class="category__count">1</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="aws">AWS<span class="category__count">1</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="ops">Ops<span class="category__count">1</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="devops">DevOps<span class="category__count">1</span></button>
+            </li>
+          </ul>
+
+          <div class="projects">
+            <article class="project card" data-type="cloud">
+              <div class="project__visual project__visual--gcp"><span>JP1</span><span>→</span><span>Cloud Run Jobs</span><span>→</span><span>Docker</span></div>
+              <div class="project__metadata">
+                <div class="project__eyebrow">Finance Cloud Migration · Private</div>
+                <h3 class="project__title">JCB Batch Platform Modernization</h3>
+                <p class="project__desc" data-i18n="project.JCB.desc">
+                  JP1 배치 실행을 Cloud Run Jobs 기반 컨테이너 배치로 연결하는 구조를 정리하고, 실행 결과·로그·에러 핸들링 흐름을 문서화했습니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">GCP</span><span class="tag">Cloud Run Jobs</span><span class="tag">JP1</span><span class="tag">Shell</span
+                  ><span class="tag">Cloud Logging</span>
+                </div>
+                <div class="project__actions">
+                  <a class="btn btn--small" href="https://github.com/moondolph" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a class="btn btn--small btn--primary" href="images/architectures/cloud-run-batch.svg" target="_blank" rel="noreferrer"
+                    ><i class="fa-solid fa-diagram-project"></i> Architecture</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-type="aws">
+              <div class="project__visual project__visual--aws">
+                <span>GitHub</span><span>→</span><span>S3</span><span>→</span><span>CloudFront</span><span>→</span><span>User</span>
+              </div>
+              <div class="project__metadata">
+                <div class="project__eyebrow">AWS Static Hosting · Public</div>
+                <h3 class="project__title">Cloud Engineer Portfolio on AWS</h3>
+                <p class="project__desc" data-i18n="project.awsPortfolio.desc">
+                  바닐라 HTML/CSS/JS 포트폴리오를 S3 정적 웹사이트와 CloudFront 배포 구조로 운영할 수 있도록 설계한 개인 포트폴리오 프로젝트입니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">Route 53</span><span class="tag">ACM</span
+                  ><span class="tag">Static Web</span>
+                </div>
+                <div class="project__actions">
+                  <a class="btn btn--small" href="https://github.com/moondolph/portfolio" target="_blank" rel="noreferrer"
+                    ><i class="fa-brands fa-github"></i> GitHub</a
+                  >
+                  <a class="btn btn--small btn--primary" href="images/architectures/aws-static-site.svg" target="_blank" rel="noreferrer"
+                    ><i class="fa-solid fa-diagram-project"></i> Architecture</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-type="ops">
+              <div class="project__visual project__visual--ops"><span>Logs</span><span>→</span><span>SQL</span><span>→</span><span>Root Cause</span></div>
+              <div class="project__metadata">
+                <div class="project__eyebrow">Public System · Operation</div>
+                <h3 class="project__title">Oracle / Linux Operation Support</h3>
+                <p class="project__desc" data-i18n="project.oracleOps.desc">
+                  공공 시스템 표준화 프로젝트에서 Oracle SQL, Linux 접속 도구, 로그 확인을 통해 계정·배치·출력 오류의 원인을 조사했습니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">Linux</span><span class="tag">TeraTerm</span
+                  ><span class="tag">Troubleshooting</span>
+                </div>
+                <div class="project__actions">
+                  <a class="btn btn--small" href="https://github.com/moondolph" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a class="btn btn--small btn--primary" href="images/architectures/public-ops.svg" target="_blank" rel="noreferrer"
+                    ><i class="fa-solid fa-diagram-project"></i> Architecture</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project card" data-type="devops">
+              <div class="project__visual project__visual--devops">
+                <span>Terraform</span><span>→</span><span>Deploy</span><span>→</span><span>Monitor</span>
+              </div>
+              <div class="project__metadata">
+                <div class="project__eyebrow">DevOps Lab · Learning</div>
+                <h3 class="project__title">Cloud DevOps Learning Lab</h3>
+                <p class="project__desc" data-i18n="project.devopsLab.desc">
+                  Terraform, Docker, Kubernetes, Shell Script를 중심으로 클라우드 리소스 배포와 운영 흐름을 실습하고 정리하는 개인 학습형 프로젝트입니다.
+                </p>
+                <div class="capability__tags">
+                  <span class="tag">Terraform</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Shell</span
+                  ><span class="tag">CI/CD</span>
+                </div>
+                <div class="project__actions">
+                  <a class="btn btn--small" href="https://github.com/moondolph" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a class="btn btn--small btn--primary" href="images/architectures/devops-lab.svg" target="_blank" rel="noreferrer"
+                    ><i class="fa-solid fa-diagram-project"></i> Architecture</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="section contact-section">
+      <div class="max-container">
+        <div class="cta">
+          <span class="eyebrow">~/contact</span>
+          <h2 class="cta__title" data-i18n="contact.title">클라우드 엔지니어로서 함께 성장할 기회를 찾고 있습니다.</h2>
+          <p class="cta__subtitle">
+            Migration. Automation. Cost Optimization. <br />
+            <span data-i18n="contact.subtitle">클라우드로 실질적인 변화를 만듭니다.</span>
+          </p>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="mailto:jysim1212@gmail.com"><i class="fa-regular fa-envelope"></i> jysim1212@gmail.com</a>
+            <a class="btn btn--ghost" href="https://github.com/moondolph" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/juyong-sim-profile/" target="_blank" rel="noreferrer"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+          </div>
+          <p class="footer-copy">© SIM JUYONG. Cloud Engineer Portfolio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <aside>
+      <a class="arrow-up" href="#home" title="back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </aside>
+  </body>
+</html>

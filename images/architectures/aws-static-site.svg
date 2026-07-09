@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AWS static portfolio hosting architecture</title>
+  <desc id="desc">GitHub repository is deployed to S3 and delivered through CloudFront with Route 53 and ACM.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#2a1803"/></linearGradient>
+    <linearGradient id="aws" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff9900"/><stop offset="1" stop-color="#ffd166"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#fff" font-family="Inter, Arial" font-size="34" font-weight="800">AWS Static Portfolio Hosting</text>
+  <text x="60" y="120" fill="rgba(255,255,255,.68)" font-family="Inter, Arial" font-size="18">GitHub → S3 → CloudFront → Route 53 / ACM</text>
+  <g font-family="Inter, Arial" font-weight="700" font-size="20" text-anchor="middle" filter="url(#shadow)">
+    <rect x="80" y="292" width="170" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="165" y="334" fill="#fff">GitHub</text><text x="165" y="363" fill="rgba(255,255,255,.6)" font-size="14">Source code</text>
+    <rect x="320" y="292" width="170" height="96" rx="18" fill="url(#aws)"/>
+    <text x="405" y="334" fill="#1f1300">S3 Bucket</text><text x="405" y="363" fill="#1f1300" font-size="14">Static files</text>
+    <rect x="560" y="292" width="190" height="96" rx="18" fill="url(#aws)"/>
+    <text x="655" y="334" fill="#1f1300">CloudFront</text><text x="655" y="363" fill="#1f1300" font-size="14">CDN + HTTPS</text>
+    <rect x="820" y="215" width="190" height="86" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="915" y="253" fill="#fff">Route 53</text><text x="915" y="280" fill="rgba(255,255,255,.6)" font-size="14">Custom domain</text>
+    <rect x="820" y="380" width="190" height="86" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="915" y="418" fill="#fff">ACM</text><text x="915" y="445" fill="rgba(255,255,255,.6)" font-size="14">TLS Certificate</text>
+    <rect x="1060" y="292" width="90" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="1105" y="348" fill="#fff">User</text>
+  </g>
+  <g stroke="#ffbd4a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M250 340H320"/><path d="M490 340H560"/><path d="M750 340H1060"/><path d="M750 320C790 290 790 258 820 258"/><path d="M750 360C790 390 790 423 820 423"/>
+  </g>
+  <rect x="60" y="585" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+  <text x="90" y="628" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="18">Design focus: low-cost static hosting, CDN delivery, HTTPS, custom domain, and simple deployment workflow.</text>
+</svg>
