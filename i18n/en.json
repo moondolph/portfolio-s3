@@ -14,7 +14,7 @@
   "home.desc": "From Code to Cloud. Building End-to-End Systems.",
   "og.title": "SIM JUYONG | Cloud Engineer Portfolio",
   "og.type": "website",
-  "og.image": "https://moondolph.github.io/portfolio/images/og2.webp",
+  "og.image": "http://sim-juyong-portfolio-s3.s3-website.ap-northeast-2.amazonaws.com/images/og2.webp",
 
   "about.title": "An engineer who understands cloud migration flows and organizes them into operable structures",
   "about.desc": "After building frontend/web development experience in Korea, I worked on public system operations and financial-sector cloud migration in IT projects in Japan. I'm now expanding my career around cloud infrastructure, DevOps, batch platforms, and operational automation.",

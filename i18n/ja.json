@@ -14,7 +14,7 @@
   "home.desc": "日本の金融・公共系プロジェクト経験をもとに、AWS、GCP、Terraform、Cloud Run Jobs、JP1バッチ移行を扱うクラウドエンジニアです。",
   "og.title": "SIM JUYONG | クラウドエンジニア ポートフォリオ",
   "og.type": "website",
-  "og.image": "https://moondolph.github.io/portfolio/images/og2.webp",
+  "og.image": "http://sim-juyong-portfolio-s3.s3-website.ap-northeast-2.amazonaws.com/images/og2.webp",
 
   "about.title": "クラウド移行の流れを理解し、運用可能な構造として整理するエンジニア",
   "about.desc": "韓国でフロントエンド/Web開発の経験を積んだ後、日本のITプロジェクトで公共系システムの運用と金融業界のクラウド移行業務を経験しました。現在はクラウドインフラ、DevOps、バッチプラットフォーム、運用自動化を中心にキャリアを広げています。",

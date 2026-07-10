@@ -14,7 +14,7 @@
   "home.desc": "From Code to Cloud. Building End-to-End Systems.",
   "og.title": "SIM JUYONG | 클라우드 엔지니어 포트폴리오",
   "og.type": "website",
-  "og.image": "https://moondolph.github.io/portfolio/images/og2.webp",
+  "og.image": "http://sim-juyong-portfolio-s3.s3-website.ap-northeast-2.amazonaws.com/images/og2.webp",
 
   "about.title": "클라우드 전환 흐름을 이해하고, 운영 가능한 구조로 정리하는 엔지니어",
   "about.desc": "한국에서 프론트엔드/웹 개발 경험을 쌓은 뒤 일본 IT 프로젝트에서 공공 시스템 운영과 금융권 클라우드 전환 업무를 경험했습니다. 현재는 클라우드 인프라, DevOps, 배치 플랫폼, 운영 자동화 역량을 중심으로 커리어를 확장하고 있습니다.",
