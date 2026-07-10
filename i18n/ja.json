@@ -45,6 +45,6 @@
   "project.oracleOps.desc": "公共系システム標準化プロジェクトで、Oracle SQL、Linux接続ツール、ログ確認を通じてアカウント・バッチ・出力エラーの原因を調査しました。",
   "project.devopsLab.desc": "Terraform、Docker、Kubernetes、Shell Scriptを中心に、クラウドリソースのデプロイと運用フローを実践・整理した個人学習用プロジェクトです。",
 
-  "contact.title": "クラウドエンジニアとして共に成長できる機会を探しています。",
+  "contact.title": "複雑さを減らし、価値を高めます。",
   "contact.subtitle": "クラウドで、確かな変化を生み出します。"
 }

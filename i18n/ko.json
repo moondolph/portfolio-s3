@@ -45,6 +45,6 @@
   "project.oracleOps.desc": "공공 시스템 표준화 프로젝트에서 Oracle SQL, Linux 접속 도구, 로그 확인을 통해 계정·배치·출력 오류의 원인을 조사했습니다.",
   "project.devopsLab.desc": "Terraform, Docker, Kubernetes, Shell Script를 중심으로 클라우드 리소스 배포와 운영 흐름을 실습하고 정리하는 개인 학습형 프로젝트입니다.",
 
-  "contact.title": "클라우드 엔지니어로서 함께 성장할 기회를 찾고 있습니다.",
+  "contact.title": "안정적이고 확장 가능한 시스템을 설계합니다.",
   "contact.subtitle": "클라우드로 실질적인 변화를 만듭니다."
 }
