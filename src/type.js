@@ -19,9 +19,27 @@ export function startTypeit(lang = resolveLang()) {
   }
 
   const phrases = {
-    ko: ["클라우드 엔지니어", "DevOps 엔지니어", "배치 플랫폼 엔지니어", "AWS/GCP를 다루는 인프라 엔지니어"],
-    ja: ["クラウドエンジニア", "DevOpsエンジニア", "バッチ基盤エンジニア", "AWS/GCPを扱うインフラエンジニア"],
-    en: ["a Cloud Engineer", "a DevOps Engineer", "a Batch Platform Engineer", "an AWS/GCP Infrastructure Engineer"],
+    ko: [
+      "클라우드 엔지니어",
+      "DevOps 엔지니어",
+      "언어의 장벽 없이 일하는 글로벌 인프라 엔지니어",
+      "AWS/GCP를 다루는 인프라 엔지니어",
+      "프론트,백엔드,인프라 모두 경험있는 멀티플레이어 엔지니어",
+    ],
+    ja: [
+      "クラウドエンジニア",
+      "DevOpsエンジニア",
+      "言語の壁なく働くグローバルインフラエンジニア",
+      "AWS/GCPを扱うインフラエンジニア",
+      "フロント・バックエンド・インフラを経験したマルチプレイヤーエンジニア",
+    ],
+    en: [
+      "a Cloud Engineer",
+      "a DevOps Engineer",
+      "a Global Infra Engineer, no language barrier",
+      "an AWS/GCP Infrastructure Engineer",
+      "a Multi-role Engineer across Frontend, Backend, and Infra",
+    ],
   };
 
   const selected = phrases[lang] || phrases.en;
