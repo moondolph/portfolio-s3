@@ -24,13 +24,13 @@
   "about.positioning.4": "Adaptability to global projects with communication in Japanese, English, and Korean",
 
   "career.desc": "Experience related to cloud engineering, organized around infrastructure, operations, and cloud technologies.",
-  "career.item1.desc": "Reviewed batch execution structure, wrapper shell scripts, and Cloud Run Jobs integration flows for a project migrating an on-premises financial system to a Google Cloud-based environment.",
-  "career.item2.desc": "Worked on JAVA, system environment setup, Oracle DB, incident investigation, log collection, and batch/account/output debugging for a municipal health insurance system standardization project.",
-  "career.item3.desc": "Built HTML, CSS, and JavaScript-based UI, responsive layouts, and collaborative development workflows through corporate IR/web page projects.",
+  "career.item1.desc": "Designed and validated cloud batch execution architecture, operational automation, and execution monitoring/log management for a project migrating an on-premises financial system to a Google Cloud-based environment.",
+  "career.item2.desc": "Operated Java-based applications and built system environments for a municipal health insurance system standardization project, handling Oracle Database queries and incident root-cause analysis, application log collection/analysis, batch (job) execution verification, account and permission management, and output report debugging as part of system operations and maintenance.",
+  "career.item3.desc": "Built HTML, CSS, and JavaScript-based UI for corporate IR/web page projects, applying responsive layouts and handling front-end publishing and maintenance, while gaining experience with Git-based version control and collaborative development workflows.",
 
   "skills.cloud.desc": "Working with both AWS and GCP to handle static hosting, serverless, and container-based batch execution structures.",
   "skills.devops.desc": "Designing operational workflows that turn infrastructure changes into code, from deployment and execution to log review.",
-  "skills.operation.desc": "Reviewing logs, databases, and batch execution results in production environments, and performing root-cause investigation and documentation.",
+  "skills.operation.desc": "Analyzing logs, databases, and console output in production environments to investigate root causes and document findings.",
   "skills.development.desc": "Understanding the connection between cloud infrastructure and applications, drawing on development experience.",
   "skills.tools.desc": "Experienced with a wide range of collaboration tools, enabling smooth teamwork and communication in any organization.",
 
@@ -41,7 +41,7 @@
   "cert.sysops.desc": "Cloud operations competency in monitoring, operations, incident response, automation, and security operations",
 
   "project.JCB.desc": "Organized the structure connecting JP1 batch execution to Cloud Run Jobs-based container batch processing, and documented the execution results, logging, and error-handling flow.",
-  "project.awsPortfolio.desc": "A personal portfolio project designed to run a vanilla HTML/CSS/JS portfolio on an S3 static website with CloudFront distribution.",
+  "project.awsPortfolio.desc": "A personal portfolio project designed to run an HTML/CSS/JS portfolio on an S3 static website with CloudFront distribution.",
   "project.oracleOps.desc": "Investigated the root causes of account, batch, and output errors using Oracle SQL, Linux access tools, and log review in a public-sector system standardization project.",
   "project.devopsLab.desc": "A personal learning project centered on Terraform, Docker, Kubernetes, and shell scripts, practicing and documenting cloud resource deployment and operations workflows.",
 
