@@ -20,7 +20,7 @@
   "about.desc": "한국에서 프론트엔드/웹 개발 경험을 쌓은 뒤 일본 IT 프로젝트에서 공공 시스템 운영과 금융권 클라우드 전환 업무를 경험했습니다. 현재는 클라우드 인프라, DevOps, 배치 플랫폼, 운영 자동화 역량을 중심으로 커리어를 확장하고 있습니다.",
   "about.positioning.1": "JP1 기반 배치 실행 구조를 Cloud Run Jobs 중심 구조로 전환하는 흐름 이해",
   "about.positioning.2": "AWS S3, CloudFront, Lambda, DynamoDB, EventBridge 기반 아키텍처 학습 및 포트폴리오화",
-  "about.positioning.3": "Oracle, SQL, Linux, 로그 확인, 장애 1차 조사 등 운영 기반 경험 보유",
+  "about.positioning.3": "Oracle, SQL, Linux, 로그 확인, 장애 조사 등 운영 기반 경험 보유",
   "about.positioning.4": "일본어/영어/한국어 커뮤니케이션이 가능한 글로벌 프로젝트 적응력",
 
   "career.desc": "클라우드 엔지니어링과 관련된 경험을 인프라, 운영, 클라우드 기술 중심으로 정리했습니다.",

@@ -20,7 +20,7 @@
   "about.desc": "After building frontend/web development experience in Korea, I worked on public system operations and financial-sector cloud migration in IT projects in Japan. I'm now expanding my career around cloud infrastructure, DevOps, batch platforms, and operational automation.",
   "about.positioning.1": "Understanding of migrating JP1-based batch execution structures to Cloud Run Jobs-centered architecture",
   "about.positioning.2": "Learned and built a portfolio around AWS S3, CloudFront, Lambda, DynamoDB, and EventBridge-based architecture",
-  "about.positioning.3": "Hands-on operations experience with Oracle, SQL, Linux, log review, and initial incident investigation",
+  "about.positioning.3": "Hands-on operations experience with Oracle, SQL, Linux, log review, and incident investigation",
   "about.positioning.4": "Adaptability to global projects with communication in Japanese, English, and Korean",
 
   "career.desc": "Experience related to cloud engineering, organized around infrastructure, operations, and cloud technologies.",
