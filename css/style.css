@@ -21,6 +21,8 @@
   --accent-weak: rgba(30, 79, 255, 0.1);
   --mark: #ffd84d;
   --mark-ink: #7a5b00;
+  --red: #e0342a;
+  --red-ink: #a8231b;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -135,6 +137,19 @@ select:focus-visible {
   text-align: left;
 }
 
+.section__header--row {
+  max-width: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.section__header--row > div {
+  max-width: 60ch;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -205,6 +220,18 @@ select:focus-visible {
   background: transparent;
   color: var(--ink);
   border-color: var(--line-strong);
+}
+
+.btn--accent {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+
+.btn--accent:hover {
+  background: var(--red-ink);
+  border-color: var(--red-ink);
+  transform: translate(-2px, -2px);
 }
 
 .btn--ghost:hover {
