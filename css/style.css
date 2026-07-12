@@ -318,10 +318,14 @@ select:focus-visible {
   position: relative;
   font-family: var(--font-mono);
   font-size: 1rem;
+  font-weight: 500;
   color: var(--ink-2);
-  padding: 6px 2px;
+  padding: 6px 10px;
+  border-radius: var(--radius-s);
   white-space: nowrap;
-  transition: color var(--dur) var(--ease);
+  transition:
+    color var(--dur) var(--ease),
+    background var(--dur) var(--ease);
 }
 
 .header__menu__item:hover {
@@ -330,14 +334,18 @@ select:focus-visible {
 
 .header__menu__item.active {
   color: var(--accent-ink);
+  font-weight: 600;
+  background: var(--accent-weak);
+  border: 1px solid rgba(30, 79, 255, 0.22);
+  padding: 5px 9px;
 }
 
 .header__menu__item.active::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
+  left: 9px;
+  right: 9px;
+  bottom: -3px;
   height: 2px;
   background: var(--accent);
 }
