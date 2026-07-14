@@ -40,7 +40,7 @@
   "cert.developer.desc": "Lambda, API, DynamoDB, 배포, 애플리케이션 연계 관점의 AWS 활용 역량",
   "cert.sysops.desc": "모니터링, 운영, 장애 대응, 자동화, 보안 운영 관점의 클라우드 운영 역량",
 
-  "project.JCB.desc": "레거시 메인프레임 배치·기간계(JENIUS) 시스템을 클라우드 네이티브 마이크로서비스 구조로 전환하는 JCB Digital Enablement Platform(JDEP) 이니셔티브의 일환으로, 기존 JP1 배치 실행 구조를 조사·검증하고 Cloud Run Jobs 기반 컨테이너 배치 아키텍처를 설계·구축했으며, 실행 결과·로그·에러 핸들링 흐름을 포함한 운영 체계를 수립했습니다.",
+  "project.JCB.desc": "레거시 JP1 배치 시스템을 Cloud Run Jobs 기반의 클라우드 네이티브 아키텍처로 전환하며, 배치 실행 구조와 운영 체계를 설계·구축했습니다.",
   "project.awsPortfolio.desc": "HTML/CSS/JS 포트폴리오를 S3 정적 웹사이트와 CloudFront 배포 구조로 운영할 수 있도록 설계한 개인 포트폴리오 프로젝트입니다.",
   "project.oracleOps.desc": "공공 시스템 표준화 프로젝트에서 Oracle SQL, Linux 접속 도구, 로그 확인을 통해 계정·배치·출력 오류의 원인을 조사했습니다.",
   "project.devopsLab.desc": "Terraform, Docker, Kubernetes, Shell Script를 중심으로 클라우드 리소스 배포와 운영 흐름을 실습하고 정리하는 개인 학습형 프로젝트입니다.",

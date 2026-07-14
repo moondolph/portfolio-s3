@@ -40,7 +40,7 @@
   "cert.developer.desc": "AWS development competency covering Lambda, APIs, DynamoDB, deployment, and application integration",
   "cert.sysops.desc": "Cloud operations competency in monitoring, operations, incident response, automation, and security operations",
 
-  "project.JCB.desc": "As part of JCB's Digital Enablement Platform (JDEP) initiative to modernize legacy mainframe batch and core systems (JENIUS) into a cloud-native, microservices-based architecture, investigated and validated the existing JP1 batch execution structure, then designed and built a Cloud Run Jobs-based container batch architecture, establishing the operational framework for execution results, logging, and error handling.",
+  "project.JCB.desc": "Migrated a legacy JP1 batch system to a cloud-native architecture based on Cloud Run Jobs, designing and building the batch execution structure and operational framework.",
   "project.awsPortfolio.desc": "A personal portfolio project designed to run an HTML/CSS/JS portfolio on an S3 static website with CloudFront distribution.",
   "project.oracleOps.desc": "Investigated the root causes of account, batch, and output errors using Oracle SQL, Linux access tools, and log review in a public-sector system standardization project.",
   "project.devopsLab.desc": "A personal learning project centered on Terraform, Docker, Kubernetes, and shell scripts, practicing and documenting cloud resource deployment and operations workflows.",
