@@ -40,7 +40,7 @@
   "cert.developer.desc": "Lambda、API、DynamoDB、デプロイ、アプリケーション連携の観点によるAWS活用スキル",
   "cert.sysops.desc": "モニタリング、運用、障害対応、自動化、セキュリティ運用の観点によるクラウド運用スキル",
 
-  "project.JCB.desc": "JP1バッチ実行をCloud Run Jobsベースのコンテナバッチへつなげる構造を整理し、実行結果・ログ・エラーハンドリングの流れをドキュメント化しました。",
+  "project.JCB.desc": "レガシーなメインフレームバッチおよび基幹システム(JENIUS)をクラウドネイティブなマイクロサービス構成へ刷新するJCB Digital Enablement Platform(JDEP)施策の一環として、既存のJP1バッチ実行構造を調査・検証し、Cloud Run Jobsベースのコンテナバッチアーキテクチャを設計・構築、実行結果・ログ・エラーハンドリングを含む運用体制を確立しました。",
   "project.awsPortfolio.desc": "HTML/CSS/JSポートフォリオを、S3の静的Webサイトとして運用しつつ CloudFrontで配信する構成に設計した個人ポートフォリオプロジェクトです。",
   "project.oracleOps.desc": "公共系システム標準化プロジェクトで、Oracle SQL、Linux接続ツール、ログ確認を通じてアカウント・バッチ・出力エラーの原因を調査しました。",
   "project.devopsLab.desc": "Terraform、Docker、Kubernetes、Shell Scriptを中心に、クラウドリソースのデプロイと運用フローを実践・整理した個人学習用プロジェクトです。",
