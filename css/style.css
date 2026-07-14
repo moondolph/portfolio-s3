@@ -924,6 +924,10 @@ select:focus-visible {
   background: linear-gradient(180deg, rgba(122, 91, 0, 0.1), transparent);
 }
 
+.project__visual--web {
+  background: linear-gradient(180deg, rgba(56, 189, 178, 0.12), transparent);
+}
+
 .project__metadata {
   padding: var(--space-5) var(--space-6);
 }

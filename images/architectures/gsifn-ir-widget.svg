@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">KOSPI IR stock info widget architecture</title>
+  <desc id="desc">KOSCOM supplies licensed market data to a widget hosted on Amazon EC2, deployed manually via VS Code Remote-SSH with no CI/CD. The widget, built with plain HTML, CSS, and JavaScript, is embedded via iframe on the investor-relations pages of KOSPI-listed enterprises including Samsung, Hyundai, SK, POSCO, and Celltrion.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#12243a"/></linearGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4285f4"/><stop offset="1" stop-color="#6ee7f9"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+
+  <rect width="1200" height="780" rx="34" fill="url(#bg)"/>
+  <text x="60" y="76" fill="#fff" font-family="Inter, Arial" font-size="32" font-weight="800">KOSPI IR Stock Info Widget</text>
+  <text x="60" y="106" fill="rgba(255,255,255,.66)" font-family="Inter, Arial" font-size="16">KOSCOM data + manual EC2 deploy → one HTML/CSS/JS widget → embedded via &lt;iframe&gt; on 5 enterprise IR sites</text>
+
+  <!-- Row labels -->
+  <g font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.5" fill="rgba(255,255,255,.4)">
+    <text x="60" y="168">DATA &amp; DEPLOY INPUTS</text>
+    <text x="60" y="338">WIDGET HOST — AMAZON EC2 (SHARED CODEBASE)</text>
+    <text x="60" y="508">CLIENT IR SITES — KOSPI-LISTED ENTERPRISES</text>
+  </g>
+
+  <!-- Row 1: inputs -->
+  <rect x="40" y="150" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="18" filter="url(#shadow)">
+    <rect x="280" y="180" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="300" y="218" fill="#fff">KOSCOM Market Data</text><text x="300" y="242" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Licensed price / financials / disclosures</text>
+
+    <rect x="640" y="180" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="660" y="218" fill="#fff">VS Code — Remote-SSH</text><text x="660" y="242" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Direct edit on the EC2 host</text>
+  </g>
+
+  <!-- Row 2: hub -->
+  <rect x="40" y="320" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="19" filter="url(#shadow)">
+    <rect x="370" y="350" width="460" height="90" rx="16" fill="url(#hub)"/>
+    <text x="600" y="390" fill="#06121f" text-anchor="middle">Amazon EC2 — Widget Host</text>
+    <text x="600" y="414" fill="#06121f" font-size="13" font-weight="600" text-anchor="middle">HTML + CSS + JS · one codebase, no CI/CD</text>
+  </g>
+
+  <!-- Row 3: clients -->
+  <rect x="40" y="490" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="16" text-anchor="middle" filter="url(#shadow)">
+    <rect x="110" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="200" y="566" fill="#fff">Samsung</text>
+
+    <rect x="310" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="400" y="566" fill="#fff">Hyundai</text>
+
+    <rect x="510" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="600" y="566" fill="#fff">SK</text>
+
+    <rect x="710" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="800" y="566" fill="#fff">POSCO</text>
+
+    <rect x="910" y="520" width="180" height="80" rx="14" fill="url(#hub)"/>
+    <text x="1000" y="566" fill="#06121f">Celltrion</text>
+  </g>
+
+  <!-- Arrows: inputs -> hub -->
+  <g stroke="#8ab4ff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 270V350"/>
+  </g>
+  <g stroke="#ffbd7a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8">
+    <path d="M780 270V350"/>
+  </g>
+
+  <!-- Arrows: hub -> clients (fan out) -->
+  <g stroke="#8ab4ff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+    <path d="M420 440L200 520"/>
+    <path d="M510 440L400 520"/>
+    <path d="M600 440V520"/>
+    <path d="M690 440L800 520"/>
+    <path d="M780 440L1000 520"/>
+  </g>
+
+  <g font-family="Inter, Arial" font-size="14" font-weight="700">
+    <text x="440" y="315" fill="#8ab4ff">market data</text>
+    <text x="800" y="315" fill="#ffbd7a">manual deploy</text>
+    <text x="600" y="480" fill="#8ab4ff" text-anchor="middle">embed via &lt;iframe&gt;</text>
+  </g>
+
+  <rect x="60" y="660" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+  <text x="90" y="690" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">Design reality: one shared HTML/CSS/JS widget served from a single EC2 host, embedded live across five</text>
+  <text x="90" y="713" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">KOSPI-listed enterprise IR sites — deployed and operated by hand, with no CI/CD in place.</text>
+</svg>

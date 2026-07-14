@@ -43,7 +43,7 @@
   "project.JCB.desc": "Migrated a legacy JP1 batch system to a cloud-native architecture based on Cloud Run Jobs, designing and building the batch execution structure and operational framework.",
   "project.awsPortfolio.desc": "A personal portfolio project designed to run an HTML/CSS/JS portfolio on an S3 static website with CloudFront distribution.",
   "project.oracleOps.desc": "Investigated the root causes of account, batch, and output errors using Oracle SQL, Linux access tools, and log review in a public-sector system standardization project.",
-  "project.devopsLab.desc": "A personal learning project centered on Terraform, Docker, Kubernetes, and shell scripts, practicing and documenting cloud resource deployment and operations workflows.",
+  "project.gsifnWidget.desc": "At GSIFN, owned the full lifecycle — planning, development, deployment, operations, and maintenance — of a stock price, financial, and disclosure widget embedded via iframe on the IR pages of major KOSPI-listed enterprises including Samsung, Hyundai, SK, POSCO, and Celltrion, over a year and a half.",
 
   "contact.title": "Value starts with solving problems.\nLet's build better value, together.",
   "contact.subtitle": "Driving real change through the cloud."

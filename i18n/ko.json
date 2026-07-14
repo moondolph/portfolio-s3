@@ -43,7 +43,7 @@
   "project.JCB.desc": "레거시 JP1 배치 시스템을 Cloud Run Jobs 기반의 클라우드 네이티브 아키텍처로 전환하며, 배치 실행 구조와 운영 체계를 설계·구축했습니다.",
   "project.awsPortfolio.desc": "HTML/CSS/JS 포트폴리오를 S3 정적 웹사이트와 CloudFront 배포 구조로 운영할 수 있도록 설계한 개인 포트폴리오 프로젝트입니다.",
   "project.oracleOps.desc": "공공 시스템 표준화 프로젝트에서 Oracle SQL, Linux 접속 도구, 로그 확인을 통해 계정·배치·출력 오류의 원인을 조사했습니다.",
-  "project.devopsLab.desc": "Terraform, Docker, Kubernetes, Shell Script를 중심으로 클라우드 리소스 배포와 운영 흐름을 실습하고 정리하는 개인 학습형 프로젝트입니다.",
+  "project.gsifnWidget.desc": "삼성, 현대, SK, POSCO, 셀트리온 등 국내 주요 코스피 상장사의 IR 페이지에 iframe으로 삽입되는 주가·재무·공시 정보 위젯을 GSIFN에서 1년 반 동안 기획부터 개발, 배포, 운영, 유지보수까지 전담했습니다.",
 
   "contact.title": "가치는 문제 해결에서 시작됩니다.\n함께 더 나은 가치를 만들어갑니다.",
   "contact.subtitle": "클라우드로 실질적인 변화를 만듭니다."
