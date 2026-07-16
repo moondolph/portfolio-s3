@@ -3,10 +3,9 @@
 import { resolveLang, applyI18n } from "./i18n.js";
 import { startTypeit } from "./type.js";
 import { initHeader } from "./features/header.js";
-import { initArrowUp, initHomeFade } from "./features/scroll_fade.js";
+import { initArrowUp } from "./features/scroll_fade.js";
 
 initHeader();
-initHomeFade();
 initArrowUp();
 
 const select = document.getElementById("langSelect");
