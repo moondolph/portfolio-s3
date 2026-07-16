@@ -1,31 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">Public system operation support architecture</title>
-  <desc id="desc">Operator uses tools to inspect logs, application server, Oracle database, and batch output.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">Japan National Health Insurance system: operations and root cause analysis workflow</title>
+  <desc id="desc">A nationwide health insurance standardization system runs batch processing and instant-output jobs on Linux hosts. An SI/Ops engineer queries the Oracle Database via SQL and reviews system and batch logs to trace account, batch, and output errors to their root cause, then collaborates with the development team to stabilize and ship fixes, which flow back into the nationwide-deployed system.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#06272b"/></linearGradient>
-    <linearGradient id="ops" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
-    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#12243a"/></linearGradient>
+    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4285f4"/><stop offset="1" stop-color="#6ee7f9"/></linearGradient>
+    <linearGradient id="me" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#86efac"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".35"/></filter>
   </defs>
-  <rect width="1200" height="720" rx="34" fill="url(#bg)"/>
-  <text x="60" y="82" fill="#fff" font-family="Inter, Arial" font-size="34" font-weight="800">Oracle / Linux Operation Support</text>
-  <text x="60" y="120" fill="rgba(255,255,255,.68)" font-family="Inter, Arial" font-size="18">Logs → SQL investigation → batch/account/output issue triage</text>
-  <g font-family="Inter, Arial" font-weight="700" font-size="20" text-anchor="middle" filter="url(#shadow)">
-    <rect x="70" y="292" width="190" height="96" rx="18" fill="url(#ops)"/>
-    <text x="165" y="334" fill="#031316">Engineer</text><text x="165" y="363" fill="#031316" font-size="14">Initial investigation</text>
-    <rect x="330" y="200" width="190" height="92" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="425" y="238" fill="#fff">TeraTerm</text><text x="425" y="266" fill="rgba(255,255,255,.6)" font-size="14">Linux access</text>
-    <rect x="330" y="388" width="190" height="92" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="425" y="426" fill="#fff">SQL Tools</text><text x="425" y="454" fill="rgba(255,255,255,.6)" font-size="14">Oracle check</text>
-    <rect x="600" y="200" width="210" height="92" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="705" y="238" fill="#fff">App / Batch Server</text><text x="705" y="266" fill="rgba(255,255,255,.6)" font-size="14">logs / status</text>
-    <rect x="600" y="388" width="210" height="92" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="705" y="426" fill="#fff">Oracle DB</text><text x="705" y="454" fill="rgba(255,255,255,.6)" font-size="14">tables / sequences</text>
-    <rect x="900" y="292" width="220" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="1010" y="334" fill="#fff">Report / Escalate</text><text x="1010" y="363" fill="rgba(255,255,255,.6)" font-size="14">root cause notes</text>
+
+  <rect width="1200" height="780" rx="34" fill="url(#bg)"/>
+  <text x="60" y="76" fill="#fff" font-family="Inter, Arial" font-size="30" font-weight="800">National Health Insurance System — Ops &amp; RCA</text>
+  <text x="60" y="106" fill="rgba(255,255,255,.66)" font-family="Inter, Arial" font-size="16">SQL + log analysis → root cause → dev collaboration → fix redeployed nationwide</text>
+
+  <!-- Row labels -->
+  <g font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.5" fill="rgba(255,255,255,.4)">
+    <text x="60" y="168">SYSTEM — NATIONWIDE HEALTH INSURANCE PLATFORM</text>
+    <text x="60" y="338">DATA &amp; LOG SOURCES</text>
+    <text x="60" y="508">ROOT CAUSE &amp; STABILIZATION</text>
   </g>
-  <g stroke="#67e8f9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M260 330C300 280 300 246 330 246"/><path d="M260 350C300 400 300 434 330 434"/><path d="M520 246H600"/><path d="M520 434H600"/><path d="M810 246C870 260 880 320 900 330"/><path d="M810 434C870 420 880 360 900 350"/>
+
+  <!-- Row 1: system -->
+  <rect x="40" y="150" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="19" filter="url(#shadow)">
+    <rect x="310" y="180" width="580" height="90" rx="16" fill="url(#hub)"/>
+    <text x="600" y="220" fill="#06121f" text-anchor="middle">Municipal Health Insurance System</text>
+    <text x="600" y="244" fill="#06121f" font-size="13" font-weight="600" text-anchor="middle">Batch processing + instant output · Linux hosts · deployed nationwide (RKKCS)</text>
   </g>
-  <rect x="60" y="585" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
-  <text x="90" y="628" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="18">Design focus: production-like investigation workflow, SQL-based evidence gathering, and clear handoff documentation.</text>
+
+  <!-- Row 2: data & logs -->
+  <rect x="40" y="320" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="18" filter="url(#shadow)">
+    <rect x="280" y="350" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="300" y="388" fill="#fff">Oracle Database</text><text x="300" y="412" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">SQL queries · data verification</text>
+
+    <rect x="640" y="350" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="660" y="388" fill="#fff">System &amp; Batch Logs</text><text x="660" y="412" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Account / batch / output errors</text>
+  </g>
+
+  <!-- Row 3: ops -->
+  <rect x="40" y="490" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
+  <g font-family="Inter, Arial" font-weight="700" font-size="18" filter="url(#shadow)">
+    <rect x="280" y="520" width="280" height="90" rx="16" fill="url(#me)"/>
+    <text x="300" y="558" fill="#06121f">SI/Ops Engineer (me)</text><text x="300" y="582" fill="#06121f" font-size="13" font-weight="600">Root cause analysis</text>
+
+    <rect x="640" y="520" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
+    <text x="660" y="558" fill="#fff">Development Team</text><text x="660" y="582" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Stabilization &amp; fixes</text>
+  </g>
+
+  <!-- Arrows: system -> data/logs -->
+  <g stroke="#8ab4ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 270L420 350"/>
+    <path d="M780 270L780 350"/>
+  </g>
+
+  <!-- Arrows: data/logs -> me (converging) -->
+  <g stroke="#8ab4ff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+    <path d="M420 440L380 520"/>
+    <path d="M780 440L460 520"/>
+  </g>
+
+  <!-- Arrow: me -> dev team -->
+  <g stroke="#86efac" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M560 565H640"/>
+  </g>
+
+  <!-- Feedback loop: dev team -> system (routed around the right side) -->
+  <g stroke="#ffbd7a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8">
+    <path d="M920 565H1080V225H890"/>
+  </g>
+
+  <g font-family="Inter, Arial" font-size="14" font-weight="700">
+    <text x="440" y="315" fill="#8ab4ff">verify</text>
+    <text x="700" y="315" fill="#8ab4ff">investigate</text>
+    <text x="600" y="558" fill="#86efac" text-anchor="middle">escalate</text>
+    <text x="1090" y="400" fill="#ffbd7a">fix &amp;</text>
+    <text x="1090" y="418" fill="#ffbd7a">stabilize</text>
+  </g>
+
+  <rect x="60" y="660" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+  <text x="90" y="690" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">Design reality: one standardized platform, deployed nationwide, means every SQL check and log read carries</text>
+  <text x="90" y="713" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">municipality-wide impact — root cause first, then stabilize together with the dev team.</text>
 </svg>

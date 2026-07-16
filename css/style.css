@@ -502,7 +502,6 @@ select:focus-visible {
 .hero__avatar {
   width: 100%;
   max-width: 240px;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius-m);
   border: 1px solid var(--line-strong);
