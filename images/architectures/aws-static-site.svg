@@ -1,14 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">AWS static portfolio hosting architecture</title>
-  <desc id="desc">GitHub repository is deployed to S3 and delivered through CloudFront with Route 53 and ACM.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">AWS static portfolio hosting and serverless visitor counter architecture</title>
+  <desc id="desc">GitHub repository is deployed to S3 and delivered through CloudFront with Route 53 and ACM. On each page load the browser also calls an API Gateway endpoint backed by a Lambda function, which reads and writes daily and total visit counts in DynamoDB.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#2a1803"/></linearGradient>
     <linearGradient id="aws" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff9900"/><stop offset="1" stop-color="#ffd166"/></linearGradient>
     <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/></filter>
   </defs>
-  <rect width="1200" height="720" rx="34" fill="url(#bg)"/>
-  <text x="60" y="82" fill="#fff" font-family="Inter, Arial" font-size="34" font-weight="800">AWS Static Portfolio Hosting</text>
-  <text x="60" y="120" fill="rgba(255,255,255,.68)" font-family="Inter, Arial" font-size="18">GitHub → S3 → CloudFront → Route 53 / ACM</text>
+  <rect width="1200" height="860" rx="34" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#fff" font-family="Inter, Arial" font-size="30" font-weight="800">AWS Static Portfolio Hosting + Serverless Visitor Counter</text>
+  <text x="60" y="120" fill="rgba(255,255,255,.68)" font-family="Inter, Arial" font-size="16">GitHub → S3 → CloudFront → Route 53 / ACM → User &#160;&#160;|&#160;&#160; User → API Gateway → Lambda → DynamoDB</text>
+
+  <!-- Row labels -->
+  <g font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.5" fill="rgba(255,255,255,.4)">
+    <text x="60" y="178">STATIC HOSTING</text>
+    <text x="60" y="545">SERVERLESS — VISITOR COUNTER API</text>
+  </g>
+
+  <!-- Row 1: static hosting -->
   <g font-family="Inter, Arial" font-weight="700" font-size="20" text-anchor="middle" filter="url(#shadow)">
     <rect x="80" y="292" width="170" height="96" rx="18" fill="#111827" stroke="rgba(255,255,255,.18)"/>
     <text x="165" y="334" fill="#fff">GitHub</text><text x="165" y="363" fill="rgba(255,255,255,.6)" font-size="14">Source code</text>
@@ -26,6 +34,28 @@
   <g stroke="#ffbd4a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M250 340H320"/><path d="M490 340H560"/><path d="M750 340H1060"/><path d="M750 320C790 290 790 258 820 258"/><path d="M750 360C790 390 790 423 820 423"/>
   </g>
-  <rect x="60" y="585" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
-  <text x="90" y="628" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="18">Design focus: low-cost static hosting, CDN delivery, HTTPS, custom domain, and simple deployment workflow.</text>
+
+  <!-- Row 2: serverless visitor counter -->
+  <g font-family="Inter, Arial" font-weight="700" font-size="19" text-anchor="middle" filter="url(#shadow)">
+    <rect x="200" y="560" width="190" height="96" rx="18" fill="url(#aws)"/>
+    <text x="295" y="600" fill="#1f1300">API Gateway</text><text x="295" y="628" fill="#1f1300" font-size="13" font-weight="500">GET /visit</text>
+    <rect x="460" y="560" width="170" height="96" rx="18" fill="url(#aws)"/>
+    <text x="545" y="600" fill="#1f1300">Lambda</text><text x="545" y="628" fill="#1f1300" font-size="13" font-weight="500">Node.js 22.x</text>
+    <rect x="700" y="560" width="190" height="96" rx="18" fill="url(#aws)"/>
+    <text x="795" y="600" fill="#1f1300">DynamoDB</text><text x="795" y="628" fill="#1f1300" font-size="13" font-weight="500">today / total visits</text>
+  </g>
+  <g stroke="#ffbd4a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M390 608H460"/><path d="M630 608H700"/>
+  </g>
+
+  <!-- User -> API Gateway trigger path -->
+  <g stroke="#ffbd7a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8">
+    <path d="M1105 388V470H295V560"/>
+  </g>
+  <text x="330" y="465" fill="#ffbd7a" font-family="Inter, Arial" font-size="14" font-weight="700">GET /visit on page load</text>
+  <text x="795" y="682" fill="rgba(255,255,255,.6)" font-family="Inter, Arial" font-size="13" text-anchor="middle">→ returns {today, total} JSON, rendered back to User</text>
+
+  <rect x="60" y="780" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
+  <text x="90" y="806" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">Design focus: low-cost static hosting, CDN delivery, HTTPS, custom domain, and simple deployment workflow.</text>
+  <text x="90" y="829" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">Visitor counter: API Gateway + Lambda + DynamoDB, called from the client on every page load.</text>
 </svg>
