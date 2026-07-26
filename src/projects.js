@@ -1,17 +1,17 @@
 "use strict";
 
-const categories = document.querySelector(".categories");
-const projects = document.querySelectorAll(".project");
-const projectsContainer = document.querySelector(".projects");
+export function initProjectFilter() {
+  const categories = document.querySelector(".categories");
+  const projectsContainer = document.querySelector(".projects");
+  if (!categories || !projectsContainer) return;
 
-if (categories && projectsContainer) {
   categories.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) return;
 
     const filter = button.dataset.category;
     handleActiveSelection(button);
-    filterProjects(filter);
+    filterProjects(filter, projectsContainer);
   });
 }
 
@@ -21,13 +21,14 @@ function handleActiveSelection(target) {
   target.classList.add("category--selected");
 }
 
-function filterProjects(filter) {
-  projectsContainer?.classList.add("anim-out");
+function filterProjects(filter, projectsContainer) {
+  const projects = projectsContainer.querySelectorAll(".project");
+  projectsContainer.classList.add("anim-out");
 
   setTimeout(() => {
     projects.forEach((project) => {
       project.hidden = !(filter === "all" || filter === project.dataset.type);
     });
-    projectsContainer?.classList.remove("anim-out");
+    projectsContainer.classList.remove("anim-out");
   }, 160);
 }

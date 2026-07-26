@@ -1,4 +1,4 @@
-const sectionIds = ["#home", "#about", "#career", "#skills", "#certificates", "#projects", "#contact"];
+const sectionIds = ["#home", "#about", "#career", "#skills", "#projects", "#certificates", "#contact"];
 const sections = sectionIds.map((id) => document.querySelector(id)).filter(Boolean);
 const navItems = sectionIds.map((id) => document.querySelector(`.header__menu [href="${id}"]`));
 let activeNavItem = null;

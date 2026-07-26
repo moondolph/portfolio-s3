@@ -1,4 +1,6 @@
 // src/i18n.js
+import { SITE } from "./data.js";
+
 const SUPPORTED = ["en", "ja", "ko"];
 const DEFAULT_LANG = "ko";
 
@@ -24,7 +26,7 @@ export function resolveLang() {
   return getLangFromQuery() || getLangFromStorage() || getLangFromNavigator() || DEFAULT_LANG;
 }
 
-async function loadDict(lang) {
+export async function loadDict(lang) {
   const res = await fetch(`./i18n/${lang}.json`, { cache: "no-store" });
   if (!res.ok) throw new Error("i18n load failed");
   return res.json();
@@ -89,6 +91,21 @@ function applyMeta(translations, lang) {
 
   const ogImage = document.querySelector('meta[property="og:image"]');
   if (ogImage && translations["og.image"]) ogImage.setAttribute("content", translations["og.image"]);
+
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute("content", SITE.url);
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", SITE.url);
+
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twitterTitle && translations["og.title"]) twitterTitle.setAttribute("content", translations["og.title"]);
+
+  const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twitterDesc && translations["site.description"]) twitterDesc.setAttribute("content", translations["site.description"]);
+
+  const twitterImage = document.querySelector('meta[name="twitter:image"]');
+  if (twitterImage) twitterImage.setAttribute("content", SITE.ogImage);
 }
 
 export async function applyI18n(lang) {
