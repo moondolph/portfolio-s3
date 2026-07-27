@@ -651,7 +651,20 @@ select:focus-visible {
 .offduty__list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-4);
+}
+
+.offduty__list li {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  background: var(--paper-raised);
+  padding: var(--space-4);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.offduty__list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 0 var(--line-strong);
 }
 
 .offduty__title {
