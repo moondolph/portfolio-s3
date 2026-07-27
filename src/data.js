@@ -20,7 +20,7 @@ export const EXPERIENCE = [
     titleKey: "career.pci.title",
     metaKey: "career.pci.meta",
     descKey: "career.pci.desc",
-    tags: ["GCP", "JP1", "Shell Script", "Cloud Run Jobs", "Docker", "GCS", "Terraform", "CI/CD", "GitLab"],
+    tags: ["GCP", "JP1/AJS3", "Shell Script", "Cloud Run Jobs", "Docker", "GCS", "Terraform", "CI/CD", "GitLab"],
   },
   {
     id: "cal",
@@ -38,7 +38,7 @@ export const EXPERIENCE = [
     titleKey: "career.gsifn.title",
     metaKey: "career.gsifn.meta",
     descKey: "career.gsifn.desc",
-    tags: ["HTML", "CSS", "JavaScript", "PHP", "XML/JSON", "Git", "EC2", "Responsive UI"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "XML/JSON", "EC2", "Responsive UI"],
   },
 ];
 
@@ -79,7 +79,7 @@ export const SKILLS = [
     id: "opsCollab",
     icon: "fa-solid fa-terminal",
     descKey: "skills.opsCollab.desc",
-    tags: ["Linux", "JP1", "Oracle", "Cloud Logging", "Jira", "Confluence", "Git", "Troubleshooting"],
+    tags: ["Linux", "JP1/AJS3", "Oracle", "Cloud Logging", "Jira", "Confluence", "Trello", "Git", "Troubleshooting"],
   },
 ];
 
@@ -95,16 +95,19 @@ export const CERTS = [
 // Planned projects must never show fabricated results/links — only summary + intended stack.
 export const PROJECTS = [
   {
-    id: "aiJobAssistant",
+    id: "hardcoreEnglish",
     category: "ai",
-    status: "planned",
+    status: "inProgress",
     visibility: "public",
     featured: true,
-    titleKey: "project.aiJobAssistant.title",
-    subtitleKey: "project.aiJobAssistant.subtitle",
-    summaryKey: "project.aiJobAssistant.summary",
-    techStack: ["React / Next.js", "Python", "FastAPI", "LLM API", "RAG", "PostgreSQL / Vector DB", "Docker", "CI/CD", "AWS / GCP"],
-    visual: { variant: "ai", chips: ["Job Posting", "→", "LLM + RAG", "→", "Cover Letter / Q&A"] },
+    titleKey: "project.hardcoreEnglish.title",
+    subtitleKey: "project.hardcoreEnglish.subtitle",
+    problemKey: "project.hardcoreEnglish.problem",
+    roleKey: "project.hardcoreEnglish.role",
+    solutionKey: "project.hardcoreEnglish.solution",
+    resultsKey: null,
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Claude API", "Node.js API Routes"],
+    visual: { variant: "ai", chips: ["15s Timer", "→", "Claude API", "→", "Correction Report"] },
     githubUrl: null,
     liveUrl: null,
     architectureUrl: null,
@@ -121,8 +124,8 @@ export const PROJECTS = [
     roleKey: "project.jcb.role",
     solutionKey: "project.jcb.solution",
     resultsKey: "project.jcb.results",
-    techStack: ["GCP", "Cloud Run Jobs", "Docker", "GCS", "Terraform", "GitLab", "CI/CD", "JP1", "Shell Script", "Cloud Logging"],
-    visual: { variant: "gcp", chips: ["JP1", "→", "Cloud Run Jobs", "→", "Docker"] },
+    techStack: ["GCP", "Cloud Run Jobs", "Docker", "GCS", "Terraform", "GitLab", "CI/CD", "JP1/AJS3", "Shell Script", "Cloud Logging"],
+    visual: { variant: "gcp", chips: ["JP1/AJS3", "→", "Cloud Run Jobs", "→", "Docker"] },
     githubUrl: "https://github.com/moondolph/jcb-cloud-batch-migration",
     liveUrl: null,
     architectureUrl: "images/architectures/cloud-run-batch.svg",

@@ -89,6 +89,9 @@ function renderProjectBody(project) {
       <div class="project__field-label" data-i18n="project.label.stack"></div>
       <div class="capability__tags">${project.techStack.map((t) => `<span class="tag">${t}</span>`).join("")}</div>`;
   }
+  const resultRow = project.resultsKey
+    ? `<dt data-i18n="project.label.result"></dt><dd data-i18n="${project.resultsKey}"></dd>`
+    : `<dt data-i18n="project.label.result"></dt><dd class="project__pending-note" data-i18n="project.label.inProgressNote"></dd>`;
   return `
       <dl class="project__facts">
         <dt data-i18n="project.label.problem"></dt>
@@ -97,8 +100,7 @@ function renderProjectBody(project) {
         <dd data-i18n="${project.roleKey}"></dd>
         <dt data-i18n="project.label.solution"></dt>
         <dd data-i18n="${project.solutionKey}"></dd>
-        <dt data-i18n="project.label.result"></dt>
-        <dd data-i18n="${project.resultsKey}"></dd>
+        ${resultRow}
       </dl>
       <div class="project__field-label" data-i18n="project.label.stack"></div>
       <div class="capability__tags">${project.techStack.map((t) => `<span class="tag">${t}</span>`).join("")}</div>`;

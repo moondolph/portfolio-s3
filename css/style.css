@@ -1030,7 +1030,8 @@ select:focus-visible {
   border: 1px solid var(--line-strong);
 }
 
-.badge--planned {
+.badge--planned,
+.badge--inProgress {
   color: var(--mark-ink);
   border-color: rgba(122, 91, 0, 0.3);
   background: rgba(255, 216, 77, 0.2);
@@ -1087,6 +1088,11 @@ select:focus-visible {
   font-size: 0.78rem;
   color: var(--ink-3);
   margin: 0 0 var(--space-4);
+}
+
+.project__pending-note {
+  font-style: italic;
+  color: var(--ink-3) !important;
 }
 
 .project__actions {
