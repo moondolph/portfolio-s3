@@ -27,6 +27,7 @@
   "about.deploy.desc": "Experience deploying static hosting, serverless, and container-based batch workloads on AWS and GCP",
   "about.operate.desc": "Experience with log analysis, monitoring, and incident response using Linux, Oracle SQL, and Cloud Logging",
   "about.automate.desc": "Building Terraform-based IaC and CI/CD pipelines, and expanding into AI-driven development and operations automation",
+  "about.offDuty.items": "Reading · Weight training · Walking · Singing · Shipping one MVP a day",
 
   "career.sectionTitle": "Experience Timeline",
   "career.desc": "A progression from service development through system operations and cloud migration, growing into an engineer who covers the full engineering lifecycle.",

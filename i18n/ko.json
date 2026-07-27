@@ -27,6 +27,7 @@
   "about.deploy.desc": "AWS와 GCP 기반의 정적 호스팅, 서버리스, 컨테이너 배치 배포 경험",
   "about.operate.desc": "Linux, Oracle SQL, Cloud Logging 기반의 로그 분석, 모니터링 및 장애 대응 경험",
   "about.automate.desc": "Terraform 기반 IaC와 CI/CD 파이프라인 구축, AI를 활용한 개발 및 운영 자동화 역량 확장 중",
+  "about.offDuty.items": "독서 · 웨이트트레이닝 · 산책 · 노래 · 하루 1개 MVP 제작",
 
   "career.sectionTitle": "Experience Timeline",
   "career.desc": "서비스 개발에서 시작해 시스템 운영과 클라우드 전환을 거쳐, 전체 라이프사이클을 다루는 엔지니어로 성장해온 과정입니다.",

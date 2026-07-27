@@ -178,7 +178,7 @@ export const PROJECTS = [
     roleKey: "project.gsifnWidget.role",
     solutionKey: "project.gsifnWidget.solution",
     resultsKey: "project.gsifnWidget.results",
-    techStack: ["HTML5", "CSS3", "JavaScript", "Amazon EC2", "SSH"],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Amazon EC2", "SSH", "PHP"],
     visual: { variant: "web", chips: ["KOSCOM", "→", "EC2 Widget", "→", "5 IR Sites"] },
     githubUrl: "https://github.com/moondolph/gsifn-ir-stock-widget",
     liveUrl: "https://www.celltrion.com/ko-kr/investment/stock-info",
