@@ -98,10 +98,10 @@
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",
   "project.gsifnWidget.subtitle": "GSIFN · Financial Frontend · Live",
-  "project.gsifnWidget.problem": "Major KOSPI-listed companies including Samsung, Hyundai, SK, POSCO, and Celltrion needed a reliable widget to display stock, financial, and disclosure data on their IR pages.",
+  "project.gsifnWidget.problem": "Major KOSPI-listed companies including Samsung, Hyundai, SK, POSCO, and Celltrion needed a renewed widget to reliably display stock, financial, and disclosure data on their IR pages.",
   "project.gsifnWidget.role": "Owned the full lifecycle — planning, development, deployment, operations, and maintenance — of the iframe-embedded widget.",
   "project.gsifnWidget.solution": "Implemented the widget UI with HTML/CSS/JavaScript and managed the deployment and operating environment on Amazon EC2 via SSH.",
-  "project.gsifnWidget.results": "Ran the widget reliably across five or more listed companies' IR sites, with ongoing maintenance.",
+  "project.gsifnWidget.results": "Ran the widget reliably across roughly 100 listed companies' IR sites, with ongoing maintenance.",
 
   "cert.sectionTitle": "AWS Certifications",
   "cert.sysops.name": "AWS Certified CloudOps Engineer - Associate",

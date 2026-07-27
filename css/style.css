@@ -939,6 +939,8 @@ select:focus-visible {
 
 .project {
   position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-m);
   overflow: hidden;
   border: 1px solid var(--line-strong);
@@ -999,6 +1001,9 @@ select:focus-visible {
 }
 
 .project__metadata {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: var(--space-5) var(--space-6);
 }
 
@@ -1021,6 +1026,11 @@ select:focus-visible {
   font-size: 0.9rem;
   line-height: 1.65;
   margin-bottom: var(--space-4);
+  min-height: calc(1.65em * 2);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .badge {
@@ -1073,6 +1083,11 @@ select:focus-visible {
   color: var(--ink-2);
   font-size: 0.9rem;
   line-height: 1.6;
+  min-height: calc(1.6em * 2);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .project__field-label {

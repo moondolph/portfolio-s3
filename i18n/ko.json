@@ -98,10 +98,10 @@
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",
   "project.gsifnWidget.subtitle": "GSIFN · Financial Frontend · Live",
-  "project.gsifnWidget.problem": "삼성, 현대, SK, POSCO, 셀트리온 등 주요 코스피 상장사의 IR 페이지에 주가·재무·공시 정보를 안정적으로 노출할 위젯이 필요했습니다.",
+  "project.gsifnWidget.problem": "삼성, 현대, SK, POSCO, 셀트리온 등 주요 코스피 상장사의 IR 페이지에 주가·재무·공시 정보를 안정적으로 노출할 위젯의 리뉴얼이 필요했습니다.",
   "project.gsifnWidget.role": "iframe 형태로 삽입되는 위젯의 기획부터 개발, 배포, 운영, 유지보수까지 전담했습니다.",
   "project.gsifnWidget.solution": "HTML/CSS/JavaScript로 위젯 UI를 구현하고, Amazon EC2와 SSH를 활용해 배포 및 운영 환경을 관리했습니다.",
-  "project.gsifnWidget.results": "5개 이상의 상장사 IR 사이트에 위젯을 안정적으로 운영하며 지속적인 유지보수를 수행했습니다.",
+  "project.gsifnWidget.results": "약 100개의 상장사 IR 사이트에 위젯을 안정적으로 운영하며 지속적인 유지보수를 수행했습니다.",
 
   "cert.sectionTitle": "AWS Certifications",
   "cert.sysops.name": "AWS Certified CloudOps Engineer - Associate",
