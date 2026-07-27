@@ -71,15 +71,15 @@
 
   "project.hardcoreEnglish.title": "Hardcore English Conversation Trainer",
   "project.hardcoreEnglish.subtitle": "AI · 개인 프로젝트",
-  "project.hardcoreEnglish.problem": "영어 실력을 늘리려면 실전처럼 압박감 있는 회화 연습이 필요했지만, 시중 앱들은 시간 제약 없이 편하게 답하는 방식이라 실전 감각을 기르기 어려웠습니다.",
-  "project.hardcoreEnglish.role": "Next.js 기반 프론트엔드와 API Routes 백엔드를 직접 설계하고, Claude API를 연동해 실시간 대화 생성과 발화 교정 리포트 기능을 구현하고 있습니다.",
-  "project.hardcoreEnglish.solution": "15초 제한시간 안에 답해야 하는 바리스타 캐릭터와의 실시간 대화(Claude Haiku)를 구현하고, 세션 종료 후 발화 교정과 총평을 생성하는 리포트(Claude Sonnet)를 별도 모델로 분리해 응답 속도와 분석 품질을 모두 확보했습니다.",
+  "project.hardcoreEnglish.problem": "시중 영어 앱은 시간 제약이 없어, 실전 같은 압박감 속에서 회화 감각을 기르기 어렵습니다.",
+  "project.hardcoreEnglish.role": "Next.js 프론트엔드와 API Routes 백엔드를 설계하고, Claude API로 실시간 대화와 교정 리포트를 구현 중입니다.",
+  "project.hardcoreEnglish.solution": "15초 제한 대화(Claude Haiku)와 세션 후 교정 리포트(Claude Sonnet)를 분리해 속도와 품질을 모두 확보했습니다.",
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",
   "project.jcb.problem": "레거시 JP1/AJS3 배치 시스템을 유지보수하며 운영 부담과 확장성 제약이 커지고 있었습니다.",
   "project.jcb.role": "Cloud Run Jobs 기반 배치 실행 구조 검토, Wrapper Shell 설계, 실행 파라미터 전달 및 구조화 로그 설계를 담당했습니다.",
-  "project.jcb.solution": "JP1/AJS3 배치를 Cloud Run Jobs로 전환하며 Docker 컨테이너화, Terraform 기반 인프라 코드화, GitLab CI/CD 파이프라인을 구축했습니다.",
+  "project.jcb.solution": "JP1/AJS3를 Cloud Run Jobs로 전환하며 Docker화, Terraform IaC, GitLab CI/CD를 구축했습니다.",
   "project.jcb.results": "배치 실행 구조와 운영 자동화 체계를 문서화하여, 전환 이후에도 안정적으로 운영할 수 있는 기반을 마련했습니다.",
 
   "project.awsPortfolio.title": "Cloud Engineer Portfolio on AWS",
@@ -98,7 +98,7 @@
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",
   "project.gsifnWidget.subtitle": "GSIFN · Financial Frontend · Live",
-  "project.gsifnWidget.problem": "삼성, 현대, SK, POSCO, 셀트리온 등 주요 코스피 상장사의 IR 페이지에 주가·재무·공시 정보를 안정적으로 노출할 위젯의 리뉴얼이 필요했습니다.",
+  "project.gsifnWidget.problem": "삼성·현대·SK 등 주요 코스피 상장사 IR 페이지에 노출되는 주가·재무 정보 위젯의 리뉴얼이 필요했습니다.",
   "project.gsifnWidget.role": "iframe 형태로 삽입되는 위젯의 기획부터 개발, 배포, 운영, 유지보수까지 전담했습니다.",
   "project.gsifnWidget.solution": "HTML/CSS/JavaScript로 위젯 UI를 구현하고, Amazon EC2와 SSH를 활용해 배포 및 운영 환경을 관리했습니다.",
   "project.gsifnWidget.results": "약 100개의 상장사 IR 사이트에 위젯을 안정적으로 운영하며 지속적인 유지보수를 수행했습니다.",
