@@ -6,7 +6,7 @@ let __typeitStartSeq = 0;
 
 export function startTypeit(lang = resolveLang()) {
   const __seq = ++__typeitStartSeq;
-  const el = document.querySelector("#typeitTarget");
+  let el = document.querySelector("#typeitTarget");
   if (!el || typeof TypeIt === "undefined") return;
 
   if (typer) {
@@ -14,8 +14,15 @@ export function startTypeit(lang = resolveLang()) {
       typer.destroy();
     } catch {}
     typer = null;
-    el.textContent = "";
-    el.innerHTML = "";
+
+    // TypeIt sometimes leaves an async timer in flight past destroy(), which would
+    // otherwise keep writing into this element after the new instance starts and
+    // interleave characters from two languages. Swap in a fresh, untouched node so
+    // any stray write from the old instance lands on a detached element instead.
+    const fresh = el.cloneNode(false);
+    fresh.textContent = "";
+    el.replaceWith(fresh);
+    el = fresh;
   }
 
   const phrases = {

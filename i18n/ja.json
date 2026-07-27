@@ -10,7 +10,7 @@
   "nav.projects": "Projects",
   "nav.contact": "Contact",
 
-  "home.title": "エンドツーエンドのシステムを開発し、デプロイし、運用します。",
+  "home.title": "End-to-Endのシステムを開発し、デプロイし、運用します。",
   "home.desc": "Think in AI. Build on Cloud.",
   "home.summary": "Web サービス開発から始まり、公共システムの運用と金融業界のクラウド移行を経験し、現在はクラウドを基盤としたAIサービス開発へ領域を広げています。",
   "home.im": "私は",
@@ -23,10 +23,10 @@
   "about.title": "アプリケーションとインフラの両方を理解するエンジニア",
   "about.desc": "フロントエンド開発から始まり、システム運用とクラウド移行を経験しながら、アプリケーションとインフラの両方を理解するエンジニアへと成長しました。現在はAIを実際のサービスに組み込み、クラウド環境でデプロイ・運用する力を広げています。",
   "about.card.title": "Capabilities",
-  "about.build.desc": "HTML、CSS、JavaScript、Java、Pythonによる Web・バックエンドサービス開発の経験",
+  "about.build.desc": "HTML、CSS、JavaScript、TypeScript、PHP、Javaによる Webアプリケーション・バックエンドサービス開発の経験",
   "about.deploy.desc": "AWSとGCPを基盤とした静的ホスティング、サーバーレス、コンテナバッチのデプロイ経験",
-  "about.operate.desc": "Linux、Oracle SQLを用いたログ分析や障害対応などの運用経験",
-  "about.automate.desc": "Terraform、CI/CDによるインフラ自動化と、AIを活用した業務自動化へ領域を拡大中",
+  "about.operate.desc": "Linux、Oracle SQL、Cloud Loggingを用いたログ分析・モニタリング・障害対応の経験",
+  "about.automate.desc": "TerraformベースのIaCとCI/CDパイプラインを構築し、AIを活用した開発・運用自動化へ領域を拡大中",
 
   "career.sectionTitle": "Experience Timeline",
   "career.desc": "サービス開発から始まり、システム運用とクラウド移行を経て、ライフサイクル全体を担うエンジニアへと成長してきた過程です。",
@@ -77,9 +77,9 @@
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",
-  "project.jcb.problem": "レガシーなJP1バッチシステムの保守により、運用負荷と拡張性の制約が大きくなっていました。",
+  "project.jcb.problem": "レガシーなJP1/AJS3バッチシステムの保守により、運用負荷と拡張性の制約が大きくなっていました。",
   "project.jcb.role": "Cloud Run Jobsベースのバッチ実行構造の検討、Wrapperシェルの設計、実行パラメータの受け渡しと構造化ログの設計を担当しました。",
-  "project.jcb.solution": "JP1バッチをCloud Run Jobsへ移行し、Dockerによるコンテナ化、Terraformによるインフラのコード化、GitLab CI/CDパイプラインを構築しました。",
+  "project.jcb.solution": "JP1/AJS3バッチをCloud Run Jobsへ移行し、Dockerによるコンテナ化、Terraformによるインフラのコード化、GitLab CI/CDパイプラインを構築しました。",
   "project.jcb.results": "バッチ実行構造と運用自動化体制を文書化し、移行後も安定して運用できる基盤を整えました。",
 
   "project.awsPortfolio.title": "Cloud Engineer Portfolio on AWS",

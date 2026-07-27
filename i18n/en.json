@@ -23,10 +23,10 @@
   "about.title": "An engineer who understands both applications and infrastructure",
   "about.desc": "Starting in frontend development, I've grown through system operations and cloud migration into an engineer who understands both applications and infrastructure. I'm now expanding my ability to connect AI into real services and deploy and operate them in the cloud.",
   "about.card.title": "Capabilities",
-  "about.build.desc": "Experience developing web and backend services with HTML, CSS, JavaScript, Java, and Python",
+  "about.build.desc": "Experience developing web applications and backend services with HTML, CSS, JavaScript, TypeScript, PHP, and Java",
   "about.deploy.desc": "Experience deploying static hosting, serverless, and container-based batch workloads on AWS and GCP",
-  "about.operate.desc": "Operational experience including Linux and Oracle SQL-based log analysis and incident response",
-  "about.automate.desc": "Expanding into infrastructure automation with Terraform and CI/CD, and AI-driven workflow automation",
+  "about.operate.desc": "Experience with log analysis, monitoring, and incident response using Linux, Oracle SQL, and Cloud Logging",
+  "about.automate.desc": "Building Terraform-based IaC and CI/CD pipelines, and expanding into AI-driven development and operations automation",
 
   "career.sectionTitle": "Experience Timeline",
   "career.desc": "A progression from service development through system operations and cloud migration, growing into an engineer who covers the full engineering lifecycle.",
@@ -77,9 +77,9 @@
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",
-  "project.jcb.problem": "Maintaining the legacy JP1 batch system was creating growing operational burden and scalability constraints.",
+  "project.jcb.problem": "Maintaining the legacy JP1/AJS3 batch system was creating growing operational burden and scalability constraints.",
   "project.jcb.role": "Reviewed the Cloud Run Jobs-based batch execution structure, designed wrapper shell scripts, execution parameter passing, and structured logging.",
-  "project.jcb.solution": "Migrated JP1 batches to Cloud Run Jobs, containerizing with Docker, codifying infrastructure with Terraform, and building a GitLab CI/CD pipeline.",
+  "project.jcb.solution": "Migrated JP1/AJS3 batches to Cloud Run Jobs, containerizing with Docker, codifying infrastructure with Terraform, and building a GitLab CI/CD pipeline.",
   "project.jcb.results": "Documented the batch execution structure and operational automation framework, laying the groundwork for stable operations after migration.",
 
   "project.awsPortfolio.title": "Cloud Engineer Portfolio on AWS",

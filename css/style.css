@@ -428,7 +428,7 @@ select:focus-visible {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: var(--space-8);
-  align-items: center;
+  align-items: start;
 }
 
 .hero__title {
@@ -467,6 +467,7 @@ select:focus-visible {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-m);
   max-width: 46ch;
+  min-height: 100px;
   overflow: hidden;
   box-shadow: 4px 4px 0 var(--line-strong);
   padding: 0 var(--space-4) var(--space-4);
