@@ -801,6 +801,7 @@ select:focus-visible {
 .timeline__content p {
   color: var(--ink-2);
   line-height: 1.7;
+  margin-bottom: var(--space-4);
 }
 
 @media (max-width: 640px) {
