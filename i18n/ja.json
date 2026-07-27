@@ -10,7 +10,7 @@
   "nav.projects": "Projects",
   "nav.contact": "Contact",
 
-  "home.title": "End-to-Endのシステムを開発し、デプロイし、運用します。",
+  "home.title": "End-to-Endの\nシステムを\n開発し、デプロイし、\n運用します。",
   "home.desc": "Think in AI. Build on Cloud.",
   "home.summary": "Web サービス開発から始まり、公共システムの運用と金融業界のクラウド移行を経験し、現在はクラウドを基盤としたAIサービス開発へ領域を広げています。",
   "home.im": "私は",
@@ -29,7 +29,7 @@
   "about.automate.desc": "TerraformベースのIaCとCI/CDパイプラインを構築し、AIを活用した開発・運用自動化へ領域を拡大中",
   "about.offDuty.reading": "インプットのないアウトプットはありません。",
   "about.offDuty.training": "身体は最も重要な開発環境です。",
-  "about.offDuty.walking": "ゆっくり歩く散歩の心地よさと安心感が創造力を引き出します。",
+  "about.offDuty.walking": "心地よさと安心感が創造力を引き出します。",
   "about.offDuty.singing": "ストレスを発散し、エネルギーを満たします。",
   "about.offDuty.mvp": "完璧さより継続。\nうまくいくまで作り続けます。",
 

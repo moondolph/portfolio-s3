@@ -10,7 +10,7 @@
   "nav.projects": "Projects",
   "nav.contact": "Contact",
 
-  "home.title": "Building, Deploying, and Operating End-to-End Systems.",
+  "home.title": "Building, Deploying,\nand Operating\nEnd-to-End Systems.",
   "home.desc": "Think in AI. Build on Cloud.",
   "home.summary": "Starting in web service development, I gained experience in public system operations and financial-sector cloud migration, and I'm now expanding into cloud-based AI service development.",
   "home.im": "I'm",
@@ -29,7 +29,7 @@
   "about.automate.desc": "Building Terraform-based IaC and CI/CD pipelines, and expanding into AI-driven development and operations automation",
   "about.offDuty.reading": "No output without input.",
   "about.offDuty.training": "Your body is your most important dev environment.",
-  "about.offDuty.walking": "A slow, relaxed walk brings the calm that unlocks creativity.",
+  "about.offDuty.walking": "Comfort and stability unlock creativity.",
   "about.offDuty.singing": "Blows off stress and recharges energy.",
   "about.offDuty.mvp": "Consistency over perfection.\nKeep shipping until it works.",
 
