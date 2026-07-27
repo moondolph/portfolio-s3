@@ -27,7 +27,11 @@
   "about.deploy.desc": "AWSとGCPを基盤とした静的ホスティング、サーバーレス、コンテナバッチのデプロイ経験",
   "about.operate.desc": "Linux、Oracle SQL、Cloud Loggingを用いたログ分析・モニタリング・障害対応の経験",
   "about.automate.desc": "TerraformベースのIaCとCI/CDパイプラインを構築し、AIを活用した開発・運用自動化へ領域を拡大中",
-  "about.offDuty.items": "読書 · 筋トレ · 散歩 · 歌 · 毎日1つのMVP制作",
+  "about.offDuty.reading": "インプットのない成長はありません。",
+  "about.offDuty.training": "身体は最も重要な開発環境です。",
+  "about.offDuty.walking": "創造力は立ち止まっている時より、歩いている時に訪れます。",
+  "about.offDuty.singing": "ストレスを発散し、エネルギーを満たします。",
+  "about.offDuty.mvp": "完璧さより継続。\nうまくいくまで作り続けます。",
 
   "career.sectionTitle": "Experience Timeline",
   "career.desc": "サービス開発から始まり、システム運用とクラウド移行を経て、ライフサイクル全体を担うエンジニアへと成長してきた過程です。",
