@@ -1111,6 +1111,11 @@ select:focus-visible {
   color: var(--ink-3) !important;
 }
 
+.project__metadata .capability__tags {
+  min-height: 58px;
+  align-content: flex-start;
+}
+
 .project__actions {
   display: flex;
   flex-wrap: wrap;
