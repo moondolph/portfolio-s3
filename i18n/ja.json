@@ -47,7 +47,7 @@
 
   "skills.sectionTitle": "Skill Map",
   "skills.frontend.title": "Frontend",
-  "skills.frontend.desc": "実務でUIパブリッシングとレスポンシブレイアウトを実装し、Reactベースのコンポーネント構造にも慣れてきています。",
+  "skills.frontend.desc": "実務ではUI実装とレスポンシブレイアウトの構築を担当し、現在はReactとTypeScriptを用いたCSRコンポーネント設計・実装の理解と実践力を高めています。",
   "skills.backend.title": "Backend",
   "skills.backend.desc": "Javaベースアプリケーションの運用経験を土台に、PythonとFastAPIによるAPIサーバー構築を学習しています。",
   "skills.ai.title": "AI",

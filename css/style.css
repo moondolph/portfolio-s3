@@ -641,6 +641,7 @@ select:focus-visible {
 .offduty__label {
   display: block;
   font-family: var(--font-mono);
+  font-weight: bold;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
