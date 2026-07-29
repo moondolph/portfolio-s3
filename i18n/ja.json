@@ -67,6 +67,7 @@
   "project.label.result": "成果",
   "project.label.plannedNote": "まだ実装されていない計画段階のプロジェクトです。架空の成果は表示していません。",
   "project.label.inProgressNote": "現在開発中の個人プロジェクトのため、正式リリース前で実利用の成果はまだありません。",
+  "project.label.privateRepoNote": "非公開リポジトリです。デプロイ結果のみ確認できます。",
   "project.action.live": "Live",
   "project.action.architecture": "Architecture",
   "project.status.planned": "Planned",
@@ -79,6 +80,12 @@
   "project.hardcoreEnglish.problem": "多くの英語アプリは時間制限がなく、実戦のような会話の反応速度が身につきにくいです。",
   "project.hardcoreEnglish.role": "Next.jsのフロントエンドとAPI Routesバックエンドを設計し、Claude APIでリアルタイム会話と添削レポートを実装中です。",
   "project.hardcoreEnglish.solution": "15秒制限の会話(Claude Haiku)とセッション後の添削レポート(Claude Sonnet)を別モデルに分離し、速度と品質を両立しました。",
+
+  "project.cafeEnglishTrainer.title": "Cafe English Trainer (MVP)",
+  "project.cafeEnglishTrainer.subtitle": "個人プロジェクト・スピーキングアウトプット訓練",
+  "project.cafeEnglishTrainer.problem": "多くの英語アプリは文法暗記や正誤判定に偏っており、「瞬時に文を作る力」を鍛える手段は少ないです。",
+  "project.cafeEnglishTrainer.role": "React・TypeScript・Viteを用いて、出題から5秒タイマー、回答比較、結果レビューまで3画面の流れを一から設計・実装しました。",
+  "project.cafeEnglishTrainer.solution": "カフェのシーンの韓国語文を提示し、5秒以内に英語文を入力させた後、模範表現と比較する方式で「アウトプットの瞬発力」を鍛える設計にしました。",
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",

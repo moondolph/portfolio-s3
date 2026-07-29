@@ -69,8 +69,9 @@ function renderProjectActions(project) {
     );
   }
   if (project.githubUrl) {
+    const privateAttr = project.githubPrivate ? ` data-i18n-attr="title:project.label.privateRepoNote"` : "";
     actions.push(
-      `<a class="btn btn--small" href="${project.githubUrl}" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-github"></i> GitHub</a>`
+      `<a class="btn btn--small" href="${project.githubUrl}" target="_blank" rel="noreferrer noopener"${privateAttr}><i class="fa-brands fa-github"></i> GitHub</a>`
     );
   }
   if (project.architectureUrl) {

@@ -67,6 +67,7 @@
   "project.label.result": "결과",
   "project.label.plannedNote": "아직 구현되지 않은 계획 단계의 프로젝트입니다. 가상의 성과는 표시하지 않습니다.",
   "project.label.inProgressNote": "현재 개발 중인 개인 프로젝트로, 정식 출시 전이라 실사용 결과는 아직 없습니다.",
+  "project.label.privateRepoNote": "비공개 저장소입니다. 배포 결과만 확인할 수 있습니다.",
   "project.action.live": "Live",
   "project.action.architecture": "Architecture",
   "project.status.planned": "Planned",
@@ -79,6 +80,12 @@
   "project.hardcoreEnglish.problem": "시중 영어 앱은 시간 제약이 없어, 실전 같은 압박감 속에서 회화 감각을 기르기 어렵습니다.",
   "project.hardcoreEnglish.role": "Next.js 프론트엔드와 API Routes 백엔드를 설계하고, Claude API로 실시간 대화와 교정 리포트를 구현 중입니다.",
   "project.hardcoreEnglish.solution": "15초 제한 대화(Claude Haiku)와 세션 후 교정 리포트(Claude Sonnet)를 분리해 속도와 품질을 모두 확보했습니다.",
+
+  "project.cafeEnglishTrainer.title": "Cafe English Trainer (MVP)",
+  "project.cafeEnglishTrainer.subtitle": "개인 프로젝트 · 스피킹 아웃풋 훈련",
+  "project.cafeEnglishTrainer.problem": "대부분의 영어 앱은 문법 암기나 정답 맞추기 위주라, '즉각적으로 문장을 만드는 능력'은 훈련하기 어렵습니다.",
+  "project.cafeEnglishTrainer.role": "React·TypeScript·Vite로 문제 출제, 5초 타이머, 답안 비교, 결과 리뷰까지 3단계 화면 흐름을 직접 기획하고 구현했습니다.",
+  "project.cafeEnglishTrainer.solution": "카페 상황의 한국어 문장을 보여주고 5초 안에 영어 문장을 입력하게 한 뒤 모범 표현과 비교하는 방식으로 '아웃풋 순발력'을 훈련하도록 설계했습니다.",
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",

@@ -67,6 +67,7 @@
   "project.label.result": "Result",
   "project.label.plannedNote": "This project is in the planning stage and not yet implemented. No fabricated results are shown.",
   "project.label.inProgressNote": "This is a personal project currently in development; no real-world usage results yet, ahead of a public release.",
+  "project.label.privateRepoNote": "Private repository — only the deployed result can be viewed.",
   "project.action.live": "Live",
   "project.action.architecture": "Architecture",
   "project.status.planned": "Planned",
@@ -79,6 +80,12 @@
   "project.hardcoreEnglish.problem": "Most language apps have no time pressure, so they don't build real conversational reflexes.",
   "project.hardcoreEnglish.role": "Designed the Next.js frontend and API routes, integrating Claude API for real-time chat and reports.",
   "project.hardcoreEnglish.solution": "Split the timed chat (Claude Haiku) and correction report (Claude Sonnet) across two models for speed and quality.",
+
+  "project.cafeEnglishTrainer.title": "Cafe English Trainer (MVP)",
+  "project.cafeEnglishTrainer.subtitle": "Personal Project · Speaking Output Training",
+  "project.cafeEnglishTrainer.problem": "Most English apps focus on grammar drills or right/wrong quizzes, leaving the skill of instantly producing a sentence untrained.",
+  "project.cafeEnglishTrainer.role": "Planned and built the 3-screen flow — question, 5-second timed input, and result review — end to end with React, TypeScript, and Vite.",
+  "project.cafeEnglishTrainer.solution": "Shows a Korean sentence from a cafe scenario, gives the user 5 seconds to type an English sentence, then compares it against model answers — training output speed rather than right/wrong judgment.",
 
   "project.jcb.title": "JCB Cloud-Native Batch Platform Migration",
   "project.jcb.subtitle": "Finance Cloud Migration",
