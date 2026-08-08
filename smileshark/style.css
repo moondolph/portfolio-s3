@@ -89,6 +89,10 @@ a {
   pointer-events: none;
 }
 
+.hero h1 span.gold {
+  color: var(--coral);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -251,12 +255,19 @@ a {
 .section__head p {
   color: var(--ink-dim);
   margin: 8px 0 0;
-  max-width: 60ch;
   font-size: 1.05rem;
 }
 
 .cert-credly-btn {
   margin-top: 18px;
+  background: #e0303d;
+  color: #fff;
+  border-color: #e0303d;
+}
+
+.cert-credly-btn:hover {
+  background: #c22029;
+  border-color: #c22029;
 }
 
 /* About */
@@ -389,6 +400,42 @@ a {
   color: var(--ink-dim);
   font-size: 0.95rem;
   margin: 0 0 12px;
+}
+
+/* Role understanding */
+.workflow-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.workflow-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border);
+  display: block;
+}
+
+.workflow-caption {
+  margin: 18px 0 14px;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.workflow-statement {
+  margin: 24px 0 0;
+  padding: 20px 24px;
+  border-left: 3px solid var(--coral);
+  background: var(--bg-alt);
+  border-radius: 0 10px 10px 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 /* Projects */

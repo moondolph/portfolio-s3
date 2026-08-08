@@ -23,7 +23,10 @@
       <div class="wrap hero__inner">
         <div>
           <span class="eyebrow"><i class="fa-solid fa-terminal"></i> ~/smileshark</span>
-          <h1>AWS의 규칙과<br />스마일샤크의 실무를<br /><span>잇는 사람, 심주용입니다.</span></h1>
+          <h1>
+            <span>AWS의 규칙</span>과<br /><span>스마일샤크의 실무</span>를<br />
+            <span>잇는 사람,</span><span class="gold">심주용</span>입니다.
+          </h1>
           <p class="lead">
             저의 강점은 자동화, 문서화, 전달력입니다. 검증은 자동화로, 규칙은 문서로, 정리한 내용은 남이 바로 쓸 수 있게 전달해왔습니다. 이제 AWS와 스마일샤크
             사이의 화음을 맞추는 역할에 도전하려 합니다.
@@ -153,7 +156,7 @@
         <div class="skills-grid">
           <div class="skill-card">
             <h3><i class="fa-solid fa-language"></i> Language & Docs</h3>
-            <p>영어통번역 전공(TOEIC 925), 일본어(JLPT N1). 일본 실무에서 기술 문서 12~15건을 작성하며 "남이 봐도 헷갈리지 않는" 문서화를 훈련했습니다.</p>
+            <p>영어통번역 전공, 일본어전공 및 일본 실무에서 기술 문서 12~15건을 작성하며 "남이 봐도 헷갈리지 않는" 문서화를 훈련했습니다.</p>
             <div class="tag-row"><span class="tag">영문 독해</span><span class="tag">일본어 실무</span><span class="tag">기술 문서화</span></div>
           </div>
           <div class="skill-card">
@@ -194,9 +197,9 @@
               <h3>이 페이지, AWS로 직접 만들고 운영했습니다</h3>
               <div class="subtitle">AWS Static Hosting · Case Study</div>
               <p>
-                S3·CloudFront로 정적 호스팅 구조를 설계하고, Route 53·ACM으로 커스텀 도메인과 HTTPS를 구성했으며, GitHub Actions로 배포를 자동화했습니다.
-                실무에서 GCP·OCI도 다뤄봤지만, 개인 프로젝트에서 AWS를 선택한 이유는 명확합니다 — 문서와 서비스 체계가 가장 방대하고 정교해서, 파고들수록 배울
-                게 많은 생태계였기 때문입니다. 지금 보고 계신 이 페이지도 그 파이프라인으로 배포됩니다.
+                S3·CloudFront로 정적 호스팅 구조를 설계하고, Route 53·ACM으로 커스텀 도메인과 HTTPS를 구성했으며, GitHub Actions로 배포를 자동화했습니다. AWS
+                서비스를 직접 구축·배포·운영해본 경험을 바탕으로 기술 문서를 읽고 실제 환경에 적용할 수 있습니다. 또한 기술적인 내용을 단순히 이해하는 데 그치지
+                않고, 비개발자도 이해할 수 있는 언어로 구조화해 설명하고 문서화할 수 있습니다.
               </p>
               <div class="tag-row">
                 <span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">Route 53</span><span class="tag">GitHub Actions</span>
@@ -209,8 +212,9 @@
               <h3>JCB Cloud-Native Batch Platform Migration</h3>
               <div class="subtitle">Finance Cloud Migration · Documentation</div>
               <p>
-                레거시 JP1/AJS3 배치 시스템을 Cloud Run Jobs로 전환하며, 배치 기동 패턴 3종을 비교표로 정리하고 CI/CD 연계 방침 결정에 쓰인 검토서를
-                작성했습니다. 코드만큼 문서가 프로젝트를 움직였습니다.
+                레거시 JP1/AJS3 배치 시스템을 Cloud Run Jobs로 전환하는 과정에서 배치 기동 패턴 3종의 조건과 차이를 비교·정리하고, CI/CD 연계 방침 결정에
+                활용되는 검토 문서를 작성했습니다. 복잡한 기술 정보를 기준에 따라 구조화하고, 여러 관계자가 같은 내용을 이해하고 판단할 수 있도록 문서로
+                정리하는 역량을 쌓았습니다.
               </p>
               <div class="tag-row">
                 <span class="tag">GCP</span><span class="tag">Cloud Run Jobs</span><span class="tag">Terraform</span><span class="tag">기술 문서</span>
@@ -223,8 +227,8 @@
               <h3>지자체 국민건강보험 시스템 — 데이터 검증</h3>
               <div class="subtitle">CAL CO., LTD. · Data Verification</div>
               <p>
-                신규 버전이 배포될 때마다 적용 전후 데이터를 SQL로 비교하고, 배치·출력 결과를 로그와 교차 확인했습니다. "일단 됐겠지"가 아니라 "이 값이 정말
-                맞는지"를 스스로 확인하는 습관을 여기서 다졌습니다.
+                신규 버전 배포 시 적용 전·후 데이터를 SQL로 비교하고, 배치 및 출력 결과를 로그와 교차 검증했습니다. 단순히 처리가 완료됐는지를 확인하는 것이
+                아니라 서로 다른 데이터와 결과를 대조하며 값의 정합성을 직접 확인하는 습관을 실무에서 익혔습니다.
               </p>
               <div class="tag-row"><span class="tag">Oracle DB</span><span class="tag">SQL</span><span class="tag">데이터 검증</span></div>
             </div>
@@ -235,8 +239,8 @@
               <h3>KOSPI IR Stock Info Widget</h3>
               <div class="subtitle">GSIFN · Financial Frontend · Live</div>
               <p>
-                삼성·현대·SK 등 약 100개 코스피 상장사 IR 사이트에 노출되는 주가·재무 정보 위젯을 기획부터 개발, 배포, 운영까지 전담했습니다. 투자자가 보는
-                숫자였기에 정확성이 가장 중요했습니다.
+                삼성·현대·SK 등 약 100개 코스피 상장사 IR 사이트에 제공되는 주가·재무 정보 위젯을 기획부터 개발·배포·운영까지 담당했습니다. 외부에 공개되는 금융
+                데이터를 다루는 만큼 정확성과 안정성을 우선하며, 맡은 업무를 처음부터 운영까지 책임지고 관리하는 경험을 쌓았습니다.
               </p>
               <div class="tag-row">
                 <span class="tag">HTML5</span><span class="tag">JavaScript</span><span class="tag">EC2</span><span class="tag">PHP</span>
@@ -250,6 +254,13 @@
                 >
                 <a class="btn btn--ghost btn--small" href="https://www.nexentire.com/kr/investment/stock/price/" target="_blank" rel="noreferrer noopener"
                   ><i class="fa-solid fa-arrow-up-right-from-square"></i> 넥센타이어</a
+                >
+                <a
+                  class="btn btn--ghost btn--small"
+                  href="https://www.sknetworks.co.kr/ir/stock/stock-price-information"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> SK네트웍스</a
                 >
               </div>
             </div>
@@ -348,6 +359,34 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> ~/role-understanding</span>
+          <h2>Understanding the Role</h2>
+          <p>
+            공개된 채용공고와 스마일샤크 공식 자료를 바탕으로 이해한 AWS Partner Manager의 업무 흐름입니다. 실제 내부 프로세스가 아니라, 지원을 준비하며 제가
+            구조화해 본 이해도임을 밝힙니다.
+          </p>
+        </div>
+        <div class="workflow-card">
+          <img src="workflow.png" alt="AWS Partner Manager Workflow — My Understanding" />
+          <p class="workflow-caption">
+            Opportunity → Validate → Design → Coordinate → Execute → Measure → Report &amp; Improve — AWS 파트너 프로그램과 스마일샤크의 기술 역량을 고객의
+            영업기회로 연결하고, 그 성과를 데이터로 관리하는 흐름으로 이해했습니다.
+          </p>
+          <div class="tag-row">
+            <span class="tag">AWS ACE</span><span class="tag">Salesforce / CRM</span><span class="tag">Spreadsheet</span
+            ><span class="tag">Jira / Confluence / Notion</span><span class="tag">Slack / Email</span>
+          </div>
+        </div>
+        <p class="workflow-statement">
+          저는 이 직무를 단순 프로그램 운영이 아니라, AWS의 파트너 제도와 스마일샤크의 기술 역량을 고객의 비즈니스 기회로 연결하고 그 성과를 데이터로 증명하는
+          역할이라고 이해했습니다.
+        </p>
       </div>
     </section>
 
