@@ -1,84 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
   <title id="title">KOSPI IR stock info widget architecture</title>
   <desc id="desc">KOSCOM supplies licensed market data to a widget hosted on Amazon EC2, deployed manually via VS Code Remote-SSH with no CI/CD. The widget, built with plain HTML, CSS, and JavaScript, is embedded via iframe on the investor-relations pages of KOSPI-listed enterprises including Samsung, Hyundai, SK, POSCO, and Celltrion.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b0f14"/><stop offset="1" stop-color="#12243a"/></linearGradient>
-    <linearGradient id="hub" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4285f4"/><stop offset="1" stop-color="#6ee7f9"/></linearGradient>
-    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".35"/></filter>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity=".08"/>
+    </filter>
   </defs>
 
-  <rect width="1200" height="780" rx="34" fill="url(#bg)"/>
-  <text x="60" y="76" fill="#fff" font-family="Inter, Arial" font-size="32" font-weight="800">KOSPI IR Stock Info Widget</text>
-  <text x="60" y="106" fill="rgba(255,255,255,.66)" font-family="Inter, Arial" font-size="16">KOSCOM data + manual EC2 deploy → one HTML/CSS/JS widget → embedded via &lt;iframe&gt; on 5 enterprise IR sites</text>
-
-  <!-- Row labels -->
-  <g font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" letter-spacing="1.5" fill="rgba(255,255,255,.4)">
-    <text x="60" y="168">DATA &amp; DEPLOY INPUTS</text>
-    <text x="60" y="338">WIDGET HOST — AMAZON EC2 (SHARED CODEBASE)</text>
-    <text x="60" y="508">CLIENT IR SITES — KOSPI-LISTED ENTERPRISES</text>
-  </g>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#1e4fff"/>
+  <text x="60" y="70" fill="#0f172a" font-family="Inter, Arial" font-size="30" font-weight="800">KOSPI IR Stock Info Widget</text>
+  <text x="60" y="100" fill="#64748b" font-family="Inter, Arial" font-size="15">KOSCOM data + manual EC2 deploy → one HTML/CSS/JS widget → embedded via &lt;iframe&gt; on 5 enterprise IR sites</text>
+  <line x1="60" y1="122" x2="1140" y2="122" stroke="#e2e8f0" stroke-width="1.5"/>
 
   <!-- Row 1: inputs -->
-  <rect x="40" y="150" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
-  <g font-family="Inter, Arial" font-weight="700" font-size="18" filter="url(#shadow)">
-    <rect x="280" y="180" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="300" y="218" fill="#fff">KOSCOM Market Data</text><text x="300" y="242" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Licensed price / financials / disclosures</text>
+  <rect x="50" y="150" width="1100" height="140" rx="18" fill="#fff8ec" stroke="#f7e2b8"/>
+  <rect x="74" y="132" width="240" height="34" rx="17" fill="#ff9900"/>
+  <text x="194" y="155" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">1 · DATA &amp; DEPLOY INPUTS</text>
 
-    <rect x="640" y="180" width="280" height="90" rx="16" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="660" y="218" fill="#fff">VS Code — Remote-SSH</text><text x="660" y="242" fill="rgba(255,255,255,.6)" font-size="13" font-weight="500">Direct edit on the EC2 host</text>
+  <g filter="url(#cardShadow)">
+    <rect x="280" y="185" width="280" height="80" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="312" cy="217" r="16" fill="#fff8ec"/>
+    <text x="312" y="223" font-size="16" text-anchor="middle">📈</text>
+    <text x="340" y="212" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">KOSCOM Market Data</text>
+    <text x="340" y="234" fill="#64748b" font-family="Inter, Arial" font-size="12">Licensed price / financials / disclosures</text>
+
+    <rect x="640" y="185" width="280" height="80" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="672" cy="217" r="16" fill="#fff8ec"/>
+    <text x="672" y="223" font-size="16" text-anchor="middle">🔧</text>
+    <text x="700" y="212" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">VS Code — Remote-SSH</text>
+    <text x="700" y="234" fill="#64748b" font-family="Inter, Arial" font-size="12">Direct edit on the EC2 host</text>
   </g>
 
   <!-- Row 2: hub -->
-  <rect x="40" y="320" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
-  <g font-family="Inter, Arial" font-weight="700" font-size="19" filter="url(#shadow)">
-    <rect x="370" y="350" width="460" height="90" rx="16" fill="url(#hub)"/>
-    <text x="600" y="390" fill="#06121f" text-anchor="middle">Amazon EC2 — Widget Host</text>
-    <text x="600" y="414" fill="#06121f" font-size="13" font-weight="600" text-anchor="middle">HTML + CSS + JS · one codebase, no CI/CD</text>
+  <rect x="50" y="310" width="1100" height="140" rx="18" fill="#eef3ff" stroke="#d6e2ff"/>
+  <rect x="74" y="292" width="330" height="34" rx="17" fill="#1e4fff"/>
+  <text x="239" y="315" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">2 · WIDGET HOST — AMAZON EC2</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="370" y="345" width="460" height="80" rx="16" fill="#1e4fff"/>
+    <text x="402" y="381" font-size="20">☁️</text>
+    <text x="600" y="382" fill="#fff" text-anchor="middle" font-family="Inter, Arial" font-weight="700" font-size="17">Amazon EC2 — Widget Host</text>
+    <text x="600" y="404" fill="rgba(255,255,255,.9)" text-anchor="middle" font-family="Inter, Arial" font-size="13" font-weight="600">HTML + CSS + JS · one codebase, no CI/CD</text>
   </g>
 
   <!-- Row 3: clients -->
-  <rect x="40" y="490" width="1120" height="150" rx="20" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.10)" stroke-dasharray="5 7"/>
-  <g font-family="Inter, Arial" font-weight="700" font-size="16" text-anchor="middle" filter="url(#shadow)">
-    <rect x="110" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="200" y="566" fill="#fff">Samsung</text>
+  <rect x="50" y="470" width="1100" height="140" rx="18" fill="#f0fbf6" stroke="#d3f0e2"/>
+  <rect x="74" y="452" width="340" height="34" rx="17" fill="#16a34a"/>
+  <text x="244" y="475" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">3 · CLIENT IR SITES (KOSPI-LISTED)</text>
 
-    <rect x="310" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="400" y="566" fill="#fff">Hyundai</text>
+  <g filter="url(#cardShadow)" text-anchor="middle">
+    <rect x="90" y="505" width="185" height="76" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="182" y="537" font-size="16">🏢</text>
+    <text x="182" y="565" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="14">Samsung</text>
 
-    <rect x="510" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="600" y="566" fill="#fff">SK</text>
+    <rect x="295" y="505" width="185" height="76" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="387" y="537" font-size="16">🏢</text>
+    <text x="387" y="565" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="14">Hyundai</text>
 
-    <rect x="710" y="520" width="180" height="80" rx="14" fill="#111827" stroke="rgba(255,255,255,.18)"/>
-    <text x="800" y="566" fill="#fff">POSCO</text>
+    <rect x="500" y="505" width="185" height="76" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="592" y="537" font-size="16">🏢</text>
+    <text x="592" y="565" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="14">SK</text>
 
-    <rect x="910" y="520" width="180" height="80" rx="14" fill="url(#hub)"/>
-    <text x="1000" y="566" fill="#06121f">Celltrion</text>
+    <rect x="705" y="505" width="185" height="76" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="797" y="537" font-size="16">🏢</text>
+    <text x="797" y="565" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="14">POSCO</text>
+
+    <rect x="910" y="505" width="200" height="76" rx="14" fill="#16a34a"/>
+    <text x="1010" y="537" font-size="16">🏢</text>
+    <text x="1010" y="565" fill="#fff" font-family="Inter, Arial" font-weight="700" font-size="14">Celltrion</text>
   </g>
 
   <!-- Arrows: inputs -> hub -->
-  <g stroke="#8ab4ff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M420 270V350"/>
+  <g stroke="#ff9900" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 265V345"/>
   </g>
-  <g stroke="#ffbd7a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8">
-    <path d="M780 270V350"/>
+  <g stroke="#ff9900" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 7">
+    <path d="M780 265V345"/>
   </g>
 
   <!-- Arrows: hub -> clients (fan out) -->
-  <g stroke="#8ab4ff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
-    <path d="M420 440L200 520"/>
-    <path d="M510 440L400 520"/>
-    <path d="M600 440V520"/>
-    <path d="M690 440L800 520"/>
-    <path d="M780 440L1000 520"/>
+  <g stroke="#1e4fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".9">
+    <path d="M420 425L182 505"/>
+    <path d="M510 425L387 505"/>
+    <path d="M600 425V505"/>
+    <path d="M690 425L797 505"/>
+    <path d="M780 425L1010 505"/>
   </g>
 
-  <g font-family="Inter, Arial" font-size="14" font-weight="700">
-    <text x="440" y="315" fill="#8ab4ff">market data</text>
-    <text x="800" y="315" fill="#ffbd7a">manual deploy</text>
-    <text x="600" y="480" fill="#8ab4ff" text-anchor="middle">embed via &lt;iframe&gt;</text>
+  <g font-family="Inter, Arial" font-size="13" font-weight="700">
+    <text x="440" y="310" fill="#ff9900">market data</text>
+    <text x="800" y="310" fill="#ff9900">manual deploy</text>
+    <text x="600" y="465" fill="#1e4fff" text-anchor="middle">embed via &lt;iframe&gt;</text>
   </g>
 
-  <rect x="60" y="660" width="1080" height="70" rx="18" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)"/>
-  <text x="90" y="690" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">Design reality: one shared HTML/CSS/JS widget served from a single EC2 host, embedded live across five</text>
-  <text x="90" y="713" fill="rgba(255,255,255,.78)" font-family="Inter, Arial" font-size="16">KOSPI-listed enterprise IR sites — deployed and operated by hand, with no CI/CD in place.</text>
+  <!-- Legend -->
+  <g font-family="Inter, Arial" font-size="13" fill="#64748b">
+    <line x1="60" y1="640" x2="92" y2="640" stroke="#ff9900" stroke-width="3"/>
+    <text x="100" y="644">시세 데이터 흐름</text>
+    <line x1="290" y1="640" x2="322" y2="640" stroke="#ff9900" stroke-width="2.5" stroke-dasharray="6 7"/>
+    <text x="330" y="644">수동 배포</text>
+    <line x1="470" y1="640" x2="502" y2="640" stroke="#1e4fff" stroke-width="2.5"/>
+    <text x="510" y="644">iframe 임베드 (5개 IR 사이트)</text>
+  </g>
+
+  <!-- Insight footer -->
+  <rect x="50" y="670" width="1100" height="110" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="78" y="702" fill="#334155" font-family="Inter, Arial" font-size="15" font-weight="700">삼성·현대·SK 등 약 100개 코스피 상장사 IR 사이트에 노출되는 주가·재무 정보 위젯을 기획부터 개발, 배포, 운영까지 전담했습니다.</text>
+  <text x="78" y="728" fill="#334155" font-family="Inter, Arial" font-size="14">하나의 EC2 코드베이스를 다수 기업 IR 사이트에 iframe으로 임베드하는 구조로, CI/CD 없이</text>
+  <text x="78" y="750" fill="#334155" font-family="Inter, Arial" font-size="14">VS Code Remote-SSH로 직접 배포합니다. 투자자가 보는 숫자였기에 정확성이 가장 중요했습니다.</text>
 </svg>
