@@ -72,7 +72,7 @@ const I18N = {
     "p0.problem": "일본 미용·뷰티 클리닉은 카피 작성, 랜딩페이지 제작, 리드 관리, 성과 분석이 따로 돌아가 마케팅팀의 반복 업무가 많음.",
     "p0.build": "AI로 일본어 마케팅 카피와 반응형 랜딩페이지를 자동 생성하고, 리드를 자동 분류·우선순위화하며, 채널별 성과를 대시보드로 보여주는 데모를 AI 코딩 툴로 직접 설계·구현.",
     "p0.result": "캠페인 기획부터 카피 · 랜딩페이지 · 리드 관리 · 성과 분석까지, 마케팅 퍼널 전체를 자동화하는 프로토타입 완성.",
-    "p0.note": "⚠️ 포트폴리오용 데모이며, 실제 운영 중인 의료 서비스가 아닙니다.",
+    "p0.note": "⚠️ 포트폴리오용 데모이며, 테스트, 검증, 시연용입니다.",
 
     "p1.title": "Corporate IR Web Platform",
     "p1.problem": "기업마다 서로 다른 IR 정보와 UI 요구사항을 웹에서 제공해야 함.",
@@ -207,7 +207,7 @@ const I18N = {
     "p0.problem": "Japanese beauty/aesthetic clinics run copywriting, landing pages, lead handling, and performance analysis as disconnected, repetitive marketing work.",
     "p0.build": "Built a demo with AI coding tools that auto-generates Japanese marketing copy and responsive landing pages, auto-classifies and prioritizes leads, and shows channel performance on a dashboard.",
     "p0.result": "A working prototype that automates the marketing funnel end to end — campaign planning, copy, landing page, lead handling, and performance analysis.",
-    "p0.note": "⚠️ A portfolio demo — not an operating medical service.",
+    "p0.note": "⚠️ A portfolio demo, built for learning, testing, and proof-of-concept purposes.",
 
     "p1.title": "Corporate IR Web Platform",
     "p1.problem": "Each company needed different IR content and UI requirements delivered on the web.",
@@ -341,7 +341,7 @@ const I18N = {
     "p0.problem": "日本の美容クリニックでは、コピー作成・ランディングページ制作・リード管理・成果分析がバラバラに運用され、マーケティング業務の反復作業が多い。",
     "p0.build": "AIで日本語マーケティングコピーとレスポンシブなランディングページを自動生成し、リードを自動分類・優先順位付けし、チャネル別の成果をダッシュボードで可視化するデモをAI Coding Toolで設計・実装。",
     "p0.result": "キャンペーン企画からコピー・ランディングページ・リード管理・成果分析まで、マーケティングファネル全体を自動化するプロトタイプを完成。",
-    "p0.note": "⚠️ ポートフォリオ用のデモであり、実際に運用中の医療サービスではありません。",
+    "p0.note": "⚠️ ポートフォリオ用のデモであり、学習・検証・テスト目的で作成したものです。",
 
     "p1.title": "Corporate IR Web Platform",
     "p1.problem": "企業ごとに異なるIR情報とUI要件をWebで提供する必要があった。",
