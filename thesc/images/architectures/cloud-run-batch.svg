@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">JCB batch platform migration: JP1/AJS3 to Cloud Run Jobs</title>
+  <desc id="desc">JP1/AJS3 Manager dispatches a jobnet to the Agent, which runs a wrapper shell that calls gcloud to execute Cloud Run Jobs. Cloud Run Jobs pulls its container image from Artifact Registry, writes structured logs to Cloud Logging, and returns an exit code to the wrapper shell so JP1 can record success or failure. Artifact Registry is kept current by a GitLab CI/CD pipeline that builds and pushes the image on every commit to the job repository.</desc>
+  <defs>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity=".08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="860" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="6" fill="#1e4fff"/>
+  <text x="60" y="70" fill="#0f172a" font-family="Inter, Arial" font-size="30" font-weight="800">JCB Batch Platform Migration</text>
+  <text x="60" y="100" fill="#64748b" font-family="Inter, Arial" font-size="15">JP1/AJS3 dispatch → containerized execution on Cloud Run Jobs → structured logging &amp; exit-code handoff</text>
+  <line x1="60" y1="122" x2="1140" y2="122" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Band A: Trigger & Dispatch -->
+  <rect x="50" y="150" width="1100" height="150" rx="18" fill="#eef3ff" stroke="#d6e2ff"/>
+  <rect x="74" y="132" width="270" height="34" rx="17" fill="#1e4fff"/>
+  <text x="209" y="155" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">1 · TRIGGER &amp; DISPATCH (ON-PREM)</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="90" y="196" width="230" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="122" cy="228" r="16" fill="#eef3ff"/>
+    <text x="122" y="234" font-size="16" text-anchor="middle">🗓️</text>
+    <text x="150" y="226" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">JP1/AJS3 Manager</text>
+    <text x="150" y="248" fill="#64748b" font-family="Inter, Arial" font-size="12">Schedules the jobnet</text>
+
+    <rect x="380" y="196" width="230" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="412" cy="228" r="16" fill="#eef3ff"/>
+    <text x="412" y="234" font-size="16" text-anchor="middle">🖥️</text>
+    <text x="440" y="226" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">JP1/AJS3 Agent</text>
+    <text x="440" y="248" fill="#64748b" font-family="Inter, Arial" font-size="12">Executes on the job host</text>
+
+    <rect x="670" y="196" width="240" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="702" cy="228" r="16" fill="#eef3ff"/>
+    <text x="702" y="234" font-size="16" text-anchor="middle">📜</text>
+    <text x="730" y="226" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">Wrapper Shell</text>
+    <text x="730" y="248" fill="#64748b" font-family="Inter, Arial" font-size="12">gcloud run jobs execute --wait</text>
+  </g>
+
+  <!-- Band B: Execution & Observability -->
+  <rect x="50" y="330" width="1100" height="150" rx="18" fill="#f0fbf6" stroke="#d3f0e2"/>
+  <rect x="74" y="312" width="330" height="34" rx="17" fill="#16a34a"/>
+  <text x="239" y="335" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">2 · EXECUTION &amp; OBSERVABILITY (GOOGLE CLOUD)</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="380" y="376" width="230" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="412" cy="408" r="16" fill="#f0fbf6"/>
+    <text x="412" y="414" font-size="16" text-anchor="middle">📦</text>
+    <text x="440" y="406" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">Artifact Registry</text>
+    <text x="440" y="428" fill="#64748b" font-family="Inter, Arial" font-size="12">Versioned container images</text>
+
+    <rect x="670" y="376" width="230" height="86" rx="14" fill="#16a34a"/>
+    <circle cx="702" cy="408" r="16" fill="rgba(255,255,255,.22)"/>
+    <text x="702" y="414" font-size="16" text-anchor="middle">☁️</text>
+    <text x="730" y="406" fill="#fff" font-family="Inter, Arial" font-weight="700" font-size="15">Cloud Run Jobs</text>
+    <text x="730" y="428" fill="rgba(255,255,255,.85)" font-family="Inter, Arial" font-size="12">Container batch execution</text>
+
+    <rect x="960" y="376" width="190" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="992" cy="408" r="16" fill="#f0fbf6"/>
+    <text x="992" y="414" font-size="16" text-anchor="middle">📊</text>
+    <text x="1020" y="406" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">Cloud Logging</text>
+    <text x="1020" y="428" fill="#64748b" font-family="Inter, Arial" font-size="12">Structured run logs</text>
+  </g>
+
+  <!-- Band C: Build & Deploy -->
+  <rect x="50" y="510" width="1100" height="150" rx="18" fill="#fff6ee" stroke="#f7e2c9"/>
+  <rect x="74" y="492" width="280" height="34" rx="17" fill="#f97316"/>
+  <text x="214" y="515" fill="#fff" font-family="Inter, Arial" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.5">3 · BUILD &amp; DEPLOY (GITLAB CI/CD)</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="90" y="556" width="230" height="86" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="122" cy="588" r="16" fill="#fff6ee"/>
+    <text x="122" y="594" font-size="16" text-anchor="middle">🦊</text>
+    <text x="150" y="586" fill="#0f172a" font-family="Inter, Arial" font-weight="700" font-size="15">GitLab Repository</text>
+    <text x="150" y="608" fill="#64748b" font-family="Inter, Arial" font-size="12">Job source code</text>
+
+    <rect x="380" y="556" width="230" height="86" rx="14" fill="#f97316"/>
+    <circle cx="412" cy="588" r="16" fill="rgba(255,255,255,.22)"/>
+    <text x="412" y="594" font-size="16" text-anchor="middle">🔁</text>
+    <text x="440" y="586" fill="#fff" font-family="Inter, Arial" font-weight="700" font-size="15">GitLab CI/CD</text>
+    <text x="440" y="608" fill="rgba(255,255,255,.9)" font-family="Inter, Arial" font-size="12">Build &amp; push image</text>
+  </g>
+
+  <!-- Arrows: main execution flow (blue) -->
+  <g stroke="#1e4fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M320 239H380"/>
+    <path d="M610 239H670"/>
+    <path d="M790 282V376"/>
+    <path d="M610 419H670"/>
+    <path d="M900 419H960"/>
+  </g>
+  <g fill="#1e4fff" font-family="Inter, Arial" font-size="13" font-weight="700">
+    <text x="350" y="228" text-anchor="middle">dispatch</text>
+    <text x="640" y="228" text-anchor="middle">run</text>
+    <text x="805" y="335" text-anchor="start">execute</text>
+    <text x="640" y="408" text-anchor="middle">pull image</text>
+    <text x="930" y="408" text-anchor="middle">logs</text>
+  </g>
+
+  <!-- exit-code return path (dashed blue) -->
+  <g stroke="#1e4fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 7" opacity=".8">
+    <path d="M850 376V282"/>
+  </g>
+  <text x="858" y="335" fill="#1e4fff" font-family="Inter, Arial" font-size="13" font-weight="700">exit code</text>
+
+  <!-- Arrows: build/deploy flow (orange dashed) -->
+  <g stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 7">
+    <path d="M320 599H380"/>
+    <path d="M495 556V462"/>
+  </g>
+  <g fill="#f97316" font-family="Inter, Arial" font-size="13" font-weight="700">
+    <text x="350" y="588" text-anchor="middle">on commit</text>
+    <text x="510" y="510" text-anchor="start">build &amp; push</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="Inter, Arial" font-size="13" fill="#64748b">
+    <line x1="60" y1="710" x2="92" y2="710" stroke="#1e4fff" stroke-width="3"/>
+    <text x="100" y="714">실행 흐름 (dispatch → run → logs)</text>
+    <line x1="330" y1="710" x2="362" y2="710" stroke="#1e4fff" stroke-width="2.5" stroke-dasharray="6 7"/>
+    <text x="370" y="714">종료 코드 반환</text>
+    <line x1="560" y1="710" x2="592" y2="710" stroke="#f97316" stroke-width="3" stroke-dasharray="6 7"/>
+    <text x="600" y="714">빌드 / 배포 흐름</text>
+  </g>
+
+  <!-- Insight footer -->
+  <rect x="50" y="750" width="1100" height="76" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="78" y="782" fill="#334155" font-family="Inter, Arial" font-size="15" font-weight="600">온프레미스 JP1/AJS3 배치를 GCP Cloud Run Jobs로 전환하며, 4개 팀이 공유할 연계 기준을 문서로 정리했습니다.</text>
+  <text x="78" y="806" fill="#334155" font-family="Inter, Arial" font-size="15" font-weight="600">배치 기동 패턴 3종 비교표와 CI/CD 연계 방침 검토서가 실제 전환 결정에 쓰였습니다.</text>
+</svg>

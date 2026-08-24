@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title data-i18n="site.title">SIM JUYONG | Web · AI · Automation Developer</title>
+    <meta
+      name="description"
+      data-i18n="site.description"
+      content="Web development, Japan system experience, and AI-assisted automation — a short portfolio built for THE SC COMPANY." />
+    <meta name="author" content="SIM JUYONG" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://d2lp7owtd50i80.cloudfront.net/thesc/" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" data-i18n-attr="content:og.title" content="SIM JUYONG | Web · AI · Automation Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://d2lp7owtd50i80.cloudfront.net/thesc/" />
+    <meta property="og:image" content="https://d2lp7owtd50i80.cloudfront.net/thesc/images/og2.webp" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="max-container header__inner">
+        <a class="header__logo" href="#home" aria-label="Go to home">👋 SIM JUYONG</a>
+
+        <nav class="header__nav" aria-label="Main navigation">
+          <ul class="header__menu">
+            <li><a class="header__menu__item" data-i18n="nav.home" href="#home">🙋 About</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.why" href="#why">🧭 Why Me</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.experience" href="#experience">🧑‍💼 Experience</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.projects" href="#projects">🚀 Projects</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.skills" href="#skills">🛠️ Skills</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.certifications" href="#certifications">🏆 Certs</a></li>
+            <li><a class="header__menu__item" data-i18n="nav.contact" href="#contact">📬 Contact</a></li>
+          </ul>
+          <div class="lang-switcher">
+            <select id="langSelect" aria-label="Language">
+              <option value="ko">한국어</option>
+              <option value="en">EN</option>
+              <option value="ja">日本語</option>
+            </select>
+          </div>
+          <button class="header__toggle" aria-label="navigation menu toggle">☰</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero section">
+        <div class="max-container">
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <span class="eyebrow" data-i18n="hero.tag">✨ WEB DEVELOPMENT · AI · AUTOMATION · JAPAN</span>
+              <h1 class="hero__title" data-i18n="hero.title" data-i18n-html>
+                AI로 빠르게 만들고,<br />웹과 자동화로 실제 문제를 해결합니다.
+              </h1>
+              <p class="hero__subtitle" data-i18n="hero.subtitle">
+                웹 개발에서 시작해 일본 시스템 프로젝트와 클라우드 환경까지 경험했습니다. 이제 AI를 활용해 아이디어를 빠르게 구현하고, 반복되는 업무를 자동화하는
+                개발을 지향합니다.
+              </p>
+              <div class="hero__cta">
+                <a class="btn btn--primary" href="#projects"><span data-i18n="hero.cta.projects">View Projects</span></a>
+                <a class="btn btn--ghost" href="https://github.com/moondolph" target="_blank" rel="noreferrer noopener">🐙 GitHub</a>
+                <a class="btn btn--ghost" href="#contact"><span data-i18n="hero.cta.contact">Contact</span></a>
+              </div>
+            </div>
+
+            <aside class="hero__panel" aria-label="Profile summary">
+              <img class="hero__avatar" src="images/profile.jpg" alt="Portrait photo of SIM JUYONG" />
+              <p class="hero__name">SIM JUYONG</p>
+              <p class="hero__role" data-i18n="hero.role">Web · AI · Automation Developer</p>
+              <div class="hero__badges">
+                <span class="tag">🌏 Korean · English · Japanese</span>
+                <span class="tag">🈴 JLPT N1</span>
+                <span class="tag" data-i18n="hero.badge.japan">🇯🇵 Japan Work Experience</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Me -->
+      <section id="why" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🧭 ~/why-me</span>
+            <h2 class="title" data-i18n="why.title">Why Me</h2>
+            <p class="description">Web × Japan × AI × Automation</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card">
+              <span class="card__index">01</span>
+              <h3 class="card__title" data-i18n="why.web.title">Web Development</h3>
+              <p class="card__desc" data-i18n="why.web.desc">개발 · 운영 · 유지보수까지, 웹 실무 전 과정을 다뤄본 개발자입니다.</p>
+              <div class="card__tags">
+                <span class="tag">Development</span>
+                <span class="tag">Operations</span>
+                <span class="tag">Maintenance</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card__index">02</span>
+              <h3 class="card__title" data-i18n="why.japan.title">Japan Work Experience</h3>
+              <p class="card__desc" data-i18n="why.japan.desc">일본어 소통 + 현지 실무 경험으로, 일본 채널용 랜딩페이지 · 대시보드 · 자동화를 직접 만듭니다.</p>
+              <div class="card__tags">
+                <span class="tag">Japanese N1</span>
+                <span class="tag">Landing Page</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">Automation Script</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card__index">03</span>
+              <h3 class="card__title" data-i18n="why.ai.title">AI Development</h3>
+              <p class="card__desc" data-i18n="why.ai.desc">AI를 학습에 그치지 않고, 실제 개발에 적극 적용하고 있습니다.</p>
+              <div class="card__tags">
+                <span class="tag">Prototyping</span>
+                <span class="tag">Refactoring</span>
+                <span class="tag">Documentation</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card__index">04</span>
+              <h3 class="card__title" data-i18n="why.automation.title">Automation</h3>
+              <p class="card__desc" data-i18n="why.automation.desc">Python · Shell 스크립트와 배치 설계 경험으로 반복 업무를 자동화합니다.</p>
+              <div class="card__tags">
+                <span class="tag">Python</span>
+                <span class="tag">Shell Script</span>
+                <span class="tag">Batch Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🧑‍💼 ~/experience</span>
+            <h2 class="title" data-i18n="experience.title">Experience</h2>
+          </div>
+
+          <div class="flow-strip">
+            <span data-i18n="experience.flow.1">Web Development</span><span>→</span>
+            <span data-i18n="experience.flow.2">System &amp; Data</span><span>→</span>
+            <span data-i18n="experience.flow.3">Cloud &amp; Automation</span><span>→</span>
+            <span data-i18n="experience.flow.4">AI-assisted Development</span>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline__item">
+              <span class="timeline__marker"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">2023.03 – 2024.08 · Korea / Seoul</div>
+                <h3>GSIFN</h3>
+                <p class="timeline__role" data-i18n="exp.gsifn.role">Web Frontend Developer</p>
+                <ul>
+                  <li data-i18n="exp.gsifn.b1">국내 주요 상장기업 IR 웹사이트 개발</li>
+                  <li data-i18n="exp.gsifn.b2">투자정보 Web Widget 개발</li>
+                  <li data-i18n="exp.gsifn.b3">HTML / CSS / JavaScript, Responsive Web</li>
+                  <li data-i18n="exp.gsifn.b4">고객사별 UI 및 기능 Customizing</li>
+                  <li data-i18n="exp.gsifn.b5">PHP / MySQL, AWS EC2 기반 운영</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <span class="timeline__marker"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">2025.05 – 2025.12 · Japan / Kumamoto</div>
+                <h3>CAL</h3>
+                <p class="timeline__role" data-i18n="exp.cal.role">System Engineer</p>
+                <ul>
+                  <li data-i18n="exp.cal.b1">일본 지자체 시스템 구축·운영</li>
+                  <li data-i18n="exp.cal.b2">Oracle / SQL 기반 데이터 처리</li>
+                  <li data-i18n="exp.cal.b3">Java 기반 시스템 분석, Linux / Kubernetes 환경 운영</li>
+                  <li data-i18n="exp.cal.b4">일본 현지 엔지니어와 협업</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item">
+              <span class="timeline__marker"></span>
+              <div class="timeline__content">
+                <div class="timeline__meta">2026.02 – 2026.07 · Japan / Osaka</div>
+                <h3>PCI Solutions</h3>
+                <p class="timeline__role" data-i18n="exp.pci.role">Cloud / Infrastructure Engineer</p>
+                <ul>
+                  <li data-i18n="exp.pci.b1">일본 금융권 Cloud Migration (JP1 → GCP Cloud Run Jobs)</li>
+                  <li data-i18n="exp.pci.b2">Shell Script 작성, 반복 실행 로직 공통화 / Parameterization</li>
+                  <li data-i18n="exp.pci.b3">일본어 기술 문서 작성</li>
+                  <li data-i18n="exp.pci.b4">애자일 스프린트 리뷰에서 일본 고객 대상으로 일본어 기술 프레젠테이션 직접 진행</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🚀 ~/projects</span>
+            <h2 class="title" data-i18n="projects.title">Selected Projects</h2>
+            <p class="description" data-i18n="projects.subtitle">Ideas into Working Products.</p>
+          </div>
+
+          <div class="projects">
+            <article class="project">
+              <h3 class="project__title" data-i18n="p1.title">Corporate IR Web Platform</h3>
+              <div class="project__body">
+                <div class="project__block">
+                  <h4>🧩 Problem</h4>
+                  <p data-i18n="p1.problem">기업마다 서로 다른 IR 정보와 UI 요구사항을 웹에서 제공해야 함.</p>
+                </div>
+                <div class="project__block">
+                  <h4>🔨 Build</h4>
+                  <p data-i18n="p1.build">HTML / CSS / JavaScript 기반 반응형 웹 및 투자정보 Widget 개발. 고객사별 요구사항에 맞게 UI와 기능 Customizing.</p>
+                </div>
+                <div class="project__block">
+                  <h4>✅ Result</h4>
+                  <p data-i18n="p1.result">국내 주요 상장기업의 IR Web Service 개발 및 운영 경험 확보.</p>
+                </div>
+              </div>
+              <div class="project__tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                <span class="tag">jQuery</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">AWS</span>
+              </div>
+              <div class="live-links">
+                <a class="live-link" href="https://www.samsungshi.com/Ko/Ir_stock.aspx#pageTop" target="_blank" rel="noreferrer noopener">🔗 Samsung Heavy Industries IR</a>
+                <a class="live-link" href="https://www.celltrion.com/ko-kr/investment/stock-info" target="_blank" rel="noreferrer noopener">🔗 Celltrion IR</a>
+                <a class="live-link" href="https://www.nexentire.com/kr/investment/stock/price/" target="_blank" rel="noreferrer noopener">🔗 Nexen Tire IR</a>
+                <a class="live-link" href="https://www.sknetworks.co.kr/ir/stock/stock-price-information" target="_blank" rel="noreferrer noopener">🔗 SK Networks IR</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project__title-row">
+                <h3 class="project__title" data-i18n="p2.title">Personal Multilingual Portfolio</h3>
+                <span class="now-badge" data-i18n="p2.now">🟢 NOW — You're looking at it!</span>
+              </div>
+              <div class="project__body">
+                <div class="project__block">
+                  <h4>🧩 Problem</h4>
+                  <p data-i18n="p2.problem">개발·클라우드·글로벌 경험을 하나의 웹사이트에서 보여줄 필요.</p>
+                </div>
+                <div class="project__block">
+                  <h4>🔨 Build</h4>
+                  <p data-i18n="p2.build">직접 설계 및 개발하고 AWS에 배포한 개인 포트폴리오. 한국어 / 영어 / 일본어 지원.</p>
+                </div>
+                <div class="project__block">
+                  <h4>✅ Result</h4>
+                  <p data-i18n="p2.result">기획 → 개발 → 배포 → 운영까지 직접 수행하는 End-to-End 개발 경험.</p>
+                </div>
+              </div>
+              <div class="project__tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                <span class="tag">AWS S3</span><span class="tag">CloudFront</span><span class="tag">GitHub</span>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project__title-row">
+                <h3 class="project__title" data-i18n="p3.title">Cloud Batch Automation</h3>
+                <span class="private-badge" data-i18n="p3.private">🔒 Private project — architecture only</span>
+              </div>
+              <p class="description" data-i18n="p3.summary" style="margin-bottom: var(--space-4)">
+                일본 금융권 배치 시스템을 JP1에서 GCP Cloud Run Jobs로 전환한 프로젝트입니다. 상세 코드와 내부 자료는 공개할 수 없어, 전체 아키텍처만 소개합니다.
+              </p>
+              <img class="project__architecture" src="images/architectures/cloud-run-batch.svg" alt="JCB batch platform migration architecture: JP1/AJS3 to Cloud Run Jobs" loading="lazy" />
+              <div class="project__tags">
+                <span class="tag">Shell</span><span class="tag">GCP</span><span class="tag">Cloud Run Jobs</span>
+                <span class="tag">JP1</span><span class="tag">Terraform</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Workflow -->
+      <section id="ai-workflow" class="section">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🤖 ~/ai-workflow</span>
+            <h2 class="title" data-i18n="ai.title">How I Build with AI</h2>
+            <p class="description" data-i18n="ai.subtitle">AI is not the product. It makes product development faster.</p>
+          </div>
+
+          <div class="flow-diagram">
+            <span class="flow-step" data-i18n="ai.flow.1">Idea / Problem</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.2">AI-assisted Planning</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.3">Prototype</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.4">Code &amp; Integration</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.5">Test</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.6">Deploy</span><span class="flow-arrow">→</span>
+            <span class="flow-step" data-i18n="ai.flow.7">Improve</span>
+          </div>
+
+          <div class="ai-columns">
+            <p class="description" data-i18n="ai.desc">
+              AI Coding Tool을 단순 코드 생성기가 아니라 개발 속도를 높이는 협업 도구로 활용합니다.
+            </p>
+            <ul>
+              <li data-i18n="ai.item.1">Requirement Structuring</li>
+              <li data-i18n="ai.item.2">Implementation Research</li>
+              <li data-i18n="ai.item.3">Code Generation</li>
+              <li data-i18n="ai.item.4">Refactoring</li>
+              <li data-i18n="ai.item.5">Debugging</li>
+              <li data-i18n="ai.item.6">Documentation</li>
+            </ul>
+          </div>
+
+          <p class="ai-note" data-i18n="ai.note">
+            AI가 생성한 결과를 그대로 사용하는 것이 아니라, 직접 검증하고 실제 서비스 환경에 맞게 수정합니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- What I Can Build -->
+      <section id="build" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🧰 ~/what-i-can-build</span>
+            <h2 class="title" data-i18n="build.title">What I Can Build</h2>
+            <p class="description" data-i18n="build.subtitle">For Marketing Teams</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="card">
+              <h3 class="card__title" data-i18n="build.landing.title">Landing Pages</h3>
+              <p class="card__desc" data-i18n="build.landing.desc">캠페인 / 서비스용 반응형 랜딩페이지</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title" data-i18n="build.dashboard.title">Marketing Dashboard</h3>
+              <p class="card__desc" data-i18n="build.dashboard.desc">API와 데이터를 연결한 간단한 운영 Dashboard</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title" data-i18n="build.automation.title">Workflow Automation</h3>
+              <p class="card__desc" data-i18n="build.automation.desc">반복적인 데이터 처리와 업무 프로세스 자동화</p>
+            </div>
+            <div class="card">
+              <h3 class="card__title" data-i18n="build.tools.title">Internal Tools</h3>
+              <p class="card__desc" data-i18n="build.tools.desc">현업의 작은 불편을 해결하는 Web-based Internal Tool</p>
+            </div>
+          </div>
+
+          <p class="description" style="margin-top: var(--space-6)" data-i18n="build.closing">
+            마케팅팀의 아이디어를 빠르게 실제 결과물로 만드는 개발자가 되고 싶습니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🛠️ ~/skills</span>
+            <h2 class="title" data-i18n="skills.title">Skills</h2>
+          </div>
+
+          <div class="skill-groups">
+            <div class="skill-group">
+              <div class="skill-group__title">💻 WEB</div>
+              <div class="card__tags">
+                <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+                <span class="tag">React</span><span class="tag">PHP</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group__title" data-i18n="skills.group.automation">AUTOMATION / DATA</div>
+              <div class="card__tags">
+                <span class="tag">Python</span><span class="tag">Shell Script</span><span class="tag">SQL</span>
+                <span class="tag">REST API</span><span class="tag">JSON</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group__title">☁️ CLOUD</div>
+              <div class="card__tags">
+                <span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Docker</span><span class="tag">Terraform</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group__title">🧰 TOOLS</div>
+              <div class="card__tags">
+                <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">GitLab</span>
+                <span class="tag">Figma</span><span class="tag">Jira</span><span class="tag">Confluence</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group__title" data-i18n="skills.group.language">LANGUAGE</div>
+              <div class="card__tags">
+                <span class="tag" data-i18n="skills.lang.ko">Korean — Native</span>
+                <span class="tag" data-i18n="skills.lang.ja">Japanese — JLPT N1 / Business</span>
+                <span class="tag" data-i18n="skills.lang.en">English — TOEIC 925 / Business</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="section section--muted">
+        <div class="max-container">
+          <div class="section__header">
+            <span class="eyebrow">🏆 ~/certifications</span>
+            <h2 class="title" data-i18n="cert.title">🏆 Certifications</h2>
+            <p class="description" data-i18n="cert.subtitle">AWS Cloud Certifications &amp; Language Proficiency</p>
+            <a class="btn btn--ghost" style="margin-top: var(--space-4)" href="https://www.credly.com/users/juyong-sim-profile/badges/credly" target="_blank" rel="noreferrer noopener">
+              🎖️ <span data-i18n="cert.credly">View all badges on Credly</span>
+            </a>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-card">
+              <img class="cert-card__badge" src="images/badges/solutions-architect-associate.png" alt="AWS Certified Solutions Architect - Associate" loading="lazy" />
+              <p class="cert-card__name">AWS Solutions Architect<br />Associate</p>
+            </div>
+            <div class="cert-card">
+              <img class="cert-card__badge" src="images/badges/developer-associate.png" alt="AWS Certified Developer - Associate" loading="lazy" />
+              <p class="cert-card__name">AWS Developer<br />Associate</p>
+            </div>
+            <div class="cert-card">
+              <img class="cert-card__badge" src="images/badges/sysops-associate.png" alt="AWS Certified CloudOps Engineer - Associate" loading="lazy" />
+              <p class="cert-card__name">AWS CloudOps Engineer<br />Associate</p>
+            </div>
+            <div class="cert-card">
+              <img class="cert-card__badge" src="images/badges/ai-practitioner.png" alt="AWS Certified AI Practitioner" loading="lazy" />
+              <p class="cert-card__name">AWS AI<br />Practitioner</p>
+            </div>
+            <div class="cert-card">
+              <img class="cert-card__badge" src="images/badges/cloud-practitioner.png" alt="AWS Certified Cloud Practitioner" loading="lazy" />
+              <p class="cert-card__name">AWS Cloud<br />Practitioner</p>
+            </div>
+          </div>
+
+          <div class="lang-cert-row">
+            <div class="lang-cert-card">
+              <span class="lang-cert-card__emoji">🗣️</span>
+              <div>
+                <p class="lang-cert-card__name" data-i18n="cert.toeic.name">TOEIC</p>
+                <p class="lang-cert-card__score" data-i18n="cert.toeic.score">925 / Business</p>
+              </div>
+            </div>
+            <div class="lang-cert-card">
+              <span class="lang-cert-card__emoji">🇯🇵</span>
+              <div>
+                <p class="lang-cert-card__name" data-i18n="cert.jlpt.name">JLPT N1</p>
+                <p class="lang-cert-card__score" data-i18n="cert.jlpt.score">Highest level of the Japanese Language Proficiency Test</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="section contact-section">
+      <div class="max-container">
+        <span class="eyebrow">📬 ~/contact</span>
+        <h2 class="cta__title" data-i18n="contact.title">Let's Build Something Useful.</h2>
+        <p class="cta__subtitle" data-i18n="contact.body" data-i18n-html>
+          기술의 가치는 실제 문제를 해결할 때 만들어진다고 생각합니다.<br /><br />웹과 AI를 활용해 아이디어를 실제 결과물로 만들겠습니다.
+        </p>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="mailto:jysim1212@gmail.com">✉️ jysim1212@gmail.com</a>
+          <a class="btn btn--ghost" href="https://github.com/moondolph" target="_blank" rel="noreferrer noopener">🐙 GitHub</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/juyong-sim-profile/" target="_blank" rel="noreferrer noopener">🔗 LinkedIn</a>
+        </div>
+        <p class="footer-copy">© SIM JUYONG. Web · AI · Automation Developer.</p>
+      </div>
+    </footer>
+
+    <a class="arrow-up" id="arrowUp" href="#home" title="back to top">↑</a>
+  </body>
+</html>
