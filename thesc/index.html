@@ -320,6 +320,14 @@
                 일본 금융권 배치 시스템을 JP1에서 GCP Cloud Run Jobs로 전환한 프로젝트입니다. 상세 코드와 내부 자료는 공개할 수 없어, 전체 아키텍처만 소개합니다.
               </p>
               <img class="project__architecture" src="images/architectures/cloud-run-batch.svg" alt="JCB batch platform migration architecture: JP1/AJS3 to Cloud Run Jobs" loading="lazy" />
+              <div class="arch-legend">
+                <span class="arch-legend__item"><i class="arch-legend__swatch arch-legend__swatch--solid-blue"></i><span data-i18n="p3.legend.exec">Execution flow (dispatch → run → logs)</span></span>
+                <span class="arch-legend__item"><i class="arch-legend__swatch arch-legend__swatch--dashed-blue"></i><span data-i18n="p3.legend.exit">Exit code return</span></span>
+                <span class="arch-legend__item"><i class="arch-legend__swatch arch-legend__swatch--dashed-orange"></i><span data-i18n="p3.legend.build">Build / deploy flow</span></span>
+              </div>
+              <p class="arch-insight" data-i18n="p3.insight" data-i18n-html>
+                온프레미스 JP1/AJS3 배치를 GCP Cloud Run Jobs로 전환하며, 4개 팀이 공유할 연계 기준을 문서로 정리했습니다.<br />배치 기동 패턴 3종 비교표와 CI/CD 연계 방침 검토서가 실제 전환 결정에 쓰였습니다.
+              </p>
               <div class="project__tags">
                 <span class="tag">Shell</span><span class="tag">GCP</span><span class="tag">Cloud Run Jobs</span>
                 <span class="tag">JP1</span><span class="tag">Terraform</span>

@@ -91,6 +91,10 @@ const I18N = {
     "p3.result": "기존 시스템과 Cloud 환경을 연결하는 표준 실행 구조 설계 및 검증.",
     "p3.private": "🔒 Private project — 아키텍처만 소개합니다",
     "p3.summary": "일본 금융권 배치 시스템을 JP1에서 GCP Cloud Run Jobs로 전환한 프로젝트입니다. 상세 코드와 내부 자료는 공개할 수 없어, 전체 아키텍처만 소개합니다.",
+    "p3.legend.exec": "실행 흐름 (dispatch → run → logs)",
+    "p3.legend.exit": "종료 코드 반환",
+    "p3.legend.build": "빌드 / 배포 흐름",
+    "p3.insight": "온프레미스 JP1/AJS3 배치를 GCP Cloud Run Jobs로 전환하며, 4개 팀이 공유할 연계 기준을 문서로 정리했습니다.\n배치 기동 패턴 3종 비교표와 CI/CD 연계 방침 검토서가 실제 전환 결정에 쓰였습니다.",
     "cert.credly": "View all badges on Credly",
 
     "ai.title": "🤖 How I Build with AI",
@@ -226,6 +230,10 @@ const I18N = {
     "p3.result": "Designed and validated a standard execution structure connecting legacy systems with the cloud.",
     "p3.private": "🔒 Private project — architecture only",
     "p3.summary": "A migration project that moved a Japanese financial company's batch system from JP1 to GCP Cloud Run Jobs. The code and internal materials are confidential, so only the overall architecture is shown here.",
+    "p3.legend.exec": "Execution flow (dispatch → run → logs)",
+    "p3.legend.exit": "Exit code return",
+    "p3.legend.build": "Build / deploy flow",
+    "p3.insight": "While migrating an on-prem JP1/AJS3 batch system to GCP Cloud Run Jobs, I documented the integration standard shared across 4 teams.\nA comparison table of 3 batch-trigger patterns and a CI/CD integration policy review were used in the actual migration decision.",
     "cert.credly": "View all badges on Credly",
 
     "ai.title": "🤖 How I Build with AI",
@@ -360,6 +368,10 @@ const I18N = {
     "p3.result": "既存システムとクラウド環境をつなぐ標準的な実行構造を設計・検証。",
     "p3.private": "🔒 Private project — アーキテクチャのみ紹介",
     "p3.summary": "日本の金融機関のバッチシステムをJP1からGCP Cloud Run Jobsへ移行したプロジェクトです。コードや内部資料は非公開のため、全体アーキテクチャのみご紹介します。",
+    "p3.legend.exec": "実行フロー（dispatch → run → logs）",
+    "p3.legend.exit": "終了コード返却",
+    "p3.legend.build": "ビルド／デプロイフロー",
+    "p3.insight": "オンプレミスのJP1/AJS3バッチをGCP Cloud Run Jobsへ移行する過程で、4チームが共有する連携基準をドキュメントとして整理しました。\nバッチ起動パターン3種の比較表とCI/CD連携方針の検討書が、実際の移行判断に使用されました。",
     "cert.credly": "View all badges on Credly",
 
     "ai.title": "🤖 How I Build with AI",
