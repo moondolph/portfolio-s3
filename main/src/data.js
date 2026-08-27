@@ -42,23 +42,50 @@ export const EXPERIENCE = [
   },
 ];
 
-// Skills — 5 groups. AI tags carry a "level" so we can label them Experience / Learning / Exploring
+// Skills — grouped into a "core" section (Cloud / Infrastructure / DevOps, the main identity)
+// and an "additional" section (Development / AI, supporting capabilities). `section` drives the
+// group-label heading rendered above each cluster in render.js.
+// AI tags carry a "level" so we can label them Experience / Learning / Exploring
 // instead of implying hands-on professional experience that doesn't exist yet.
 export const SKILLS = [
   {
+    id: "cloudInfra",
+    section: "core",
+    icon: "fa-solid fa-cloud",
+    descKey: "skills.cloudInfra.desc",
+    tags: ["AWS", "GCP", "Terraform", "Docker", "Kubernetes", "Linux", "Cloud Run Jobs", "Lambda", "S3", "CloudFront"],
+  },
+  {
+    id: "devopsAutomation",
+    section: "core",
+    icon: "fa-solid fa-gears",
+    descKey: "skills.devopsAutomation.desc",
+    tags: ["CI/CD", "GitHub Actions", "GitLab", "Shell Script", "JP1/AJS3", "Cloud Logging"],
+  },
+  {
+    id: "opsCollab",
+    section: "core",
+    icon: "fa-solid fa-terminal",
+    descKey: "skills.opsCollab.desc",
+    tags: ["Oracle", "SQL", "Troubleshooting", "Jira", "Confluence", "Trello", "Git"],
+  },
+  {
     id: "frontend",
+    section: "additional",
     icon: "fa-solid fa-code",
     descKey: "skills.frontend.desc",
-    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
+    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
   },
   {
     id: "backend",
+    section: "additional",
     icon: "fa-solid fa-server",
     descKey: "skills.backend.desc",
     tags: ["Java", "Python", "FastAPI", "REST API", "SQL"],
   },
   {
     id: "ai",
+    section: "additional",
     icon: "fa-solid fa-brain",
     descKey: "skills.ai.desc",
     tags: [
@@ -68,18 +95,6 @@ export const SKILLS = [
       { name: "AI Agent", level: "exploring" },
       { name: "Vector Database", level: "exploring" },
     ],
-  },
-  {
-    id: "cloudDevops",
-    icon: "fa-solid fa-cloud",
-    descKey: "skills.cloudDevops.desc",
-    tags: ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "CI/CD", "GitLab", "Cloud Run Jobs", "Lambda", "S3", "CloudFront"],
-  },
-  {
-    id: "opsCollab",
-    icon: "fa-solid fa-terminal",
-    descKey: "skills.opsCollab.desc",
-    tags: ["Linux", "JP1/AJS3", "Oracle", "Cloud Logging", "Jira", "Confluence", "Trello", "Git", "Troubleshooting"],
   },
 ];
 
@@ -91,52 +106,17 @@ export const CERTS = [
   { id: "cloudPractitioner", badge: "cloud-practitioner.png", nameKey: "cert.cloudPractitioner.name", descKey: "cert.cloudPractitioner.desc" },
 ];
 
-// Projects — ordered by display priority. `status` is "live" | "private" | "planned".
+// Projects — ordered by display priority. Cloud/Ops projects lead since Cloud & DevOps is the
+// main positioning; a future flagship "Production Cloud Service" project should be prepended here.
+// `status` is "live" | "private" | "planned".
 // Planned projects must never show fabricated results/links — only summary + intended stack.
 export const PROJECTS = [
-  {
-    id: "hardcoreEnglish",
-    category: "ai",
-    status: "inProgress",
-    visibility: "public",
-    featured: true,
-    titleKey: "project.hardcoreEnglish.title",
-    subtitleKey: "project.hardcoreEnglish.subtitle",
-    problemKey: "project.hardcoreEnglish.problem",
-    roleKey: "project.hardcoreEnglish.role",
-    solutionKey: "project.hardcoreEnglish.solution",
-    resultsKey: null,
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Claude API", "Node.js API Routes"],
-    visual: { variant: "ai", chips: ["15s Timer", "→", "Claude API", "→", "Correction Report"] },
-    githubUrl: null,
-    liveUrl: null,
-    architectureUrl: null,
-  },
-  {
-    id: "cafeEnglishTrainer",
-    category: "fullstack",
-    status: "inProgress",
-    visibility: "private",
-    featured: false,
-    titleKey: "project.cafeEnglishTrainer.title",
-    subtitleKey: "project.cafeEnglishTrainer.subtitle",
-    problemKey: "project.cafeEnglishTrainer.problem",
-    roleKey: "project.cafeEnglishTrainer.role",
-    solutionKey: "project.cafeEnglishTrainer.solution",
-    resultsKey: null,
-    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    visual: { variant: "web", chips: ["Korean Input", "→", "5s Timer", "→", "English Output"] },
-    githubUrl: "https://github.com/moondolph/korean-to-english",
-    githubPrivate: true,
-    liveUrl: "https://korean-to-english.vercel.app/",
-    architectureUrl: null,
-  },
   {
     id: "jcb",
     category: "cloud",
     status: "private",
     visibility: "private",
-    featured: false,
+    featured: true,
     titleKey: "project.jcb.title",
     subtitleKey: "project.jcb.subtitle",
     problemKey: "project.jcb.problem",
@@ -186,6 +166,43 @@ export const PROJECTS = [
     architectureUrl: "images/architectures/public-ops.svg",
   },
   {
+    id: "hardcoreEnglish",
+    category: "ai",
+    status: "inProgress",
+    visibility: "public",
+    featured: false,
+    titleKey: "project.hardcoreEnglish.title",
+    subtitleKey: "project.hardcoreEnglish.subtitle",
+    problemKey: "project.hardcoreEnglish.problem",
+    roleKey: "project.hardcoreEnglish.role",
+    solutionKey: "project.hardcoreEnglish.solution",
+    resultsKey: null,
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Claude API", "Node.js API Routes"],
+    visual: { variant: "ai", chips: ["15s Timer", "→", "Claude API", "→", "Correction Report"] },
+    githubUrl: null,
+    liveUrl: null,
+    architectureUrl: null,
+  },
+  {
+    id: "cafeEnglishTrainer",
+    category: "fullstack",
+    status: "inProgress",
+    visibility: "private",
+    featured: false,
+    titleKey: "project.cafeEnglishTrainer.title",
+    subtitleKey: "project.cafeEnglishTrainer.subtitle",
+    problemKey: "project.cafeEnglishTrainer.problem",
+    roleKey: "project.cafeEnglishTrainer.role",
+    solutionKey: "project.cafeEnglishTrainer.solution",
+    resultsKey: null,
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    visual: { variant: "web", chips: ["Korean Input", "→", "5s Timer", "→", "English Output"] },
+    githubUrl: "https://github.com/moondolph/korean-to-english",
+    githubPrivate: true,
+    liveUrl: "https://korean-to-english.vercel.app/",
+    architectureUrl: null,
+  },
+  {
     id: "gsifnWidget",
     category: "fullstack",
     status: "live",
@@ -205,4 +222,4 @@ export const PROJECTS = [
   },
 ];
 
-export const PROJECT_CATEGORIES = ["all", "ai", "fullstack", "cloud", "ops"];
+export const PROJECT_CATEGORIES = ["all", "cloud", "ops", "ai", "fullstack"];

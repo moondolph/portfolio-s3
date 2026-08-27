@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIM JUYONG — Full Stack · AI · Cloud Engineer Portfolio
+   SIM JUYONG — Cloud & DevOps Engineer Portfolio
    Concept: "Engineer's Notebook" — paper + grid + terminal.
    ========================================================================== */
 
@@ -832,6 +832,20 @@ select:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
+}
+
+.capabilities__label {
+  grid-column: 1 / -1;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: var(--space-3);
+}
+
+.capabilities__label:first-child {
+  margin-top: 0;
 }
 
 .capability {

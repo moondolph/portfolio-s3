@@ -27,25 +27,25 @@ export function startTypeit(lang = resolveLang()) {
 
   const phrases = {
     ko: [
-      "풀스택 · AI · 클라우드 엔지니어",
-      "서비스를 개발하고 배포하고 운영하는 엔지니어",
-      "AWS/GCP 인프라를 다루는 클라우드 엔지니어",
-      "프론트엔드부터 인프라까지 경험한 엔지니어",
-      "AI를 서비스에 연결하는 방법을 학습하는 엔지니어",
+      "클라우드 & DevOps 엔지니어",
+      "AWS/GCP 인프라를 설계하고 자동화하는 엔지니어",
+      "클라우드 마이그레이션과 IaC를 다루는 엔지니어",
+      "웹 개발부터 인프라 운영까지 경험한 엔지니어",
+      "AI를 서비스 자동화에 연결하는 방법을 학습하는 엔지니어",
     ],
     ja: [
-      "フルスタック・AI・クラウドエンジニア",
-      "サービスを開発し、デプロイし、運用するエンジニア",
-      "AWS/GCPを扱うクラウドエンジニア",
-      "フロントエンドからインフラまで経験したエンジニア",
-      "AIをサービスに繋げる方法を学ぶエンジニア",
+      "クラウド & DevOpsエンジニア",
+      "AWS/GCPインフラを設計・自動化するエンジニア",
+      "クラウド移行とIaCを担うエンジニア",
+      "Web開発からインフラ運用まで経験したエンジニア",
+      "AIを自動化に繋げる方法を学ぶエンジニア",
     ],
     en: [
-      "a Full Stack · AI · Cloud Engineer",
-      "an engineer who builds, deploys, and operates services",
-      "a Cloud Engineer working across AWS and GCP",
-      "an engineer with experience from frontend to infrastructure",
-      "an engineer learning to connect AI into real services",
+      "a Cloud & DevOps Engineer",
+      "an engineer who designs and automates AWS/GCP infrastructure",
+      "an engineer specializing in cloud migration and IaC",
+      "an engineer with experience from web development to infrastructure operations",
+      "an engineer learning to connect AI into automation workflows",
     ],
   };
 
