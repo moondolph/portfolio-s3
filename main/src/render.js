@@ -6,7 +6,7 @@
 import { EXPERIENCE, SKILLS, CERTS, PROJECTS, PROJECT_CATEGORIES } from "./data.js";
 import { initProjectFilter } from "./projects.js";
 
-const CATEGORY_LABELS = { all: "All", ai: "AI", fullstack: "Full Stack", cloud: "Cloud", ops: "Operations" };
+const CATEGORY_LABELS = { all: "All", cloud: "Cloud", ops: "Operations", ai: "AI", fullstack: "Full Stack" };
 
 function tagChip(tag) {
   if (typeof tag === "string") return `<span class="tag">${tag}</span>`;
@@ -34,14 +34,23 @@ function renderCareer() {
 function renderSkills() {
   const container = document.querySelector("#skills .capabilities");
   if (!container) return;
-  container.innerHTML = SKILLS.map(
-    (group) => `
+  // Groups are pre-ordered in data.js: "core" (Cloud/Infrastructure/DevOps — the main identity)
+  // before "additional" (Development/AI — supporting capabilities). Print a section label the
+  // first time a section changes so the priority reads clearly without a layout rework.
+  let lastSection = null;
+  container.innerHTML = SKILLS.map((group) => {
+    const label =
+      group.section !== lastSection
+        ? `<div class="capabilities__label" data-i18n="skills.section.${group.section}"></div>`
+        : "";
+    lastSection = group.section;
+    return `${label}
     <section class="capability">
       <h3 class="capability__title"><i class="${group.icon}"></i> <span data-i18n="skills.${group.id}.title"></span></h3>
       <p class="capability__desc" data-i18n="${group.descKey}"></p>
       <div class="capability__tags">${group.tags.map(tagChip).join("")}</div>
-    </section>`
-  ).join("");
+    </section>`;
+  }).join("");
 }
 
 function renderCertifications() {
