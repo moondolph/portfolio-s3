@@ -131,7 +131,7 @@
   "cert.cloudPractitioner.name": "AWS Certified Cloud Practitioner",
   "cert.cloudPractitioner.desc": "Demonstrates foundational understanding of core cloud services such as IAM, EC2, and S3.",
 
-  "contact.title": "The future isn't something you wait for.\nIt's something you build.",
-  "contact.tagline": "Build. Deploy. Operate. Automate.",
+  "contact.title": "Every service\nultimately runs on infrastructure.",
+  "contact.tagline": "I design, automate, and operate infrastructure you can rely on.",
   "contact.subtitle": "Reliable infrastructure turns ideas into services that scale."
 }

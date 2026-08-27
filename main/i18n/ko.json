@@ -131,7 +131,7 @@
   "cert.cloudPractitioner.name": "AWS Certified Cloud Practitioner",
   "cert.cloudPractitioner.desc": "IAM, EC2, S3 등 핵심 서비스에 대한 클라우드 기초 이해를 증명합니다.",
 
-  "contact.title": "미래는 기다리는 것이 아닙니다.\n직접 만드는 것입니다.",
-  "contact.tagline": "Build. Deploy. Operate. Automate.",
+  "contact.title": "모든 서비스는\n결국 인프라 위에서 실행됩니다.",
+  "contact.tagline": "안정적인 인프라를 설계하고, 자동화하고, 운영합니다.",
   "contact.subtitle": "신뢰할 수 있는 인프라가 아이디어를 확장 가능한 서비스로 만듭니다."
 }
