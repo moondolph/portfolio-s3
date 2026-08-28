@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ==========================================================================
+         NESIC Career Story Page — JUYONG SIM  ·  Japanese version (default)
+         A ~60-90 second visual career presentation. Static HTML/CSS/vanilla JS.
+         Five sections (Japanese-led titles, English kicker):
+           01 自己紹介 / About Me (hero)
+           02 経歴 / Experience
+           03 志望動機 / Motivation   (deep band — the key section)
+           04 強み / Strengths
+           05 入社後の目標 / Future
+         English version lives at /nesic/en/ and shares this style.css / script.js.
+         When editing content, update the English version at en/index.html to match.
+         ========================================================================== -->
+
+    <title>JUYONG SIM | My Journey to Global Infrastructure</title>
+    <meta
+      name="description"
+      content="韓国・カナダ・日本を経験したITエンジニアのキャリアストーリー。Web開発 → システム運用 → クラウド移行と広げてきた経験を土台に、世界をつなぐグローバルインフラ分野で長期的な専門性を築いていきます。" />
+    <meta name="author" content="JUYONG SIM" />
+
+    <!-- This page is shared directly with recruiters; keep it out of search indexes. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://d2lp7owtd50i80.cloudfront.net/nesic/" />
+    <link rel="alternate" hreflang="ja" href="https://d2lp7owtd50i80.cloudfront.net/nesic/" />
+    <link rel="alternate" hreflang="en" href="https://d2lp7owtd50i80.cloudfront.net/nesic/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://d2lp7owtd50i80.cloudfront.net/nesic/" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Fonts: Space Grotesk (English headings), Inter (Latin body),
+         Yu Gothic / Noto Sans JP (Japanese headings + body). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ====================================================================
+         HEADER
+         ==================================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="wrap site-header__inner">
+        <a class="site-header__logo" href="#profile">JUYONG SIM</a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <button class="site-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="site-nav__bars" aria-hidden="true"></span>
+          </button>
+          <ul class="site-nav__menu" id="navMenu">
+            <li><a href="#profile">自己紹介</a></li>
+            <li><a href="#experience">経歴</a></li>
+            <li><a href="#motivation">志望動機</a></li>
+            <li><a href="#strengths">強み</a></li>
+            <li><a href="#future">入社後の目標</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__end">
+          <!-- Static language switch. Japanese is the current page. -->
+          <div class="lang-switch" aria-label="Language">
+            <span aria-current="page">日本語</span>
+            <a href="./en/">EN</a>
+          </div>
+          <span class="site-header__role">Toward Global Infrastructure</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ====================================================================
+           01. 自己紹介 — About Me  (hero)
+           私は何者か。 韓国 → カナダ → 日本、IT エンジニア、英語・日本語。
+           ==================================================================== -->
+      <section class="hero" id="profile" aria-labelledby="profile-title">
+        <!-- Decorative latitude / longitude grid + coordinate labels. -->
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <!-- Faint simplified world map + career route (Korea → Canada → Japan). -->
+        <svg class="hero__map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <path
+            class="hm-land"
+            d="M35 70 L150 48 L340 55 L350 110 L285 175 L255 210 L230 175 L160 120 Z
+               M291 222 L333 228 L403 272 L367 319 L306 394 L291 300 Z
+               M360 35 L400 28 L415 60 L385 75 L358 55 Z
+               M475 139 L569 56 L611 83 L583 139 L539 133 Z
+               M472 156 L594 164 L642 219 L611 278 L556 347 L533 300 L522 239 L453 208 Z
+               M611 172 L644 214 L717 228 L778 244 L800 217 L839 147 L944 94 L1000 67 L792 39 L667 61 L639 133 Z
+               M778 250 L825 245 L845 265 L800 275 Z
+               M839 289 L897 283 L925 325 L903 356 L875 347 L822 339 Z" />
+          <path class="hm-route" d="M847 147 Q560 40 277 129 M277 129 Q580 30 883 150" />
+          <circle class="hm-dot" cx="847" cy="147" r="4" />
+          <circle class="hm-dot" cx="277" cy="129" r="4" />
+          <circle class="hm-dot" cx="883" cy="150" r="4" />
+        </svg>
+
+        <span class="coord coord--tl" aria-hidden="true">37.57&deg;N 126.98&deg;E</span>
+        <span class="coord coord--br" aria-hidden="true">43.45&deg;N 80.49&deg;W</span>
+
+        <div class="wrap hero__layout">
+          <div class="hero__inner">
+            <p class="eyebrow">PROFILE</p>
+            <h1 class="hero__title" id="profile-title">自己紹介</h1>
+            <p class="hero__subtitle">ITシステムから、世界をつなぐインフラへ。</p>
+
+            <!-- Career geography. Stacks vertically on mobile (see CSS). -->
+            <ol class="route" aria-label="Career geography">
+              <li class="route__stop">Korea</li>
+              <li class="route__stop">Canada</li>
+              <li class="route__stop route__stop--next">Japan</li>
+            </ol>
+
+            <!-- Line breaks at clause boundaries for readable Japanese wrapping. -->
+            <p class="hero__copy">
+              韓国出身のITエンジニアです。<br />
+              カナダでの留学・海外経験を経て、韓国と日本で実務経験を積み、<br />
+              英語と日本語でのコミュニケーションを活かして仕事を進めてきました。
+            </p>
+
+            <a class="btn" href="#experience">Explore My Journey</a>
+          </div>
+
+          <!-- Profile card. Photo is a real portrait (not a placeholder). -->
+          <aside class="hero__panel" aria-label="Profile">
+            <img class="hero__avatar" src="./images/profile/profile.jpg" alt="Portrait photo of JUYONG SIM" width="350" height="450" />
+            <div class="hero__panel__content">
+              <p class="hero__name">JUYONG SIM</p>
+            </div>
+            <ul class="hero__panel__list">
+              <li><span class="k">学歴</span><span class="v">韓国外国語大学校</span></li>
+              <li>
+                <span class="k">専攻</span><span class="v">英語通訳翻訳<br />日本言語文化<br />コンピュータ工学（学士）</span>
+              </li>
+              <li><span class="k">言語</span><span class="v">韓国語 / 日本語 / 英語</span></li>
+              <li><span class="k">技術分野</span><span class="v">Web / System / Infra</span></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           02. 経歴 — Experience
+           何をしてきたか。 Web Development → System Operations → Cloud Migration
+           （韓国 → 熊本 → 大阪 の流れ）
+           ==================================================================== -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow">EXPERIENCE</p>
+            <h2 class="section__title" id="experience-title">経歴</h2>
+          </header>
+
+          <!-- Compact visual progression (things actually done). -->
+          <ol class="progression" aria-label="Career progression">
+            <li class="progression__step reveal">Web開発</li>
+            <li class="progression__step reveal">システム開発・運用</li>
+            <li class="progression__step reveal">クラウド移行</li>
+          </ol>
+
+          <ol class="timeline">
+            <!-- Web Development -->
+            <li class="timeline__item reveal">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <p class="timeline__meta"><span class="timeline__place">韓国</span><span>2023.03 – 2024.08</span></p>
+                <h3 class="timeline__theme">Web開発</h3>
+                <p class="timeline__text">
+                  金融情報サービス企業の企業IR・Webサイト構築プロジェクトに参加し、HTML / CSS / JavaScript による UI 実装とレスポンシブ対応を担当しました。
+                </p>
+                <p class="timeline__text">画面のコーディング・保守に加え、Git での構成管理とチーム開発プロセスを経験しました。</p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>PHP</li>
+                  <li>レスポンシブUI</li>
+                  <li>Git</li>
+                </ul>
+                <p class="timeline__links-label">LIVE</p>
+                <ul class="timeline__links">
+                  <li>
+                    <a href="https://www.celltrion.com/en-us/investment/stock-info" target="_blank" rel="noreferrer noopener"
+                      >Celltrion IR <span aria-hidden="true">↗</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.nexentire.com/jp/investment/stock/price/index.php" target="_blank" rel="noreferrer noopener"
+                      >Nexen Tire IR <span aria-hidden="true">↗</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.sknetworks.co.kr/en/ir/stock/stock-price-information" target="_blank" rel="noreferrer noopener"
+                      >SK Networks IR <span aria-hidden="true">↗</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- System Operations -->
+            <li class="timeline__item reveal">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <p class="timeline__meta"><span class="timeline__place">日本 · 熊本</span><span>2025.05 – 2025.12</span></p>
+                <h3 class="timeline__theme">システム開発・運用</h3>
+                <p class="timeline__text">
+                  自治体の健康保険システム標準化プロジェクトで、Java アプリの開発・デプロイと環境構築、Oracle DB でのデータ照会・障害原因分析を担当しました。
+                </p>
+                <p class="timeline__text">
+                  アプリログの収集・分析、バッチ実行検証、アカウント・権限管理、帳票機能のデバッグにも取り組み、運用・保守と関係者対応を通じて実システムの動き方を学びました。
+                </p>
+                <ul class="tags">
+                  <li>Java</li>
+                  <li>Oracle</li>
+                  <li>SQL</li>
+                  <li>Linux</li>
+                  <li>バッチ検証</li>
+                  <li>障害調査</li>
+                  <li>ドキュメント</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Cloud Migration -->
+            <li class="timeline__item reveal">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <p class="timeline__meta"><span class="timeline__place">日本 · 大阪</span><span>2026.02 – 2026.07</span></p>
+                <h3 class="timeline__theme">クラウド移行</h3>
+                <p class="timeline__text">
+                  オンプレミス基盤の金融システムを Google Cloud へ移行するプロジェクトに参画し、クラウドバッチ実行アーキテクチャの技術検証と JP1/AJS3
+                  からの移行を担当しました。
+                </p>
+                <p class="timeline__text">Shell Script 作成、テスト・検証、実行モニタリング／ログ管理体制の検討、複数チームとの情報共有・調整を行いました。</p>
+                <ul class="tags">
+                  <li>GCP Cloud Run Jobs</li>
+                  <li>JP1/AJS3</li>
+                  <li>Shell Script</li>
+                  <li>Docker</li>
+                  <li>Terraform</li>
+                  <li>CI/CD</li>
+                  <li>マルチチーム調整</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           03. 志望動機 — Motivation   ★ the key section
+           Exactly four cards, read as one story:
+             01 MY BACKGROUND  → 02 SPECIALIZATION  → 03 GLOBAL CAREER  → 04 FUTURE VISION
+           Desktop: 2×2 grid. Mobile: single column. Japanese title leads;
+           English label + keywords are secondary. Keep it scannable (5-10s/card).
+           ==================================================================== -->
+      <section class="section section--dark" id="motivation" aria-labelledby="motivation-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow eyebrow--light">MOTIVATION</p>
+            <h2 class="section__title" id="motivation-title">志望動機</h2>
+            <p class="section__lead">これまでの経験を活かしながら、<br />グローバルな環境で新たな専門性を築きたいです。</p>
+          </header>
+
+          <div class="motiv-cards">
+            <!-- 01 — 지금까지의 경험을 모두 활용할 수 있는 기회 -->
+            <article class="motiv-card reveal">
+              <p class="motiv-card__label">01 / MY BACKGROUND</p>
+              <h3 class="motiv-card__title">これまでの経験を活かせる仕事</h3>
+              <div class="motiv-card__text">
+                <p>英語通訳翻訳と日本言語文化を学び、カナダでの留学、日本での実務を経験してきました。</p>
+                <p>IT分野では、Web開発、システム運用、クラウドマイグレーションへと経験を広げてきました。</p>
+                <p>IT × 語学 × 海外経験を活かせることに、この仕事の大きな魅力を感じています。</p>
+              </div>
+              <div class="motiv-card__keys">
+                <ul>
+                  <li>IT Experience</li>
+                  <li>English / Japanese</li>
+                  <li>Canada / Japan</li>
+                  <li>Cross-Cultural Experience</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 02 — 희소하고 깊이 있는 전문성을 쌓을 수 있는 기회 -->
+            <article class="motiv-card reveal">
+              <p class="motiv-card__label">02 / SPECIALIZATION</p>
+              <h3 class="motiv-card__title">希少な専門性を築く</h3>
+              <div class="motiv-card__text">
+                <p>クラウド業務を経験する中で、デジタルサービスを支えるデータセンターやネットワークなどの物理インフラにも関心を持つようになりました。</p>
+                <p>特に、国や大陸をつなぐ海底ケーブルと、複数の専門領域が組み合わされる Route Engineering に強く惹かれています。</p>
+                <p>新しい知識を学びながら、長期的に専門性を深めていきたいと考えています。</p>
+              </div>
+              <!-- 보조 그래픽: 클라우드 경험 → 글로벌 통신 인프라로 관심이 확장된 흐름 -->
+              <ol class="motiv-flow" aria-label="Cloud / AI to submarine cables">
+                <li>Cloud / AI</li>
+                <li>Data Centers</li>
+                <li>Global Networks</li>
+                <li>Submarine Cables</li>
+              </ol>
+              <div class="motiv-card__keys">
+                <p class="motiv-card__keys-label">Currently Exploring</p>
+                <ul>
+                  <li>Marine Survey</li>
+                  <li>Bathymetry</li>
+                  <li>GIS</li>
+                  <li>Route Engineering</li>
+                  <li>Submarine Cable</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 03 — 글로벌한 환경에서 커리어를 확장할 수 있는 기회 -->
+            <article class="motiv-card reveal">
+              <p class="motiv-card__label">03 / GLOBAL CAREER</p>
+              <h3 class="motiv-card__title">世界を舞台に働く</h3>
+              <div class="motiv-card__text">
+                <p>一つの国に限定されず、さまざまな国や文化の中で働くことに魅力を感じています。</p>
+                <p>
+                  海外の顧客やエンジニアと英語でコミュニケーションを取り、海外出張を含むグローバルなプロジェクトを通じて、さらに国際的な経験を広げていきたいと考えています。
+                </p>
+              </div>
+              <div class="motiv-card__keys">
+                <ul>
+                  <li>Global Projects</li>
+                  <li>International Collaboration</li>
+                  <li>English Communication</li>
+                  <li>Overseas Experience</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 04 — 장기적으로 글로벌 스페셜리스트로 성장 -->
+            <article class="motiv-card reveal">
+              <p class="motiv-card__label">04 / FUTURE VISION</p>
+              <h3 class="motiv-card__title">グローバルな専門家へ</h3>
+              <div class="motiv-card__text">
+                <p>
+                  これまで培ってきたIT経験、語学力、異文化環境への適応力を土台として、海底ケーブル分野の専門知識を一つずつ身につけていきたいと考えています。
+                </p>
+                <p>長期的に経験を積み重ね、技術とグローバルコミュニケーションの両面で信頼されるスペシャリストを目指します。</p>
+              </div>
+              <div class="motiv-card__keys">
+                <ul>
+                  <li>IT × Global</li>
+                  <li>Continuous Learning</li>
+                  <li>Long-Term Expertise</li>
+                  <li>Specialist</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           04. 強み — Strengths
+           地図 + 実際の写真 + 4 つの資質（多文化・コミュニケーション・適応・視座）。
+           ==================================================================== -->
+      <section class="section section--tint" id="strengths" aria-labelledby="strengths-title">
+        <div class="wrap">
+          <div class="gx-top">
+            <div class="gx-intro">
+              <p class="eyebrow">STRENGTHS</p>
+              <h2 class="section__title" id="strengths-title">強み</h2>
+              <p class="gx-subtitle">多様な文化・価値観の中で培ったコミュニケーション力と適応力</p>
+              <p class="gx-body">
+                カナダ・日本・韓国での学びと実務経験、そして世界中の仲間との出会いが、<br />
+                私の視野を広げ、グローバルに挑戦し続ける原動力になっています。
+              </p>
+            </div>
+
+            <!-- World map (reuses the hero map's land shapes) with the three places. -->
+            <figure class="gx-map">
+              <img src="./images/global/worldmap.png" alt="Canada, Korea, and Japan on a world map" loading="lazy" />
+              <figcaption class="gx-map__legend">
+                <span><b>Canada</b> Study &amp; Life</span>
+                <span><b>Korea</b> IT Experience</span>
+                <span><b>Japan</b> IT Experience</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Single collage image. Put your file at nesic/images/people/friends.png -->
+          <figure class="gx-photo">
+            <img src="./images/people/friends.png" alt="海外での仲間との時間" loading="lazy" />
+          </figure>
+
+          <!-- Four qualities matched to what the role asks for:
+               English · global orientation · IT/infrastructure understanding ·
+               communication · willingness to learn a new specialty. -->
+          <div class="gx-cards">
+            <article class="gx-card reveal">
+              <span class="gx-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V5a1 1 0 0 1 1-1Zm3 4v2h10V8H7Zm0 4v2h7v-2H7Z" /></svg>
+              </span>
+              <h3 class="gx-card__title">英語・日本語<wbr />コミュニケーション</h3>
+              <p class="gx-card__text">英語と日本語を使い、海外の顧客やエンジニアと、仕事や日常の中でコミュニケーションを取ってきました。</p>
+              <ul class="gx-card__tags">
+                <li>🇬🇧 English</li>
+                <li>🇯🇵 Japanese</li>
+              </ul>
+            </article>
+
+            <article class="gx-card reveal">
+              <span class="gx-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2c1.6 0 3 2.5 3.6 6H8.4C9 6.5 10.4 4 12 4ZM4.2 11h3.3a22 22 0 0 0 0 2H4.2a8 8 0 0 1 0-2Zm4.2 4h7.2c-.6 3.5-2 6-3.6 6s-3-2.5-3.6-6Zm8.1-2a22 22 0 0 0 0-2h3.3a8 8 0 0 1 0 2h-3.3ZM19.4 9h-2.8a15 15 0 0 0-1-4A8 8 0 0 1 19.4 9ZM8.4 5a15 15 0 0 0-1 4H4.6a8 8 0 0 1 3.8-4ZM4.6 15h2.8a15 15 0 0 0 1 4 8 8 0 0 1-3.8-4Zm11 4a15 15 0 0 0 1-4h2.8a8 8 0 0 1-3.8 4Z" /></svg>
+              </span>
+              <h3 class="gx-card__title">グローバル志向</h3>
+              <p class="gx-card__text">一つの国に限定されず、さまざまな国や文化の中で働くことに魅力を感じています。カナダ・日本での生活と実務がその土台です。</p>
+              <ul class="gx-card__tags">
+                <li>🇨🇦 Canada</li>
+                <li>🇯🇵 Japan</li>
+                <li>🇰🇷 Korea</li>
+              </ul>
+            </article>
+
+            <article class="gx-card reveal">
+              <span class="gx-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 7.24L4.47 5.5 12 1.76 19.53 5.5 12 9.24ZM2 12l10 5 10-5-2.4-1.2L12 14.3 4.4 10.8 2 12Zm0 5 10 5 10-5-2.4-1.2L12 19.3 4.4 15.8 2 17Z" /></svg>
+              </span>
+              <h3 class="gx-card__title">IT・インフラ理解</h3>
+              <p class="gx-card__text">Web開発、システム運用、クラウド移行を経験する中で、サービスを支えるデータセンターやネットワークなどのインフラにも関心を広げてきました。</p>
+              <ul class="gx-card__tags">
+                <li>🌐 Web</li>
+                <li>⚙️ System</li>
+                <li>☁️ Cloud</li>
+              </ul>
+            </article>
+
+            <article class="gx-card reveal">
+              <span class="gx-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3Zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9ZM17 16 12 18.72 7 16v-3.72L12 15l5-2.72V16Z" /></svg>
+              </span>
+              <h3 class="gx-card__title">新しい分野への<wbr />学習意欲</h3>
+              <p class="gx-card__text">未知の技術領域に適応してきた経験を土台に、海底ケーブルという新しい専門分野にも意欲的に取り組み、着実に基礎を身につけていきます。</p>
+              <ul class="gx-card__tags">
+                <li>🌊 Submarine Cable</li>
+                <li>🧭 New Field</li>
+                <li>📚 Learning</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           05. 入社後の目標 — Future
+           入社後どう成長するか。 Learn → Experience → Specialize
+           ==================================================================== -->
+      <section class="section" id="future" aria-labelledby="future-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="eyebrow">FUTURE</p>
+            <h2 class="section__title" id="future-title">入社後の目標</h2>
+          </header>
+
+          <ol class="phase-flow" aria-label="Growth phases">
+            <li>Learn</li>
+            <li>Experience</li>
+            <li>Specialize</li>
+          </ol>
+
+          <!-- 3-step growth roadmap. English label = design element; Japanese title carries the goal. -->
+          <ol class="roadmap">
+            <li class="roadmap__step reveal">
+              <p class="roadmap__label"><span class="roadmap__num">01</span> LEARN</p>
+              <h3 class="roadmap__title">海洋・ルート設計の基礎を習得</h3>
+              <p class="roadmap__text">
+                海洋調査、GIS、海底地形、ケーブルルート設計など、<br />
+                業務に必要な基礎知識を着実に身につけます。
+              </p>
+            </li>
+            <li class="roadmap__step reveal">
+              <p class="roadmap__label"><span class="roadmap__num">02</span> EXPERIENCE</p>
+              <h3 class="roadmap__title">グローバルプロジェクトで実践力を磨く</h3>
+              <p class="roadmap__text">
+                海外の顧客・関係者との協働や実際のプロジェクトを通じて、<br />
+                ルート設計・評価・調整に必要な実践力を高めます。
+              </p>
+            </li>
+            <li class="roadmap__step reveal">
+              <p class="roadmap__label"><span class="roadmap__num">03</span> SPECIALIZE</p>
+              <h3 class="roadmap__title">海底ケーブルの専門家へ</h3>
+              <p class="roadmap__text">
+                技術・現場・グローバルコミュニケーションの経験を積み重ね、<br />
+                海底ケーブルプロジェクトを長期的に支えられる<br />
+                専門性の高いエンジニアを目指します。
+              </p>
+            </li>
+          </ol>
+
+          <blockquote class="closing">
+            <p class="closing__label">Long-Term Vision</p>
+            <p class="closing__en">技術と世界をつなぐ、海底ケーブルの専門家へ。</p>
+            <p class="closing__ja">
+              IT分野で培った経験と語学力を活かしながら、<br />海底ケーブルという新たな専門領域で経験を積み重ね、<br />将来的にはグローバルなプロジェクトを担えるエンジニアを目指します。
+            </p>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <div class="site-footer__id">
+          <p class="site-footer__name">JUYONG SIM</p>
+          <p class="site-footer__role">Toward Global Submarine Cable Engineer</p>
+        </div>
+
+        <blockquote class="site-footer__tagline">
+          <p class="site-footer__tagline-en">Connecting technology,<br />people, and the world.</p>
+          <p class="site-footer__tagline-ja">技術と人をつなぎ、<br />世界を支えるエンジニアへ。</p>
+        </blockquote>
+
+        <p class="site-footer__langs">Korean · Japanese · English</p>
+
+        <nav class="site-footer__links" aria-label="Contact">
+          <a href="mailto:jysim1212@gmail.com">
+            <svg class="site-footer__ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+              <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+            </svg>
+            jysim1212@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/juyong-sim-profile/" target="_blank" rel="noreferrer noopener">
+            <svg class="site-footer__ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
+        </nav>
+        <p class="site-footer__copy">&copy; 2026 JUYONG SIM</p>
+      </div>
+    </footer>
+  </body>
+</html>

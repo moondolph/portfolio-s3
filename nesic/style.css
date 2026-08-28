@@ -1,0 +1,1400 @@
+/* ==========================================================================
+   NESIC Career Story Page — JUYONG SIM
+   Concept: "global infrastructure engineering document", presented with the
+   crisp, white-dominant corporate feel of NESIC's own site — deep indigo-blue
+   structure, one vivid blue accent, light blue tint panels, generous
+   whitespace, thin lines. Headings stay in a distinct display face so the
+   page still reads as a personal site, not a copy of NESIC branding.
+
+   Five sections (Japanese-led titles, English kicker):
+     01 自己紹介 / About Me (hero)
+     02 経歴 / Experience
+     03 志望動機 / Motivation   (deep band — the key section)
+     04 強み / Strengths
+     05 入社後の目標 / Future
+
+   Single stylesheet, plain CSS custom properties. Easy to edit in VS Code.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Fonts */
+  --font-display: "Space Grotesk", "Inter", "Noto Sans JP", sans-serif;
+  --font-body: "Inter", "Yu Gothic Medium", "游ゴシック Medium", "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Color — deep indigo-blue / vivid blue accent / white / off-white / gray.
+     Tuned near NESIC's site palette without reusing it verbatim. */
+  --blue-900: #0b1c5c; /* deep indigo — headings, key structure, dark band */
+  --blue-800: #14276e;
+  --blue-600: #2f5fe0; /* single vivid accent — links, markers, CTA */
+  --blue-500: #4f79e8;
+  --blue-100: #e9f0fc; /* tint panels */
+  --blue-050: #f4f7fd;
+
+  --paper: #ffffff;
+  --paper-off: #f6f7f9;
+  --line: #e2e6ec;
+  --line-strong: #d3d9e2;
+
+  --ink: #1e2530;
+  --ink-2: #5b6470;
+  --ink-3: #8a929c;
+
+  --on-dark: #eef2fb;
+  --on-dark-2: rgba(238, 242, 251, 0.74);
+  --on-dark-line: rgba(238, 242, 251, 0.2);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 36px;
+  --space-7: 56px;
+  --space-8: 88px;
+  --space-9: 128px;
+
+  --wrap: 1080px;
+  --radius: 4px;
+  --dur: 220ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset / base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Land anchor targets flush under the fixed header (72px tall), so no sliver
+     of the previous section shows. Sections have ample top padding below this. */
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Visible focus states for keyboard users. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   3. Shared typography helpers
+   -------------------------------------------------------------------------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+  margin-bottom: var(--space-4);
+}
+
+.eyebrow--light {
+  color: var(--blue-500);
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--blue-900);
+}
+
+.section--dark .section__title {
+  color: var(--on-dark);
+}
+
+/* --------------------------------------------------------------------------
+   4. Buttons — solid vivid blue, NESIC-style
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  margin-top: var(--space-6);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--blue-600);
+  border: 1px solid var(--blue-600);
+  border-radius: var(--radius);
+  transition:
+    background var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+.btn:hover {
+  background: var(--blue-900);
+  border-color: var(--blue-900);
+}
+
+/* --------------------------------------------------------------------------
+   5. Header — solid white, dark text (NESIC-style)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+/* Subtle divider + shadow once the page is scrolled (toggled from script.js). */
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 12px rgba(11, 28, 92, 0.06);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: 72px;
+}
+
+.site-header__logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--blue-900);
+}
+
+.site-header__end {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.site-header__role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* Language switch — two static links, current one is muted and non-clickable. */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.lang-switch a {
+  color: var(--ink-3);
+  transition: color var(--dur) var(--ease);
+}
+
+.lang-switch a:hover {
+  color: var(--blue-600);
+}
+
+.lang-switch [aria-current="page"] {
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+/* Slash divider between the two items, whichever order they appear in. */
+.lang-switch > * + *::before {
+  content: "/";
+  margin-right: var(--space-2);
+  color: var(--line-strong);
+}
+
+.site-nav__menu {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.site-nav__menu a {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+  transition: color var(--dur) var(--ease);
+}
+
+.site-nav__menu a:hover {
+  color: var(--blue-600);
+}
+
+.site-nav__toggle {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. Section 01 — Hero / Who I Am
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--blue-050);
+  color: var(--ink);
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-9);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Decorative latitude / longitude grid. */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(47, 95, 224, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(47, 95, 224, 0.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at 30% 40%, #000 30%, transparent 78%);
+}
+
+/* Faint world-map watermark + career route (Korea → Canada → Japan).
+   Inline SVG, no external requests. Sits above the grid, below the content. */
+.hero__map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--blue-600);
+  /* Strongest behind the profile card / lower-right, fades under the headline. */
+  -webkit-mask-image: radial-gradient(115% 105% at 82% 62%, #000 28%, transparent 92%);
+  mask-image: radial-gradient(115% 105% at 82% 62%, #000 28%, transparent 92%);
+}
+
+.hero__map .hm-land {
+  fill: currentColor;
+  fill-opacity: 0.05;
+  stroke: currentColor;
+  stroke-opacity: 0.12;
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.hero__map .hm-route {
+  fill: none;
+  stroke: currentColor;
+  stroke-opacity: 0.24;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: hero-route-draw 2.4s var(--ease) 0.35s forwards;
+}
+
+.hero__map .hm-dot {
+  fill: currentColor;
+  fill-opacity: 0.4;
+}
+
+@keyframes hero-route-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__map .hm-route {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.coord {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: rgba(11, 28, 92, 0.28);
+}
+
+.coord--tl {
+  top: 96px;
+  left: var(--space-5);
+}
+
+.coord--br {
+  bottom: 40px;
+  right: var(--space-5);
+}
+
+/* Two columns on desktop: copy on the left, profile card on the right. */
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  /* Same scale as .section__title so the hero heading matches every section. */
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--blue-900);
+}
+
+.hero__subtitle {
+  margin-top: var(--space-5);
+  font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+  color: var(--blue-600);
+  font-weight: 500;
+}
+
+.hero__copy {
+  /* em (not ch) so the measure works for full-width Japanese too:
+     ~33 JP characters / ~65 Latin characters per line. */
+  max-width: 33em;
+  margin-top: var(--space-6);
+  color: var(--ink-2);
+  /* Cleaner Japanese wrapping: stricter kinsoku + avoid short last lines. */
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+/* Route: horizontal on desktop, vertical on mobile. Thin connecting line. */
+.route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  margin-top: var(--space-7);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+}
+
+.route__stop {
+  position: relative;
+  padding-left: var(--space-4);
+  color: var(--ink-2);
+}
+
+.route__stop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--blue-600);
+}
+
+.route__stop:not(:last-child)::after {
+  content: "\2192"; /* → */
+  margin-left: var(--space-5);
+  color: var(--line-strong);
+}
+
+.route__stop--next {
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+/* Profile card (pattern borrowed from the main portfolio's hero panel). */
+.hero__panel {
+  align-self: start;
+  padding: var(--space-5);
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--blue-100);
+}
+
+.hero__avatar {
+  width: 100%;
+  max-width: 160px;
+  /* An ID photo is already framed as head-and-shoulders (3:4). Show it whole —
+     any forced aspect-ratio + object-fit:cover would clip the hair or shoulders. */
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  margin: 0 auto;
+}
+
+.hero__panel__content {
+  margin-top: var(--space-4);
+  text-align: center;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--blue-900);
+}
+
+/* Label / value rows (数値のように揃う). Two shared grid tracks so the value
+   column lines up regardless of label length (JP or EN). */
+.hero__panel__list {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-4);
+  row-gap: var(--space-3);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.hero__panel__list li {
+  display: contents;
+}
+
+.hero__panel__list .k,
+.hero__panel__list .v {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-3);
+}
+
+.hero__panel__list .k {
+  color: var(--ink-3);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   7. Section shells
+   -------------------------------------------------------------------------- */
+.section {
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-9);
+  border-top: 1px solid var(--line);
+}
+
+/* Hero already has its own bottom border — avoid a doubled rule. */
+.hero + .section {
+  border-top: 0;
+}
+
+.section--tint {
+  background: var(--blue-050);
+}
+
+/* The one deep band on the page — gravitas for section 03 (Motivation). */
+.section--dark {
+  background: var(--blue-900);
+  color: var(--on-dark);
+  border-top-color: transparent;
+}
+
+.section__head {
+  max-width: 56ch;
+  margin-bottom: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   8. Section 02 — Career Journey: progression + timeline
+   -------------------------------------------------------------------------- */
+.progression {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 640px;
+  margin-bottom: var(--space-8);
+}
+
+.progression__step {
+  position: relative;
+  padding: var(--space-4) var(--space-5);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.0625rem;
+  color: var(--blue-900);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue-600);
+  border-radius: var(--radius);
+}
+
+.progression__step:not(:last-child)::after {
+  content: "\2193"; /* ↓ */
+  position: absolute;
+  left: 22px;
+  bottom: -18px;
+  font-size: 0.875rem;
+  color: var(--ink-3);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-8);
+}
+
+/* Continuous vertical route line behind the markers. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: var(--space-7);
+}
+
+.timeline__marker {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--blue-600);
+}
+
+.timeline__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.timeline__place {
+  color: var(--blue-600);
+}
+
+.timeline__theme {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--blue-900);
+}
+
+.timeline__text {
+  margin-top: var(--space-3);
+  /* em (not ch) so the measure suits full-width Japanese; ~38 JP chars/line. */
+  max-width: 38em;
+  color: var(--ink-2);
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+/* Small supporting technology / topic labels — never the visual focus. */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.tags li {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  padding: 2px var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Live links to shipped work. */
+.timeline__links-label {
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+.timeline__links-label::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: var(--space-2);
+  border-radius: 50%;
+  background: var(--blue-600);
+  vertical-align: middle;
+}
+
+.timeline__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.timeline__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--blue-600);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  transition:
+    border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+}
+
+.timeline__links a:hover {
+  border-color: var(--blue-600);
+  background: var(--blue-050);
+}
+
+/* --------------------------------------------------------------------------
+   10. Section 03 — Motivation (deep band): exactly four cards.
+   Desktop: 2×2 grid. Mobile: single column. Japanese title leads; the
+   English label and keyword chips are secondary.
+   -------------------------------------------------------------------------- */
+
+/* Lead sentence under the section title. */
+.section__lead {
+  margin-top: var(--space-4);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.section--dark .section__lead {
+  color: var(--on-dark-2);
+}
+
+.motiv-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+/* White cards — same visual design as the other card grids on the site,
+   deliberately light on the deep-navy band. */
+.motiv-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--blue-600);
+  border-radius: var(--radius);
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+/* Understated hover, matching the Strengths cards. */
+@media (hover: hover) {
+  .motiv-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue-500);
+    box-shadow: 0 14px 30px rgba(11, 28, 92, 0.12);
+  }
+
+  .motiv-card:hover .motiv-card__title {
+    color: var(--blue-600);
+  }
+}
+
+.motiv-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+/* Japanese title leads — the largest element in the card. */
+.motiv-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--blue-900);
+  transition: color var(--dur) var(--ease);
+}
+
+.motiv-card__text {
+  display: grid;
+  gap: var(--space-3);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+
+/* Small secondary flow inside card 02 — not the main content. */
+.motiv-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.motiv-flow li:not(:last-child)::after {
+  content: "\2192";
+  margin-left: var(--space-2);
+  color: var(--line-strong);
+}
+
+.motiv-flow li:last-child {
+  color: var(--blue-600);
+}
+
+/* Keyword chips pinned to the bottom of each card. */
+.motiv-card__keys {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.motiv-card__keys-label {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+.motiv-card__keys ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.motiv-card__keys li {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  padding: 3px var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+@media (min-width: 861px) {
+  .motiv-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Section 04 — Global Experience: intro + world map + photo mosaic + cards
+   -------------------------------------------------------------------------- */
+/* Intro text, then a large full-width world map below it. */
+.gx-top {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.gx-subtitle {
+  margin-top: var(--space-4);
+  font-size: 1.0625rem;
+  color: var(--ink-2);
+}
+
+.gx-body {
+  margin-top: var(--space-5);
+  color: var(--ink-2);
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+/* World map image (nesic/images/global/worldmap.png). */
+.gx-map {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gx-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gx-map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.gx-map__legend b {
+  color: var(--blue-900);
+  font-weight: 600;
+}
+
+/* Single collage image (nesic/images/people/friends.png). */
+.gx-photo {
+  margin: var(--space-8) 0 0;
+}
+
+.gx-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+/* Four qualities — same card design as elsewhere on the site. */
+.gx-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.gx-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--blue-600);
+  border-radius: var(--radius);
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+@media (hover: hover) {
+  .gx-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue-500);
+    box-shadow: 0 14px 30px rgba(11, 28, 92, 0.12);
+  }
+}
+
+.gx-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue-900);
+}
+
+.gx-card__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--on-dark);
+}
+
+.gx-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  color: var(--blue-900);
+  /* Cleaner wrapping for the long katakana titles: stricter kinsoku, phrase
+     breaks where supported, and evenly balanced lines. */
+  line-break: strict;
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+
+.gx-card__text {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* Pinned to the card bottom with a divider. One tag per row, every chip the
+   same fixed size, so all four cards share one grid structure. */
+.gx-card__tags {
+  display: grid;
+  /* Three fixed rows: a card with only two tags still reserves the same
+     block height, so all four cards stay identical. */
+  grid-template-rows: repeat(3, 28px);
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.gx-card__tags li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* Section 05 — phase flow label: Learn → Experience → Specialize */
+.phase-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+.phase-flow li:not(:last-child)::after {
+  content: "\2192";
+  margin-left: var(--space-3);
+  color: var(--line-strong);
+}
+
+/* Section 05 — 3-step growth roadmap. */
+.roadmap {
+  display: grid;
+  gap: var(--space-7);
+  max-width: 640px;
+}
+
+.roadmap__step {
+  position: relative;
+  padding: var(--space-5) var(--space-6);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue-600);
+  border-radius: var(--radius);
+}
+
+/* Centered ↓ connector between steps. */
+.roadmap__step:not(:last-child)::after {
+  content: "\2193";
+  position: absolute;
+  left: 50%;
+  bottom: calc(-1 * var(--space-6));
+  transform: translateX(-50%);
+  color: var(--ink-3);
+}
+
+.roadmap__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+}
+
+.roadmap__num {
+  font-weight: 600;
+  margin-right: var(--space-2);
+}
+
+.roadmap__title {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: var(--blue-900);
+}
+
+.roadmap__text {
+  margin-top: var(--space-3);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--ink-2);
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+.closing {
+  margin-top: var(--space-8);
+  padding-top: var(--space-7);
+}
+
+.closing__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-600);
+  margin-bottom: var(--space-3);
+}
+
+.closing__en {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--blue-900);
+}
+
+.closing__ja {
+  margin-top: var(--space-4);
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   12. Footer — light, clean
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: var(--paper-off);
+  color: var(--ink-2);
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.site-footer__id {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.site-footer__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
+  color: var(--blue-900);
+}
+
+.site-footer__role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-500);
+}
+
+.site-footer__tagline {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.site-footer__tagline-en {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--blue-900);
+}
+
+.site-footer__tagline-ja {
+  max-width: 40ch;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.site-footer__langs {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+}
+
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--blue-600);
+}
+
+.site-footer__ico {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+  fill: currentColor;
+}
+
+.site-footer__copy {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+/* --------------------------------------------------------------------------
+   13. Scroll reveal animation
+   .reveal starts hidden; script.js adds .is-visible via IntersectionObserver.
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 600ms var(--ease),
+    transform 600ms var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   14. Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .site-header__role {
+    display: none;
+  }
+
+  /* Mobile navigation: hamburger toggles a stacked menu. */
+  .site-nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-nav__bars,
+  .site-nav__bars::before,
+  .site-nav__bars::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--blue-900);
+    transition:
+      transform var(--dur) var(--ease),
+      opacity var(--dur) var(--ease);
+  }
+
+  .site-nav__bars::before {
+    transform: translateY(-6px);
+  }
+
+  .site-nav__bars::after {
+    transform: translateY(4px);
+  }
+
+  .site-nav__toggle[aria-expanded="true"] .site-nav__bars {
+    background: transparent;
+  }
+
+  .site-nav__toggle[aria-expanded="true"] .site-nav__bars::before {
+    transform: rotate(45deg);
+  }
+
+  .site-nav__toggle[aria-expanded="true"] .site-nav__bars::after {
+    transform: rotate(-45deg);
+  }
+
+  .site-nav__menu {
+    position: fixed;
+    inset: 72px 0 auto 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 20px rgba(11, 28, 92, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--dur) var(--ease);
+  }
+
+  .site-nav__menu.is-open {
+    max-height: 60vh;
+  }
+
+  .site-nav__menu li {
+    border-top: 1px solid var(--line);
+  }
+
+  .site-nav__menu a {
+    display: block;
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* Route becomes a vertical list on mobile. */
+  .route {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .route__stop:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
+}
+
+@media (min-width: 861px) {
+  /* Hero: two columns. */
+  .hero__layout {
+    /* Wider profile column so label/value rows (esp. 専攻) wrap cleanly. */
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: var(--space-7);
+    align-items: center;
+  }
+
+  /* Alternating timeline on wider screens. */
+  .timeline {
+    gap: var(--space-9);
+  }
+
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline__item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: var(--space-8);
+  }
+
+  .timeline__item:nth-child(even) {
+    margin-left: 50%;
+    padding-left: var(--space-8);
+    padding-right: 0;
+  }
+
+  .timeline__marker {
+    left: auto;
+    right: -7px;
+  }
+
+  .timeline__item:nth-child(even) .timeline__marker {
+    left: -8px;
+    right: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   15. Reduced motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
