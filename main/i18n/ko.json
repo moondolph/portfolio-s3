@@ -1,6 +1,6 @@
 {
   "site.title": "SIM JUYONG | 클라우드 & DevOps 엔지니어",
-  "site.description": "한국과 일본에서 웹 개발, 공공 시스템 운영, 금융권 클라우드 마이그레이션을 경험했습니다. AWS·GCP를 기반으로 클라우드 인프라를 설계·구축·자동화·운영하는 클라우드 & DevOps 엔지니어입니다.",
+  "site.description": "한국과 일본에서 웹 개발, 공공 시스템 개발·배포, 금융권 클라우드 마이그레이션을 경험했습니다. AWS·GCP를 기반으로 클라우드 인프라를 설계·구축·자동화·운영하는 클라우드 & DevOps 엔지니어입니다.",
   "header.name": "SIM JUYONG",
   "nav.home": "홈",
   "nav.about": "소개",
@@ -12,7 +12,7 @@
 
   "home.title": "End-to-End 시스템을\n개발하고, 배포하고,\n운영합니다.",
   "home.desc": "클라우드 마이그레이션 · 인프라 자동화 · 컨테이너 워크로드",
-  "home.summary": "웹 개발에서 커리어를 시작해 공공 시스템 운영과 금융권 클라우드 마이그레이션을 경험했으며, 현재는 AWS·GCP·Terraform·컨테이너 기술을 중심으로 클라우드 인프라의 설계·구축·자동화·운영으로 전문성을 확장하고 있습니다.",
+  "home.summary": "웹 개발에서 커리어를 시작해 공공 시스템 개발·배포와 금융권 클라우드 마이그레이션을 경험했으며, 현재는 AWS·GCP·Terraform·컨테이너 기술을 중심으로 클라우드 인프라의 설계·구축·자동화·운영으로 전문성을 확장하고 있습니다.",
   "home.im": "저는",
   "home.cta.projects": "프로젝트 보기",
   "home.cta.contact": "연락하기",
@@ -21,7 +21,7 @@
   "og.image": "https://d2lp7owtd50i80.cloudfront.net/images/og2.webp",
 
   "about.title": "애플리케이션과 인프라를 함께 이해하는 클라우드 엔지니어",
-  "about.desc": "웹 개발에서 커리어를 시작해 공공 시스템 운영과 금융권 클라우드 마이그레이션을 거치며, 애플리케이션부터 운영, 인프라까지 시스템 전체를 이해하는 엔지니어로 성장했습니다. 현재는 AWS·GCP·Terraform·컨테이너 기술을 중심으로 클라우드 인프라의 설계·구축·자동화·운영 역량을 확장하고 있습니다. 여러 분야로 흩어진 경력이 아니라, 서비스를 만드는 입장에서 그 서비스를 떠받치는 인프라를 구축·자동화하는 입장으로 꾸준히 영역을 넓혀온 과정입니다.",
+  "about.desc": "웹 개발에서 커리어를 시작해 공공 시스템 개발·배포와 금융권 클라우드 마이그레이션을 거치며, 애플리케이션부터 운영, 인프라까지 시스템 전체를 이해하는 엔지니어로 성장했습니다. 현재는 AWS·GCP·Terraform·컨테이너 기술을 중심으로 클라우드 인프라의 설계·구축·자동화·운영 역량을 확장하고 있습니다. 여러 분야로 흩어진 경력이 아니라, 서비스를 만드는 입장에서 그 서비스를 떠받치는 인프라를 구축·자동화하는 입장으로 꾸준히 영역을 넓혀온 과정입니다.",
   "about.card.title": "Capabilities",
   "about.build.desc": "HTML, CSS, JavaScript, TypeScript, PHP, and Java 기반의 웹 애플리케이션 및 백엔드 서비스 개발 경험",
   "about.deploy.desc": "AWS와 GCP 기반의 정적 호스팅, 서버리스, 컨테이너 배치 배포 경험",
@@ -38,9 +38,9 @@
   "career.pci.title": "JCB 클라우드 마이그레이션 / 배치 플랫폼 엔지니어링",
   "career.pci.meta": "일본 · 금융 · 클라우드 마이그레이션",
   "career.pci.desc": "온프레미스 기반 금융 시스템을 Google Cloud 기반 환경으로 전환하는 프로젝트에서 클라우드 배치 실행 아키텍처 설계 및 기술 검증, 운영 자동화 설계, 실행 모니터링 및 로그 관리 체계 검토 등의 업무를 수행했습니다.",
-  "career.cal.title": "공공 시스템 운영 / 데이터베이스 지원",
+  "career.cal.title": "공공 시스템 개발·배포 / 데이터베이스 지원",
   "career.cal.meta": "일본 · 공공 시스템 개발 · 백엔드",
-  "career.cal.desc": "지자체 건강보험시스템 표준화 프로젝트에서 Java 기반 애플리케이션 운영 및 시스템 환경 구축을 수행하였으며, Oracle Database를 활용한 데이터 조회 및 장애 원인 분석, 애플리케이션 로그 수집·분석, 배치(Job) 실행 검증, 계정 및 권한 관리, 출력기능 디버깅 등 시스템 운영 및 유지보수 업무를 담당했습니다.",
+  "career.cal.desc": "지자체 건강보험시스템 표준화 프로젝트에서 Java 기반 애플리케이션 개발·배포 및 시스템 환경 구축을 수행하였으며, Oracle Database를 활용한 데이터 조회 및 장애 원인 분석, 애플리케이션 로그 수집·분석, 배치(Job) 실행 검증, 계정 및 권한 관리, 출력기능 디버깅 등 시스템 개발·배포 및 유지보수 업무를 담당했습니다.",
   "career.gsifn.title": "프론트엔드 엔지니어 / 기업 웹 프로젝트",
   "career.gsifn.meta": "한국 · 웹 · 프론트엔드",
   "career.gsifn.desc": "기업 IR 및 웹 페이지 구축 프로젝트에 참여하여 HTML, CSS, JavaScript 기반 UI 구현을 수행했습니다. 반응형 웹 레이아웃 적용, 화면 퍼블리싱 및 유지보수를 담당했으며, Git 기반 형상관리와 협업 프로세스를 경험하며 프론트엔드 개발 및 협업 역량을 쌓았습니다.",
@@ -105,11 +105,11 @@
   "project.awsPortfolio.solution": "Route 53과 ACM으로 커스텀 도메인·HTTPS를 구성하고, GitHub Actions로 S3 동기화 및 CloudFront 캐시 무효화를 자동화했습니다.",
   "project.awsPortfolio.results": "배포 파이프라인을 자동화하여 코드 푸시만으로 반영되는 운영 구조를 완성했습니다.",
 
-  "project.oracleOps.title": "Oracle / Linux Operation Support",
+  "project.oracleOps.title": "Oracle / Linux Development & Deployment Support",
   "project.oracleOps.subtitle": "RKKCS · National Health Insurance · Japan",
   "project.oracleOps.problem": "일본 건강보험시스템 표준화 프로젝트에서 시스템 장애와 출력 오류의 원인을 신속히 파악해야 했습니다.",
-  "project.oracleOps.role": "Java와 Oracle SQL 기반 시스템의 운영 및 장애 분석을 담당했습니다.",
-  "project.oracleOps.solution": "버전 셋업, 로그 분석, SQL 검증을 수행하며 운영 환경을 관리했고, 계정·배치(Job)·출력 오류의 원인을 분석했습니다.",
+  "project.oracleOps.role": "Java와 Oracle SQL 기반 시스템의 개발·배포 및 장애 분석을 담당했습니다.",
+  "project.oracleOps.solution": "버전 셋업, 로그 분석, SQL 검증을 수행하며 개발·배포 환경을 관리했고, 계정·배치(Job)·출력 오류의 원인을 분석했습니다.",
   "project.oracleOps.results": "장애 원인 분석과 대응 절차를 체계화하여 재발 시 대응 시간을 단축했습니다.",
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",

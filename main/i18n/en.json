@@ -1,6 +1,6 @@
 {
   "site.title": "SIM JUYONG | Cloud & DevOps Engineer",
-  "site.description": "Cloud & DevOps engineer with experience across web development, public system operations, and financial-sector cloud migration in Korea and Japan. Designing, automating, and operating cloud infrastructure on AWS and GCP.",
+  "site.description": "Cloud & DevOps engineer with experience across web development, public system development and deployment, and financial-sector cloud migration in Korea and Japan. Designing, automating, and operating cloud infrastructure on AWS and GCP.",
   "header.name": "SIM JUYONG",
   "nav.home": "Home",
   "nav.about": "About",
@@ -12,7 +12,7 @@
 
   "home.title": "Building, Deploying,\nand Operating\nEnd-to-End Systems.",
   "home.desc": "Cloud Migration · Infrastructure Automation · Containerized Workloads",
-  "home.summary": "Starting in web development, I gained experience in public system operations and financial-sector cloud migration, and I'm now expanding my expertise in designing, building, automating, and operating cloud infrastructure around AWS, GCP, Terraform, and container technologies.",
+  "home.summary": "Starting in web development, I gained experience in public system development and deployment and financial-sector cloud migration, and I'm now expanding my expertise in designing, building, automating, and operating cloud infrastructure around AWS, GCP, Terraform, and container technologies.",
   "home.im": "I'm",
   "home.cta.projects": "View Projects",
   "home.cta.contact": "Contact",
@@ -21,7 +21,7 @@
   "og.image": "https://d2lp7owtd50i80.cloudfront.net/images/og2.webp",
 
   "about.title": "A cloud engineer who understands both applications and infrastructure",
-  "about.desc": "Starting in web development, I've grown through public system operations and financial-sector cloud migration into an engineer who understands the full system, from application to operations to infrastructure. My career isn't spread across unrelated roles — it's a steady expansion from building services to running and automating the cloud infrastructure they run on.",
+  "about.desc": "Starting in web development, I've grown through public system development and deployment and financial-sector cloud migration into an engineer who understands the full system, from application to operations to infrastructure. My career isn't spread across unrelated roles — it's a steady expansion from building services to running and automating the cloud infrastructure they run on.",
   "about.card.title": "Capabilities",
   "about.build.desc": "Experience developing web applications and backend services with HTML, CSS, JavaScript, TypeScript, PHP, and Java",
   "about.deploy.desc": "Experience deploying static hosting, serverless, and container-based batch workloads on AWS and GCP",
@@ -38,9 +38,9 @@
   "career.pci.title": "JCB Cloud Migration / Batch Platform Engineering",
   "career.pci.meta": "Japan · Finance · Cloud Migration",
   "career.pci.desc": "Designed and validated cloud batch execution architecture, operational automation, and execution monitoring/log management for a project migrating an on-premises financial system to a Google Cloud-based environment.",
-  "career.cal.title": "Public Sector System Operation / Database Support",
+  "career.cal.title": "Public Sector System Development & Deployment / Database Support",
   "career.cal.meta": "Japan · Public System Development · Backend",
-  "career.cal.desc": "Operated Java-based applications and built system environments for a municipal health insurance system standardization project, handling Oracle Database queries and incident root-cause analysis, application log collection/analysis, batch (job) execution verification, account and permission management, and output report debugging as part of system operations and maintenance.",
+  "career.cal.desc": "Developed and deployed Java-based applications and built system environments for a municipal health insurance system standardization project, handling Oracle Database queries and incident root-cause analysis, application log collection/analysis, batch (job) execution verification, account and permission management, and output report debugging as part of system development, deployment, and maintenance.",
   "career.gsifn.title": "Frontend Engineer / Enterprise Web Projects",
   "career.gsifn.meta": "Korea · Web · Frontend",
   "career.gsifn.desc": "Built HTML, CSS, and JavaScript-based UI for corporate IR/web page projects, applying responsive layouts and handling front-end publishing and maintenance, while gaining experience with Git-based version control and collaborative development workflows.",
@@ -105,11 +105,11 @@
   "project.awsPortfolio.solution": "Set up a custom domain/HTTPS via Route 53/ACM, and automated S3 sync and CloudFront invalidation with GitHub Actions.",
   "project.awsPortfolio.results": "Automated the deployment pipeline into an operational structure that ships on every code push.",
 
-  "project.oracleOps.title": "Oracle / Linux Operation Support",
+  "project.oracleOps.title": "Oracle / Linux Development & Deployment Support",
   "project.oracleOps.subtitle": "RKKCS · National Health Insurance · Japan",
   "project.oracleOps.problem": "A health insurance system project in Japan needed fast root-cause analysis for failures and output errors.",
-  "project.oracleOps.role": "Handled operations and failure analysis for a Java and Oracle SQL-based system.",
-  "project.oracleOps.solution": "Managed operations via version setup, log analysis, and SQL verification, tracing account, batch, and output errors.",
+  "project.oracleOps.role": "Handled development, deployment, and failure analysis for a Java and Oracle SQL-based system.",
+  "project.oracleOps.solution": "Managed development and deployment via version setup, log analysis, and SQL verification, tracing account, batch, and output errors.",
   "project.oracleOps.results": "Systematized root-cause analysis and response procedures, reducing response time for recurring issues.",
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",

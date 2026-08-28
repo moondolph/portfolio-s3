@@ -1,6 +1,6 @@
 {
   "site.title": "SIM JUYONG | クラウド & DevOpsエンジニア",
-  "site.description": "韓国と日本でWeb開発、公共システム運用、金融業界向けクラウドマイグレーションを経験。AWS・GCPを軸にクラウドインフラの設計・構築・自動化・運用を行うクラウド & DevOpsエンジニアです。",
+  "site.description": "韓国と日本でWeb開発、公共システム開発・デプロイ、金融業界向けクラウドマイグレーションを経験。AWS・GCPを軸にクラウドインフラの設計・構築・自動化・運用を行うクラウド & DevOpsエンジニアです。",
   "header.name": "SIM JUYONG",
   "nav.home": "Home",
   "nav.about": "About",
@@ -12,7 +12,7 @@
 
   "home.title": "End-to-Endの\nシステムを\n開発し、デプロイし、\n運用します。",
   "home.desc": "クラウドマイグレーション · インフラ自動化 · コンテナワークロード",
-  "home.summary": "Web developmentからキャリアをスタートし、日本の公共システム運用、金融業界向けクラウドマイグレーションを経験してきました。現在はAWS・GCP・Terraform・コンテナ技術を軸に、クラウドインフラの設計・構築・自動化・運用に専門性を広げています。",
+  "home.summary": "Web developmentからキャリアをスタートし、日本の公共システム開発・デプロイ、金融業界向けクラウドマイグレーションを経験してきました。現在はAWS・GCP・Terraform・コンテナ技術を軸に、クラウドインフラの設計・構築・自動化・運用に専門性を広げています。",
   "home.im": "私は",
   "home.cta.projects": "プロジェクトを見る",
   "home.cta.contact": "お問い合わせ",
@@ -21,7 +21,7 @@
   "og.image": "https://d2lp7owtd50i80.cloudfront.net/images/og2.webp",
 
   "about.title": "アプリケーションとインフラの両方を理解するクラウドエンジニア",
-  "about.desc": "Web developmentからキャリアをスタートし、日本の公共システム運用、金融業界向けクラウドマイグレーションを経験してきました。アプリケーションから運用、インフラまでシステム全体を理解するエンジニアへと成長し、現在はAWS・GCP・Terraform・コンテナ技術を軸に、クラウドインフラの設計・構築・自動化・運用に専門性を広げています。バラバラなキャリアではなく、サービスを作る立場からそれを支えるインフラを構築・自動化する立場へと、一貫して領域を広げてきました。",
+  "about.desc": "Web developmentからキャリアをスタートし、日本の公共システム開発・デプロイ、金融業界向けクラウドマイグレーションを経験してきました。アプリケーションから運用、インフラまでシステム全体を理解するエンジニアへと成長し、現在はAWS・GCP・Terraform・コンテナ技術を軸に、クラウドインフラの設計・構築・自動化・運用に専門性を広げています。バラバラなキャリアではなく、サービスを作る立場からそれを支えるインフラを構築・自動化する立場へと、一貫して領域を広げてきました。",
   "about.card.title": "Capabilities",
   "about.build.desc": "HTML、CSS、JavaScript、TypeScript、PHP、Javaによる Webアプリケーション・バックエンドサービス開発の経験",
   "about.deploy.desc": "AWSとGCPを基盤とした静的ホスティング、サーバーレス、コンテナバッチのデプロイ経験",
@@ -38,9 +38,9 @@
   "career.pci.title": "JCBクラウド移行 / バッチプラットフォームエンジニアリング",
   "career.pci.meta": "日本 · 金融 · クラウド移行",
   "career.pci.desc": "オンプレミス基盤の金融システムをGoogle Cloud環境へ移行するプロジェクトで、クラウドバッチ実行アーキテクチャの設計・技術検証、運用自動化設計、実行モニタリングおよびログ管理体制の検討などを担当しました。",
-  "career.cal.title": "公共システム運用 / データベース支援",
+  "career.cal.title": "公共システム開発・デプロイ / データベース支援",
   "career.cal.meta": "日本 · 公共システム開発 · バックエンド",
-  "career.cal.desc": "自治体健康保険システム標準化プロジェクトで、Javaベースのアプリケーション運用およびシステム環境構築を担当し、Oracle Databaseを用いたデータ照会・障害原因分析、アプリケーションログの収集・分析、バッチ(ジョブ)実行検証、アカウント・権限管理、帳票出力機能のデバッグなど、システム運用・保守業務を担当しました。",
+  "career.cal.desc": "自治体健康保険システム標準化プロジェクトで、Javaベースのアプリケーションの開発・デプロイおよびシステム環境構築を担当し、Oracle Databaseを用いたデータ照会・障害原因分析、アプリケーションログの収集・分析、バッチ(ジョブ)実行検証、アカウント・権限管理、帳票出力機能のデバッグなど、システム開発・デプロイおよび保守業務を担当しました。",
   "career.gsifn.title": "フロントエンドエンジニア / 企業Webプロジェクト",
   "career.gsifn.meta": "韓国 · Web · フロントエンド",
   "career.gsifn.desc": "企業のIR/Webページ構築プロジェクトに参加し、HTML、CSS、JavaScriptによるUI実装を担当しました。レスポンシブWebレイアウトの適用、画面のコーディングおよび保守を担当し、Gitによる構成管理と協業プロセスを経験しながらフロントエンド開発・協業スキルを身につけました。",
@@ -105,11 +105,11 @@
   "project.awsPortfolio.solution": "Route 53・ACMでドメインとHTTPSを構成し、GitHub ActionsでS3同期とキャッシュ無効化を自動化しました。",
   "project.awsPortfolio.results": "デプロイパイプラインを自動化し、コードのプッシュだけで反映される運用構造を実現しました。",
 
-  "project.oracleOps.title": "Oracle / Linux Operation Support",
+  "project.oracleOps.title": "Oracle / Linux Development & Deployment Support",
   "project.oracleOps.subtitle": "RKKCS · National Health Insurance · Japan",
   "project.oracleOps.problem": "日本の健康保険システム標準化プロジェクトで、障害や出力エラーの原因を迅速に特定する必要がありました。",
-  "project.oracleOps.role": "JavaおよびOracle SQLベースのシステムの運用・障害分析を担当しました。",
-  "project.oracleOps.solution": "バージョンセットアップ、ログ分析、SQL検証を行い運用環境を管理し、アカウント・バッチ(ジョブ)・出力エラーの原因を分析しました。",
+  "project.oracleOps.role": "JavaおよびOracle SQLベースのシステムの開発・デプロイおよび障害分析を担当しました。",
+  "project.oracleOps.solution": "バージョンセットアップ、ログ分析、SQL検証を行い開発・デプロイ環境を管理し、アカウント・バッチ(ジョブ)・出力エラーの原因を分析しました。",
   "project.oracleOps.results": "障害原因分析と対応手順を体系化し、再発時の対応時間を短縮しました。",
 
   "project.gsifnWidget.title": "KOSPI IR Stock Info Widget",
