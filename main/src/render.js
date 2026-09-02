@@ -72,14 +72,17 @@ function visualClass(variant) {
 
 function renderProjectActions(project) {
   const actions = [];
-  if (project.liveUrl) {
+  const liveUrls = [
+    ...(project.liveUrl ? [project.liveUrl] : []),
+    ...(project.liveUrls || []),
+  ];
+  liveUrls.forEach((url, i) => {
+    const label =
+      liveUrls.length > 1
+        ? `<span data-i18n="project.action.live"></span>${i + 1}`
+        : `<span data-i18n="project.action.live"></span>`;
     actions.push(
-      `<a class="btn btn--small btn--primary" href="${project.liveUrl}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="project.action.live"></span></a>`
-    );
-  }
-  (project.liveUrls || []).forEach((link) => {
-    actions.push(
-      `<a class="btn btn--small btn--primary" href="${link.url}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="project.action.live"></span> · ${link.label}</a>`
+      `<a class="btn btn--small btn--primary" href="${url}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${label}</a>`
     );
   });
   if (project.githubUrl) {

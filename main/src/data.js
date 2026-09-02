@@ -219,8 +219,8 @@ export const PROJECTS = [
     githubUrl: "https://github.com/moondolph/gsifn-ir-stock-widget",
     liveUrl: "https://www.celltrion.com/ko-kr/investment/stock-info",
     liveUrls: [
-      { url: "https://www.nexentire.com/jp/investment/stock/price/index.php", label: "Nexen Tire" },
-      { url: "https://www.sknetworks.co.kr/en/ir/stock/stock-price-information", label: "SK Networks" },
+      "https://www.nexentire.com/jp/investment/stock/price/index.php",
+      "https://www.sknetworks.co.kr/en/ir/stock/stock-price-information",
     ],
     architectureUrl: "images/architectures/gsifn-ir-widget.svg",
   },
