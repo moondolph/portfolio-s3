@@ -244,6 +244,11 @@ select:focus-visible {
   font-size: 0.82rem;
 }
 
+.btn--small:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ---- Header / Nav ---------------------------------------------------------- */
 .header {
   position: fixed;
@@ -1248,7 +1253,6 @@ select:focus-visible {
   font-size: 0.92rem;
   color: rgba(248, 247, 242, 0.62);
   margin: var(--space-3) 0 var(--space-6);
-  max-width: 56ch;
   margin-inline: auto;
 }
 
