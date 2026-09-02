@@ -76,13 +76,9 @@ function renderProjectActions(project) {
     ...(project.liveUrl ? [project.liveUrl] : []),
     ...(project.liveUrls || []),
   ];
-  liveUrls.forEach((url, i) => {
-    const label =
-      liveUrls.length > 1
-        ? `<span data-i18n="project.action.live"></span>${i + 1}`
-        : `<span data-i18n="project.action.live"></span>`;
+  liveUrls.forEach((url) => {
     actions.push(
-      `<a class="btn btn--small btn--primary" href="${url}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${label}</a>`
+      `<a class="btn btn--small btn--primary" href="${url}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="project.action.live"></span></a>`
     );
   });
   if (project.githubUrl) {
