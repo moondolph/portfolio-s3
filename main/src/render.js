@@ -77,6 +77,11 @@ function renderProjectActions(project) {
       `<a class="btn btn--small btn--primary" href="${project.liveUrl}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="project.action.live"></span></a>`
     );
   }
+  (project.liveUrls || []).forEach((link) => {
+    actions.push(
+      `<a class="btn btn--small btn--primary" href="${link.url}" target="_blank" rel="noreferrer noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="project.action.live"></span> · ${link.label}</a>`
+    );
+  });
   if (project.githubUrl) {
     const privateAttr = project.githubPrivate ? ` data-i18n-attr="title:project.label.privateRepoNote"` : "";
     actions.push(
