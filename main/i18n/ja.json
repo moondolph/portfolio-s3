@@ -131,7 +131,7 @@
   "cert.cloudPractitioner.name": "AWS Certified Cloud Practitioner",
   "cert.cloudPractitioner.desc": "IAM、EC2、S3など主要サービスに関するクラウドの基礎理解を証明します。",
 
-  "contact.title": "すべてのサービスは\n最終的にインフラの上で動いています。",
-  "contact.tagline": "信頼できるインフラを設計し、自動化し、運用します。",
-  "contact.subtitle": "信頼できるインフラが、アイデアをスケールするサービスへと変えます。"
+  "contact.title": "課題を見つけ、技術で解決します。",
+  "contact.tagline": "アイデアを実際に動くサービスへと形にします。",
+  "contact.subtitle": "Web、クラウド、AI など多様な技術を活かし、より良い解決策をつくり続けます。"
 }
